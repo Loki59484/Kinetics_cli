@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Mozilla/4.79 [fr] (X11; U; Linux 2.4.18-3 i686) [Netscape]">
+</head>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 153);" link="#ff0000" alink="#ff0000" vlink="#ff0000">
+<font color="#ff0000"><font size="+1"><a href="userIndex.html#2%204%20calculation">Back
+to Summary</a></font></font>
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<p><b><i><font color="#000000"><font size="+2">II.5 <u>How to generate the KiSThelP input file directly from ADF output</u></font></font></i></b>
+
+<br><br>
+After having created a new session (menu Session/New), run a new calculation using the menu Calculation/Atom,Molecule <br>(or
+Calculation/k / TST, or . . .) and select your ADF outputfile upon request (.out file extension).
+<br><br>
+
+Prior to that, you must run a frequency ADF job to get all necessary data to be read next by KiSThelP. This can be done through <br> the 
+ADF integrated graphical user interface: check the checkbox  Frequencies. An .out ADF outputfile will be generated, which can be read by KiSThelP. <br> 
+
+
+<br><br>
+An ADF  parser has been designed to analyze ADF '.out' outputfiles up to release 2024.102. More recent versions might be parsed, but without guarantees.
+<br><br>
+<font color="#ff0000">
+ADF - KiSThelP OUTPUT DIFFERENCES
+</font> <br>
+-------------------------------------------------------------------------------------------------------------------------
+<br> When comparing KiSThelP thermochemistry analysis with ADF's one, caution: 
+
+<ul>
+<li> ADF does not take into account the electronic degeneracy in the calculation of thermal properties, while KiSThelP does. <br> This can be checked by setting 1 in the 'Elec. deg.' field in KiSThelP graphical user interface. 
+
+<li> The default pressure taken by ADF is 1.0 atm. Using KiSThelP you can screen interactively any pressure, but default is 1.0 bar.
+
+<li> The default temperature taken by ADF is 298.15K. Using KiSThelP you can screen interactively any temperature, but default is 298.0K.
+
+<li> Make sure KiSThelP has read the proper ADF Rotational symmetry number. Anyway, this value can be set interactively directly from the graphical interface.
+ 
+<li> WARNING: in addition to the standard harmonic conventional treatment, ADF performs a specific thermochemistry treatment for low vibrational modes:
+ <br> a so-called 'low vibrational frequency free rotor
+      interpolation correction' is applied according to the paper by S. Grimme (Chem. Eur. J. 2012, 18, 9955-9964) <br> and the ADF output provides the user with both treatments (harmonic and low vibrational frequency free rotor). <br> It is worth noting that in KiSThelP, to account for deviations from the harmonic oscillator,<br> a hindered rotor approach has been implemented  (HRDS treatment, see <a href="molecularSystem.html"> this page</a>). <br> The 'low vibrational frequency free rotor interpolation correction' will be implemented in KiSThelP soon.
+    
+</ul> <br>
+-------------------------------------------------------------------------------------------------------------------------
+
+<br>
+    
+All the data used by KiSThelP to get the thermochemistry results can be interactively changed directly from the KiSThelP graphical interface:
+
+
+<ul>
+
+<li> The Mass (amu).
+
+<li> The potential energy (hartree).
+
+<li> The Electronic degeneracy.
+
+<li> The Rotational Symmetry number.
+
+<li> The inertia moments (a.u.).
+
+<li> The real vib. frequencies (cm-1).
+
+</ul>
+
+Also, a scaling factor applied to vib. frequencies can applied through the KiSThelP graphical interface. Default value in KiSThelP is 1.0.
+
+</body>
+
+
+

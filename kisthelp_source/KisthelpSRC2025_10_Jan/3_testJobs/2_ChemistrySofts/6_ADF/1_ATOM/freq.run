@@ -1,0 +1,22 @@
+#!/bin/sh
+
+"$AMSBIN/ams" << eor
+
+Task SinglePoint
+Properties
+    NormalModes Yes
+End
+
+Engine ADF
+    Basis
+        Core None
+    End
+    SpinPolarization 1
+    XC
+        MetaHybrid M06-2X
+    End
+    Unrestricted Yes
+    NumericalQuality Good
+EndEngine
+eor
+

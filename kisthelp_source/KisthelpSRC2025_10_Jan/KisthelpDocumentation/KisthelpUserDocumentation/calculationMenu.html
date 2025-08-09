@@ -1,0 +1,469 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Mozilla/4.79 [fr] (X11; U; Linux 2.4.18-3 i686) [Netscape]">
+</head>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 153);" link="#ff0000" alink="#ff0000" vlink="#ff0000">
+<font color="#ff0000"><font size="+1"><a href="userIndex.html#2%204%20calculation">Back
+to Summary</a></font></font>
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<p><b><i><font color="#000000"><font size="+2">III.3 <u>Description of the Calculation menu</u></font></font></i></b>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+<p><font size="+1">
+KiSThelP has been designed to perform statistical mechanics calculations from ab initio quantum chemistry data. This results in the computation of canonical partition functions, molecular thermodynamic properties, thermal equilibrium constants, transition state theory (TST) rate coefficients, and RRKM rate coefficients. One-dimensional tunneling and variational effects have also been incorporated in the TST calculations.
+
+It is to be noted that the standard state of pure gaseous species (ideal gas at P<sup>0</sup>=1 bar) is used in chemical equilibrium and TST kinetic properties computations, but the molecular properties calculated with KiSThelP can also be estimated at any pressure. These properties computations clearly have some limitations the user must be aware of. The Born-Oppenheimer and ideal gas approximations are invoked. The electronic partition function is truncated after the first term. Harmonic oscillator and the rigid-rotor approximation are assumed. 
+<br><br>
+At a given temperature, the data required to derive the vibrational partition functions Q<sub>vib</sub><sup>v=0</sup> from ab initio calculations are the frequencies (&nu;<sub>i</sub>) of vibrational modes obtained within the harmonic oscillator approximation. In calculating the vibrational partition function, vibrational energy is measured from the ground state (v=0). But, we also print out Q<sub>vib</sub><sup>BOT</sup> obtained by choosing the zero of energy to be the bottom of the potential energy curve.  Due to the neglect of anharmonicity in electronic structure computations, it is known that there is a systematic error in the calculated harmonic vibrational frequencies when they are compared to the experimental fundamental vibrational frequencies. A scaling factor is commonly used to correct the calculated value to match the experimental one. KiSThelP gives the possibility to scale harmonic vibrational frequencies by such a factor (directly from the GUI). The harmonic oscillator approximation provides a fast and straightforward method to determine the vibrational frequencies used to compute the partition function of internal modes, but it breaks down for large-amplitude internal motions such as internal rotations. The hindered rotor approximation offers a significant improvement as compared to the harmonic oscillator treatment. That is the reason why the approach of Flagan et al [B. R. McClurg, W. A. Goddard and R. C. Flagan, J. Chem. Phys. 106 (1997) 6675] has been implemented in KiSThelP to account for deviations from the harmonic oscillator (HO) value. The calculations are based on two quantities:
+&theta; = k<sub>b</sub>T/h&nu; and r = &Delta;E/h&nu;. The deviations proposed by the authors for the vibrational contributions are: 
+
+ </font><br>
+<div style="text-align:center;"> <IMG src="hrds_r.png"  width="74" height="64">    &nbsp;&nbsp; 
+ <IMG src="hrds_teta.png"  width="87" height="65">  </div> <br>
+
+<div style="text-align:center;"> <IMG src="hrds_zpe.png"  width="171" height="76">   &nbsp;&nbsp;
+ <IMG src="hrds_q.png"  width="265" height="92">   &nbsp;&nbsp;
+ <IMG src="hrds_u.png"  width="315" height="88">  </div> <br>
+
+<div style="text-align:center;"> <IMG src="hrds_bessel1.png"  width="220" height="134">    &nbsp;&nbsp; 
+ <IMG src="hrds_bessel2.png"  width="370" height="149">  </div> <br>
+
+
+<font size="+1">
+where the corrections &Delta;U and Q/Q<sub>H</sub>O exclude ZPE contribution and I<sub>x</sub>(r/2&theta;) is the Bessel function of order x. 
+
+The method used (HRDS) is based on an interpolation scheme between quantum-mechanical partition function at low temperature and the classical partition function at high temperature. The only input parameter to HRDS is the ratio of barrier height to harmonic frequency. However, torsions exhibiting multiple-wells energy curves, with conformers favoured over others conformers cannot be well represented by this method.
+
+<br>
+<br>
+Translational partition function, Q<sub>trans</sub>, only depends on the molecular mass, temperature and pressure in the ideal gas approximation.  For molecules, the moments of inertia derived from the geometry are used as input for calculating the rotational partition function Q<sub>rot</sub>  in the rigid rotor approximation. Three cases are envisaged: single atoms (Q<sub>rot</sub> is set to 1), linear polyatomic molecules, and general non-linear polyatomic molecules.  The rotational symmetry number that compensates for overcounting identical states must be supplied by the user in the input data file. Spacing of electronic energy levels is assumed to be very large compared to k<sub>b</sub>T so that the excited electronic states do not make a significant contribution to the total partition function. The electronic partition then reduces to the degeneracy of the ground state. The energy of the ground state is set to zero. As usually adopted in statistical mechanics for molecules, vibration, translation, rotation and electronic modes are assumed uncoupled. Hence, in KiSThelP, the partition function of a molecule in its ground state is calculated as:  Q<sub>trans</sub> &times; Q<sub>rot</sub> &times; Q<sub>vib</sub>&times; Q<sub>elec</sub>. These statistical calculations provide the bridge between quantum mechanics of individual molecules and resulting thermodynamic properties, which are reported in the output. It should be kept in mind that the absolute enthalpies computed from quantum mechanics are relative to infinitely separated electrons and nuclei. </font>
+<br>
+&nbsp;
+</p>
+<p><b><font size="+1">1) <i><u>Atoms and Molecules</u></i>
+:</font></b>
+</p>
+<p><font size="+1">This menu is to compute statistical and thermodynamical
+properties of a system (atom
+or molecule, or TS, or reactionpath point)</font>
+</p>
+<p><font size="+1">KiSThelP can compute
+these properties :</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - at a
+single temperature</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; -
+within&nbsp; a temperature range</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - at a
+single pressure</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - within
+a&nbsp; pressure range
+<br>
+<br>
+The equations used for computing statistical and thermochemical data in KiSThelP are from standard texts on thermodynamics (see for example [R.A. Alberty and R. J. Silbey, <i>"Physical Chemistry"</i>,1st edition, Edited by John Wiley & sons, Inc, ]. Formula employed in KiSThelP are <a HREF="formula.html"> here </a>. The starting point in each case (translational, vibrational, rotational) is the partition function Q(V,T) for the corresponding component of the total partition function.
+<br>
+<br>
+In addition to the numerical results (statistical and thermodynamical), the Maxwell-Boltzmann
+distribution (N<sub>i</sub>/N) = g(E<sub>i</sub>)exp(-E<sub>i</sub>/k<sub>B</sub>T)/Q is plotted as a function of (E<sub>i</sub>/k<sub>B</sub>T).  E<sub>i</sub> represents energy levels in the translational and ro-vibrational  modes. In practice, the degeneracy g(E<sub>i</sub>) is evaluated as the product N(E<sub>i</sub>) &times; dE<sub>i</sub> using the density of states and a small energy grain dE<sub>i</sub>, respectively. 
+N(E<sub>i</sub>) is obtained by convolution using ro_vibrational and translational densities of states (as described by W. Forst [in <i> "Theory of Unimolecular reactions"</i>,   Academic Press, New York, 1973 and <i> "Unimolecular reactions" </i>, Cambridge University Press,2003]. It also includes electronic degeneracy of the ground state. The density of states of vibrations and rotations have been calculated using the Laplace-transform method, which is based on the inversion of the partition function. For translational modes, a semi-classical approach is employed here, rather than the Laplace-transform method.<BR>
+<BR>
+KiSThelP is an interactive program that allows the user to change input data directly through the GUI. For single molecular system calculations, the user can interactively test the influence of the mass, potential energy, electronic degeneracy, rotational symetry number, inertia moment, vibrational frequencies, on statistical and thermodynamical properties. The "default values" button restores initial values. Also, a "vibrational" scaling factor field is made available. Default value is 1.0, meaning that no scaling factor is applied. Changing to values &le; 1 will multiply each initial frequency by this factor. 
+
+<BR>
+<BR>
+Similarly, temperature and pressure can be interactively changed from single value to range of values. All the properties are immediately re-computed accounting for new parameters. In the case of a "temperature range" or "pressure range", a 2D-plot is displayed. Selected properties can then be displayed individually.
+This grahical tools offers several facilities: scales settings, changing titles x/y limits,  exporting image (png format), saving numerical data &hellip;
+
+
+
+
+
+<br><br>
+An input file must be supplied (.kinp or data fetched from electronic structure calculation results).
+&nbsp;</font>
+</p>
+<p><b><font size="+1">2) <i><u>k / TST</u></i> :</font></b></p>
+<p><b><font size="+1">&nbsp; &nbsp;
+&nbsp; &nbsp; Classical Transition State Theory (TS located at
+the first-order saddle point)</font></b>
+</p>
+
+
+
+<p><font size="+1">
+The method used is the conventional <a name="kinetic"> transition state theory </a> [H. Eyring, Chemical Reviews, 17 (1935) 65]. For an overview of TST  and its improvements, see also [A. Fernandez-Ramos, B. A. Ellingson, B. C. Garrett, and D. G. Truhlar, Chapter 3 in Reviews in Computational Chemistry, 23 (2007) 125 , edited by K. B. Lipkowitz and T. R. Cundari (Wiley-VCH, Hoboken, NJ)].
+
+<br><br>
+Conventional TST requires information only for the saddle point and reactant(s). The equation usually presented for the conventional TST is: </font><br>
+<div style="text-align:center;"> <IMG src="k_TST.png"  width="344" height="102">  </div> <br>
+
+<font size="+1">
+where k<sub>b</sub> is Boltzmann's constant, T is the temperature, h is Planck's constant, N<sub>A</sub> is Avogadro's number (it disappears for unimolecular reactions rate constants with units of s<sup>-1</sup>). V<sup>&Dagger;</sup> is the difference in zero-point excluded potential energy between transition state (TS, assumed to be located at the saddle point on the PES) and reactant(s) (zero point energy contributions are included in the partition functions).  Q<sup>TS</sup> and Q<sup>R</sup> denote the total partition functions of the transition state and reactant(s) with the translational partition functions expressed in per unit volume. Q<sup>TS</sup> excludes the reaction coordinate. 
+<br><br>
+The thermodynamic equivalent of the previous equation is employed in KiSThelP: </font>
+
+<div style="text-align:center;"> <IMG src="k_TST_thermo.png"  width="335" height="102">  </div> <br>
+
+<font size="+1">
+where &Delta;G<sup>&Dagger;,0</sup>(T) represents the standard Gibbs free energy of activation for the considered reaction (&Delta;n = 1 or 0 for gas-phase bimolecular or unimolecular reactions, respectively; RT/P<sup>0</sup> has the unit of the inverse of a concentration). In the calculation of &Delta;G<sup>&Dagger;,0</sup>(T), the imaginary frequency that corresponds to the reaction coordinate degree of freedom is removed from the vibrational partition function of transition state, and thus of the kinetic treatment (except for tunneling correction calculation).
+<br> <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Options :</font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <u>UniMolecular
+Reaction</u>&nbsp; : to compute an unimolecular rate constant
+at the Transition State Theory (TST) level</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KiSThelP will ask the user for two data filemanes: one for the reactant, one for the TS <a href="ReactionPath.html">(see ReactionPath section)</a></font>
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <u>BiMolecular Reaction</u>&nbsp; : to compute a bimolecular rate constant
+at the Transition State Theory (TST) level</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;Reactants data are obtained from
+separated fragments electronic structure calculations.</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;KiSThelP will ask the user for three data filemanes: two for
+the reactant
+1 and 2, one for the TS <a href="ReactionPath.html">(see ReactionPath section) </a></font><br>
+<br>
+&nbsp;
+&nbsp;
+</p>
+<font size="+1">
+To determine the reaction path degeneracy &sigma;, thinking about all the various possibilities can rapidly become confusing. Recommended literature are [A. J. Karas, M. A. Collins and R. G. Gilbert, Chem. Phys. Lett. 193 (1992) 181]&nbsp;[A. Fern&aacute;ndez-Ramos,B. A. Ellingson, R. Meana-Paneda, J. M. C. Marques  and D. G. Truhlar, Theor. Chem. Account 118(2007)813] and  [R. G. Gilbert and S. C. Smith, <i> Theory of Unimolecular and Recombination Reactions</i>, Physical Chemistry texts, Blackwell Scientific Publications, 1990]
+
+. When calculating reaction rate constants in KiSThelP, it should be noted that the rotational symmetry numbers are removed from all partition functions (reactants, transition state) (even though they must be present in .kinp files) because they are included in the reaction path degeneracy &sigma;. <u>In this case, the user must supply the reaction path degeneracy directly through the GUI</u>. This number is correctly given by: &sigma;= (n<sup>&Dagger;</sup> &times; &sigma;<sup>R</sup>)/(n<sup>R</sup> &times; &sigma;<sup>&Dagger;</sup>)  where n and n<sup>&Dagger;</sup> are the number of chiral isomers of the reactant(s) and transition state, respectively, and  &sigma;<sup>R</sup> and  &sigma;<sup>&Dagger;</sup> are the corresponding rotational symmetry numbers. 
+&nbsp;</font>
+<br><br>
+<font size="+1">
+Dual level calculations (combining properties obtained at a low-level of theory with accurate properties computed at a high-level) can be carried out by changing properties values directly in the .kinp files.
+</font>
+<br>
+<br><br>
+
+<p><font size="+1">KiSThelP can compute rate constants and activation properties:</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - at a single temperature</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - within a temperature range</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - at a single pressure</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - within a pressure range</font>
+<br>
+
+<font size="+1">(it is to be noted that, though the TST rate constant is based on the standard state of pure gaseous species (ideal gas at P<sup>0</sup>=1 bar), non-standard activation properties can be displayed too). </font>
+
+ <br><br>
+
+<font size="+1">
+Temperature and pressure can be interactively changed from single value to range of values. All the properties are immediately re-computed accounting for new parameters. In the case of a "temperature range" or "pressure range", a 2D-plot is displayed. Selected properties can then be displayed individually.
+This grahical tools offers several facilities: scales settings, changing titles x/y limits,  exporting image (png format), saving numerical data &hellip;
+<br><br>
+In addition to all the previous (numerical, graphical) results, the micro-canonical rate constant k(E) in s<sup>-1</sup> for an unimolecular reaction is displayed as a function of E/k<sub>b</sub>T. This involves sum and density of states computations as presented further below in <A HREF="calculationMenu.html#8RRKM">section 8 (RRKM)</a>.
+
+
+ 
+<br> <br>
+KiSThelP also performs two statistical fits to the two- and three-parameters Arrhenius equations : k = Ae<sup> -E<sub>a</sub>/RT</sup> and k = A &times T<sup>n</sup> e<sup> -E<sub>a</sub>/RT</sup>. In the single temperature mode, teh Arrhenius fit is obtained from a temperature range centred on the selected temperature. In the range
+temperature mode, the selected range serves to obtain the fit. The corresponding plots are compared to the TST k=f(T) curves. Numerical and graphical results can be saved through the plot tool.
+<br> </font>
+
+<br><br>
+<p></p>
+<p><b><font size="+1">3) <i><u>k / TST / W</u></i> :</font></b></p>
+<p><b><font size="+1">&nbsp; &nbsp;
+&nbsp; &nbsp; Classical Transition State Theory (TS located at
+the first-order saddle point) including Wigner tunneling correction</font></b>
+</p>
+<p><font size="+1">
+
+One-dimensional quantum mechanical effects on reaction coordinate motion (tunneling and non-classical reflections) are incorporated by a multiplicative transmission coefficient &chi;(T), so that:  k<sup>TST/T</sup>(T) = &chi;(T) &times; k<sup>TST</sup>(T). In this relative simple treatment, the imaginary frequency (characterizing the reaction mode) is used to compute the Wigner tunneling correction </font><font size="+1">[E.
+Wigner, Z. Phys. Chem. B, <b>19</b> (1932) 203].</font></p>
+
+<div style="text-align:center;"> <IMG src="wigner.png"  width="240" height="99">  </div> <br>
+
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+
+<p><b><font size="+1">4) <i><u>k / TST / Eck</u></i> :</font></b></p>
+<p><b><font size="+1">&nbsp; &nbsp;
+&nbsp; &nbsp; Classical Transition State Theory (TS located at
+the first-order saddle point) including Eckart tunneling correction</font></b>
+</p>
+<p><font size="+1">A Quantum effects in the reaction mode degree of freedom are
+included by multiplying the TST rate constant by a transmission coefficient. One-dimensional quantum mechanical tunneling treatment through an unsymmetrical Eckart potential energy barrier is involved [C. Eckart, Phys. Rev. 35 (1930) 1303 ]. This methodology requires no ab initio  calculations at points other than reactants, products, and saddle point. User will be asked for the ZPE corrected reverse energy barrier. The tunneling effect is accounted for by a multiplicative factor, so that:  k<sup>TST/T</sup>(T) = &chi;(T) &times; k<sup>TST</sup>(T).
+<br><br>
+The analytic form proposed by Eckart can model a variety of physically reasonable shapes (involving unsymmetrical forms) and admits an analytical solution of the corresponding Schr&ouml;dinger equation and then for the probability p(E) of transmission through the corresponding 1-D barrier at energy E. Original formula are used in KiSThelP with L, the width of the transition region which can be defined in term of the imaginary frequency &nu;<sup>&Dagger;</sup> characterizing the reaction mode (that is routinely obtained from electronic structure calculations). </font>
+<br> <br>
+
+<div style="text-align:center;"> <IMG src="eckart.png"  width="800" height="272">  </div> <br>
+<br><br>
+<font size="+1">
+The two constants (A,B) determining the overall shape of the Eckart barrier are directly linked to the zero-point-corrected energy barriers in the reverse and forward direction computed by KiSThelP: &Delta;H<sup>&Dagger;,0</sup><sub>r</sub> and &Delta;H<sup>&Dagger;,0</sup><sub>f</sub>
+
+
+See [<i> "Unimolecular reactions" </i>, Cambridge University Press,2003] for more details. Finally, the Eckart tunnelling correction  &chi;(T) is 
+obtained by numerically integrating p(E) over a Boltzmann distribution of energies.</font>
+
+<div style="text-align:center;"> <IMG src="eckart_therm.png"  width="308" height="163">  </div> <br>
+<font size="+1">
+ In KiSThelP, 
+the algorithm uses a 15-point Gauss-Laguerre integration. In the case of an endothermic reaction, roots of 15th degree Laguerre polynomial are distributed on an energy range above A. The Gauss-Laguerre scheme can still be used
+by means of an integration variable change, leading to: </font>
+
+<div style="text-align:center;"> <IMG src="eckart_therm2.png"  width="359" height="164">  </div> <br>
+
+
+<font size="+1">
+<br><br>
+However, the potential energy along IRC has not always a shape such that the tunneling probability
+cannot be usefully approximated by an Eckart potential. Furthermore, although convenient to carry out,and thus attractive, these methods (Wigner and Eckart) do not take into account the full dimensionality of the quantum effect. 
+One of the possible extensions of KiSThelP is to program the semi-classical WKB approximation in order to better estimate the permeability P(E), using zero curvature tunneling (ZCT, which does not include corner-cutting tunneling) or event more accurate small-curvature tunneling (SCT) or large curvature tunneling (LCT) approaches. See [A. Fernandez-Ramos, B. A. Ellingson, B. C. Garrett, and D. G. Truhlar, <i> Variational Transition State Theory
+with Multidimensional Tunneling </i> Chapter 3 in Reviews in Computational Chemistry, 23 (2007) 125 , edited by K. B. Lipkowitz and T. R. Cundari (Wiley-VCH, Hoboken, NJ)] for a more detail discussion about these approaches.
+
+
+
+</font></p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p><b><font size="+1">5) <i><u>k / VTST</u></i> : </font></b><br>
+&nbsp;
+<br>
+
+
+</p>
+<p><b><font size="+1">&nbsp; &nbsp;
+&nbsp; &nbsp;Generalized&nbsp;Transition State Theory (TS
+located variationally; the optimum TS corresponds to a maximum free
+energy of activation at a given temperature)&nbsp;</font></b></p>
+<br>
+<font size="+1">
+Available in KiSThelP, the variational transition state theory (CVT) involves a generalized transition state rate constant: 
+</font><br>
+<div style="text-align:center;"> <IMG src="k_VTST1.png"  width="343" height="100">  </div> <br>
+<div style="text-align:center;"> <IMG src="k_VTST2.png"  width="207" height="81">  </div> <br>
+<font size="+1">
+
+where s is the distance along the minimum energy reaction path (MEP) in isoinertial coordinates. In this theory (CVT), the rate constant k<sup>CVT</sup>(T) is obtained  by minimizing k<sup>GT</sup> with respect to s along the reaction path. The thermodynamic equivalent of the previous equation is employed in KiSThelP (k<sup>CVT</sup>(T) is obtained by minimizing the generalized free energy of activation &Delta;G<sup>&Dagger;,0</sup>(T)<sup>GT</sup>). In this case, addition information is needed on the PES. The MEP can be obtained by performing a so-called intrinsic reaction path (IRC) calculation using a quantum chemistry software. By convention, s=0 at transition state structure, s &lt;0 on reactant side and s&gt; 0 on product size. 
+
+<p>In VTST, the required information
+is the Minimum Energy Path (MEP) information obtained from electronic
+structure calculations. This information is read from a raectionpath .kinp input
+file containing as "POINT" sections as points calculated along the
+reaction path (including the transition state). The coordinate reaction, potential energy, inertia
+moment, ... </font><font size="+1"><a href="ReactionPath.html"> (see
+ReactionPath section)</a></font><font size="+1">
+must be supplied for each point. </font></p>
+
+
+<p><font size="+1"> <span style="font-weight: bold;">Remarks</span>:&nbsp;</font></p>
+
+<p><font size="+1">-  As abovementioned for conventional TST, the reaction path
+multiplicity is given by the user through KiSThelP graphical interface</font></p>
+
+<p><font size="+1">- Along the reaction path, ideally, all bound modes transverse to the
+reaction path should be characterized by no imaginary frequency in KiSThelP.
+But practically, from electronic structure calculations, a reactionpath point can have 0, 1, or more 
+than one imaginary boundary modes normal to the reaction mode. In KiSThelP,  0 or 1, or more  imaginary frequencies will be accepted for a reaction path point. But if 0 imaginary frequency is found, then, to handle a homogeneous set of data the smallest frequency is set to imaginary number to design the reaction mode (thus it is removed from statistical and kinetics treatments). If more than 1 imaginary frequency are found, corresponding imaginary frequencies are removed from statistical treatments. In all these cases,  warnings will be delivered to the user. 
+
+
+</font></p>
+
+
+
+<p><font size="+1"><font size="+1"><b><font size="+1">6)&nbsp;</font></b><b><font size="+1"><i><u>k / VTST / W</u></i></font></b><b><font size="+1"> : </font></b><br>
+&nbsp;
+<br>
+</font></font></p>
+<p><font size="+1"><font size="+1"><b><font size="+1">&nbsp; &nbsp;
+&nbsp; &nbsp;Generalized&nbsp;Transition State Theory (TS located variationally; the optimum TS corresponds to a
+maximum free energy of activation at a given temperature)&nbsp; including Wigner tunneling correction</font></b></font></font></p>
+
+
+To include quantum effects on reaction coordinate motion the rate constant k<sup>CVT</sup>(T) is multiplied by a transmission coefficient &chi;(T):  k<sup>CVT/T</sup>(T) =  &chi;(T) &times; k<sup>CVT</sup>(T).
+The imaginary frequency of the transition state (1-order saddle point on the potential energy surface) is used to compute the Wigner tunneling correction.
+
+<p><b><font size="+1">7) <i><u>k / VTST / Eck</u></i> :</font></b></p>
+<p><b><font size="+1">&nbsp; &nbsp;
+
+
+
+Generalized&nbsp;Transition State Theory (TS located variationally; the optimum TS corresponds to a maximum free
+energy of activation at a given temperature)&nbsp; including Eckart tunneling correction</font></b>
+</p>
+<p><font size="+1">The tunneling effect is accounted for by a multiplicative factor, so that: k<sup>CVT/T</sup>(T) =  &chi;(T) &times; k<sup>CVT</sup>(T). A one-dimensional quantum mechanical tunneling treatment through an unsymmetrical Eckart potential energy barrier is involved. This methodology requires no ab initio  calculations at points other than reactants, products, and saddle point. User will be asked for the ZPE corrected reverse energy barrier.
+
+
+<a name="8RRKM">
+<p><b><font size="+1">8) <i><u>RRKM</u></i>:</font></b></p>
+
+
+<p><b><font size="+1">&nbsp; &nbsp;
+
+
+Treatment of unimolecular processus in gas phase. Transition state theory reformulated on a microcanonical basis. Pressure effects can be accounted for.</font></b>
+</p>
+<br>
+The implementation of this method in KiSThelP is based on the following books: (1)[K.A. Holbrook, M.J. Pilling and S. H. Robertson, <i>"Unimolecular Reactions"</i>, Wiley &amp; sons Eds, 1996] (2)[P. J. Robinson and K.A. Holbrook,<i>"Unimolecular Reactions"</i> Wiley-Interscience, London, 1972], [W. Forst, <i>"Unimolecular reactions" </i>, Cambridge University Press,2003]. Only reaction paths with a well defined  1st-order saddle point on the potential energy surface are considered here (Tight TS). The other cases (Loose transition state) represent one of the perpectives for futur developpments of KiSThelP.
+
+<br><br>
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+* <u>TightTS</u>&nbsp;: to compute an unimolecular rate constant using the RRKM theory within
+the rigid TS model </font>
+<br>
+
+<p><font size="+1">
+- KiSThelP will ask the user for two data filemanes: one for the
+reactant, one for the TS <a href="ReactionPath.html">(see ReactionPath section)</a></font>
+</p>
+<p>
+- <font size="+1">Next, KiSThelP will ask for molecular
+mass (diluent gas), &epsilon;/k<sub>b</sub> (in K) and &sigma;(cm) for reactant and diluent gas respectively. These data will serve to estimate the deactivation rate constant within the RRKM unimolecular kinectic mechanism. Data may be found using the KiSThelP <A href="dataMenu.html#lennarJones">"Data/Lennard-Jones parameters"</a> menu</font>
+</p>
+<p><font size="+1">- The user can then interactively test the influence of the statistical factor, collision
+efficiency and critical energy E0 values, on the unimolecular rate constant, through the GUI.
+<br> <br>
+
+- KiSThelP can compute the rate constant:
+<br><br>
+- at a single temperature
+<br>
+- within a temperature range<
+<br>
+- at a single pressure
+<br>
+- within a pressure range
+
+
+</font>
+<br>
+&nbsp;
+</p>
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(* <u>LooseTS</u>&nbsp;: <b><font color="#ff0000"> not implemented in this version</font></b></font>)
+</p>
+
+<br><br>
+The thermal rate constants of the unimolecular reactions
+are obtained by applying the RRKM theory to predict
+the falloff behaviour. The microcanonical rate constants k(E) are calculated by the standard
+RRKM expression: <br><br></font>
+
+<br>
+<div style="text-align:center;"> <IMG src="k_E.png"  width="144" height="75">  </div> <br>
+
+
+<font size="+1">
+
+where &sigma; is the
+reaction path degeneracy, G(E) is the total number of states
+of the transition state with energy less than or equal to E,
+and N(E) is the density of states of the dissociating reactant species. 
+
+Reactant and transition state are approximated as symmetric tops and the external K-rotor,
+associated with the smallest moment of inertia, is treated as an
+active degree of freedom completely coupled to the vibrations. Laplace-transform method based on the inversion of the partition functions is employed for the calculation of the sum of states G(E) and density of states N(E).
+The thermal rate constant is obtained by using the following expression:</font>
+
+<br>
+<div style="text-align:center;"> <IMG src="k_RRKM.png"  width="442" height="130">  </div> <br>
+
+<font size="+1">
+where  &sigma; is the reaction path degeneracy, h is the Planck's constant, Q<sub>2</sub> is the partition function of the active degrees of freedom (vibrations + K-rotor)
+of the reactant, Q&Dagger;<sub>1</sub> and Q<sub>1</sub> are the partition functions
+for adiabatic rotations of the transition state and of the reactant,
+respectively, E<sub>0</sub> is the zero-point-corrected threshold energy. The strong collision approximation is used assuming that every collision deactivates with &omega;=&beta;<sub>c</sub>Z<sub>LJ</sub>[M] being
+the effective collision frequency where &beta;<sub>c</sub> is the collisional efficiency,
+Z<sub>LJ</sub> is the Lennard-Jones collision frequency and [M] is
+    the total gas concentration. Z<sub>LJ</sub> are calculated using the Lennard-Jones parameters: &epsilon;/k<sub>b</sub> (K) and &sigma; (cm) according to the equations (3.1) and (3.3) from reference [J. Troe, J. Chem. Phys. 66, 4758 (1977); <a href="http://doi.org/10.1063/1.433838" target=_blank> doi: 10.1063/1.433838 </a>]. Such parameters may be found using the KiSThelP <A href="dataMenu.html#lennarJones">"Data/Lennard-Jones parameters"</a> menu. In order to account for the centrifugal
+effect in the rate constant calculation, the factor Q<sup>&Dagger;</sup><sub>1</sub>/Q<sub>1</sub>
+was included in the expression of k(T) and k(E) is evaluated
+at the energy E including &lt;&Delta;E<sub>j</sub>&gt; with &lt;&Delta;E<sub>j</sub>&gt; = (1- I<sup>&Dagger;</sup>/I)&times; k<sub>b</sub>T 
+where I<sup>&Dagger;</sup> and I are the average of the two largest moments of
+inertia. It accounts for the release (or uptake) of a certain amount of the rotational energy associated with the external two-dimensional inactive rotation (J) into the active degrees of freedom as the system approach the transition state.  The thermal rate constant is obtained using a 15-point Gauss-Laguerre integration. For the 15 roots of the Laguerre polynomial numerical values of G(E), N(E) and k(E) are given. In addition, the k(E) plot is displayed for energy values up to 100 k<sub>b</sub>T. Low- and high-pressure limits (k<sup>0</sup> and k<sup>&infin;</sup>) are also given. Neither variational theory nor tunneling effect have been implemented in the present version of KiSThelP. This is one of the perspectives for futur KiSThelP developments.</font>
+<br><br><br>
+<b><font size="+1">9) <i><u>Keq</u></i> :</font></b>
+</font></font></p>
+
+<p><b><font size="+1">&nbsp; &nbsp;
+
+Calculation of gas-phase chemical reaction equilibrium constants
+
+</font></b>
+</p>
+
+<p><font size="+1">
+The knowledge of equilibrium constants is important in the
+study of chemical reaction mechanisms. In addition to allowing
+the prediction of the composition of a mixture, the equilibrium
+constant is also connected to rate constants through
+the existence of equilibrium between stable species in multiplestep
+processes. Furthermore, in simulations of gas-phase mixtures,
+backward rate can be found using the forward rate and the equilibrium constant.
+In other respects, the equilibrium constant is a practical indicator
+to test theoretical methods because it is very sensitive both to
+the energy quality and to geometrical parameters and also
+because the electronic structure of each compound that takes
+part in the equilibrium is extremely different from the others.
+
+<br><br>
+To compute an equilibrium constant betwen reactant(s) and product(s)for a given balanced equation,stoichiometric coefficients must be supplied. The thermodynamical expression of the equilibrium constant for gas-phase reactions is employed in KiSThelP:
+</font><br>
+<div style="text-align:center;"> <IMG src="equil.png"  width="147" height="100">  </div> <br>
+
+<font size="+1">
+where &Delta;G<sup>0</sup>(T) is the change in standard Gibbs energy. The standard state of a pure gaseous substance is used (ideal gas at one bar pressure).  It is to be noted that non-standard reaction properties (&Delta;H;, &Delta;S, &Delta;G) can be displayed too.                                                                                                                     
+
+
+Reactants data are obtained from separated electronic structure calculations.
+
+
+KiSThelP will ask the user for the number of reactants and products in the studied balanced equation. For each species, one data filename and stoechiometric coefficient must be provided.
+<a href="molecularSystem.html">(see Reactant (or Product)
+section)</a></font>
+<br>
+&nbsp;</font></font></p>
+<p><font size="+1"><font size="+1"><font size="+1">KiSThelP  can compute gas-phase equilibrium constants
+:</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; - at a
+single Temperature</font>
+<br>
+<font size="+1">&nbsp;&nbsp;&nbsp; -
+within&nbsp; a temperature range</font>
+<br>
+&nbsp;
+</font></font></p>
+<p><font size="+1"><font size="+1"><b><font size="+1">10) <i><u>Reset</u></i>
+:</font></b>
+</font></font></p>
+<p><font size="+1"><font size="+1"><font size="+1">&nbsp; This menu will reset the current
+calculation.</font>
+<br>
+&nbsp;
+</font></font></p>
+<p><font size="+1"><font size="+1"><font color="#ff0000"><font size="+1"><a href="userIndex.html#2%204%20calculation">Back
+to Summary</a></font></font>
+</font></font></p>
+</body></html>

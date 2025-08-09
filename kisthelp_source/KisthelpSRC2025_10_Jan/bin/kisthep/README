@@ -1,0 +1,7 @@
+Additonnal packages:
+
+
+* Source: contains all java file of the KISTHEP application, 
+          distributed in 3 directories:
+- util
+- file

@@ -1,0 +1,8 @@
+! RKS BP def2-TZVP RI def2/J
+! TightSCF Grid5 NoFinalGrid
+! Freq 
+* xyz 0 1
+C      0.000000    0.000000   -0.518698
+N      0.000000    0.000000    0.674157
+H      0.000000    0.000000   -1.606907
+*

@@ -1,0 +1,42 @@
+*MASS (in amu)
+30.04695
+*END
+*NUMBER OF SYMMETRY
+1
+*END
+   Note that here below, one vib. mode has got two parameters: frequency value associated
+   with the hindered mode, and the hindered barrier height in kJ/mol (12.38)
+*FREQUENCIES (in cm-1)
+313.2818 12.38
+827.1342
+828.3265
+1007.5319
+1225.6507
+1226.4910
+1418.3577
+1441.0353
+1516.7221
+1517.1107
+1521.4155
+1521.7532
+3043.1290
+3044.2548
+3098.2240
+3098.4534
+3122.2106
+3122.3672
+*END
+*ELECTRONIC DEGENERACY
+1
+*END
+*MOMENT OF INERTIA (in Amu.bohr**2)
+22.44984208834885
+90.60155174233027
+90.60209755070267
+*END
+*LINEAR
+not linear
+*END
+*POTENTIAL ENERGY (in hartree)
+-79.8387385
+*END

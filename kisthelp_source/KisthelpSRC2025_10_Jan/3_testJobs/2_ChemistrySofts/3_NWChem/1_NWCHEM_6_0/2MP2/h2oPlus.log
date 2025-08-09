@@ -1,0 +1,1864 @@
+    nwchem, len=6
+      freq, len=4
+ argument  1 = freq
+  Unable to open freq --- appending .nw
+                                         
+                                         
+
+
+              Northwest Computational Chemistry Package (NWChem) 6.0
+              ------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                              Copyright (c) 1994-2010
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname      = clovis1
+    program       = nwchem
+    date          = Sat May  4 08:32:28 2013
+
+    compiled      = Tue_Nov_09_10:54:15_2010
+    source        = /home/d3y133/nwchem-releases/nwchem-6.0-linux
+    nwchem branch = 6.0
+    input         = freq.nw
+    prefix        = h2o_freq.
+    data base     = ./h2o_freq.db
+    status        = startup
+    nproc         =        1
+    time left     =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     =   13107201 doubles =    100.0 Mbytes
+    stack    =   13107201 doubles =    100.0 Mbytes
+    global   =   26214400 doubles =    200.0 Mbytes (distinct from heap & stack)
+    total    =   52428802 doubles =    400.0 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = .
+  0 scratch   = .
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+
+ Scaling coordinates for geometry "geometry" by  1.889725989
+ (inverse scale =  0.529177249)
+
+ C2V symmetry detected
+
+          ------
+          auto-z
+          ------
+
+
+                             Geometry "geometry" -> ""
+                             -------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.00000000     0.00000000     0.14142136
+    2 H                    1.0000     0.70710678     0.00000000    -0.56568542
+    3 H                    1.0000    -0.70710678     0.00000000    -0.56568542
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H                  1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.8410208052
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             C2v       
+ Group number             16
+ Group order               4
+ No. of unique centers     2
+
+      Symmetry unique atoms
+
+     1    2
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value
+      ----------- --------  ----- ----- ----- ----- ----- ----------
+    1 Stretch                  1     2                       1.00000
+    2 Stretch                  1     3                       1.00000
+    3 Bend                     2     1     3                90.00000
+
+
+            XYZ format geometry
+            -------------------
+     3
+ geometry
+ O                     0.00000000     0.00000000     0.14142136
+ H                     0.70710678     0.00000000    -0.56568542
+ H                    -0.70710678     0.00000000    -0.56568542
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |  angstroms
+ ------------------------------------------------------------------------------
+    2 H                |   1 O                |     1.88973  |     1.00000
+    3 H                |   1 O                |     1.88973  |     1.00000
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          2
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    2 H                |   1 O                |   3 H                |    90.00
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          1
+ ==============================================================================
+
+
+
+  library name resolved from: .nwchemrc
+  library file name is: </apps/nwchem/6.0/usr.local.lib.nwchem/libraries/>
+  
+                      Basis "ao basis" -> "" (cartesian)
+                      -----
+  H (Hydrogen)
+  ------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  3.42525091E+00  0.154329
+  1 S  6.23913730E-01  0.535328
+  1 S  1.68855400E-01  0.444635
+
+  O (Oxygen)
+  ----------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  1.30709320E+02  0.154329
+  1 S  2.38088610E+01  0.535328
+  1 S  6.44360830E+00  0.444635
+
+  2 S  5.03315130E+00 -0.099967
+  2 S  1.16959610E+00  0.399513
+  2 S  3.80389000E-01  0.700115
+
+  3 P  5.03315130E+00  0.155916
+  3 P  1.16959610E+00  0.607684
+  3 P  3.80389000E-01  0.391957
+
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ H                           sto-3g                  1        1   1s
+ O                           sto-3g                  3        5   2s1p
+
+
+                              H2O+ : STO-3G mp2 freq
+                              ----------------------
+
+
+                   NWChem Nuclear Hessian and Frequency Analysis
+                   ---------------------------------------------
+
+
+
+                         NWChem Finite-difference Hessian
+                         --------------------------------
+
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = atomic
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = T
+  symmetry adapt  = T
+
+
+ Forming initial guess at       0.1s
+
+
+ Starting SCF solution at       0.1s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754522069
+      One electron energy =   -115.830487771543
+      Two electron energy =     32.335712444261
+ Nuclear repulsion energy =      8.841020805213
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = T
+  Use skeleton AO sym   = T
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+ GA uses MA = F    GA memory limited = T
+
+ Available: 
+  local mem=  2.62D+07
+ global mem=  2.62D+07
+ local disk=  2.17D+11
+   1 passes of   5:         131729                        191                       316.
+
+ Semi-direct pass number   1 of   1  for UHF alpha       at        0.2s
+Node 0 wrote      0.0 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at        0.2s
+ Done maket at        0.2s
+ Done multipass loop at        0.2s
+
+ GA uses MA = F    GA memory limited = T
+
+ Available: 
+  local mem=  2.62D+07
+ global mem=  2.62D+07
+ local disk=  2.17D+11
+   1 passes of   4:         131665                        210                       373.
+
+ Semi-direct pass number   1 of   1  for UHF beta        at        0.3s
+Node 0 wrote      0.0 Mb in      0.0 s     Agg I/O rate:     0.0 Mb/s
+ Done moints_semi at        0.3s
+ Done maket at        0.3s
+ Done multipass loop at        0.3s
+
+
+          -------------------------------------------
+          SCF energy                 -74.653754522069
+          Correlation energy          -0.032368791071
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686123313140
+          -------------------------------------------
+
+ -----------------------
+ Performance information
+ -----------------------
+
+ Timer overhead =  1.00D-06 seconds/call
+
+               Nr. of calls         CPU time (s)                 Wall time (s)                GFlops
+             ---------------    -------------------     ------------------------------   -------------------
+Name         Min   Avg   Max    Min     Avg     Max     Min     Avg     Max   Mx/calls   Min     Max     Sum
+mp2: moin     2     2     2   1.70E-2 1.70E-2 1.70E-2  2.02E-2 2.02E-2 2.02E-2 1.01E-2   0.0     0.0     0.0   
+mp2: make     2     2     2    0.0     0.0     0.0     2.72E-4 2.72E-4 2.72E-4 1.36E-4   0.0     0.0     0.0   
+mp2: tota     1     1     1   3.30E-2 3.30E-2 3.30E-2  0.14    0.14    0.14    0.14      0.0     0.0     0.0   
+
+ The average no. of pstat calls per process was 5.00D+00
+ with a timing overhead of 5.00D-06s
+
+
+ Saving state for mp2 with suffix hess
+        ./h2o_freq.movecs
+
+  
+ initial hessian
+
+ zero matrix
+
+  
+ atom:   1 xyz: 1(+) wall time:       0.3      date:  Sat May  4 08:32:29 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       0.3s
+
+
+ Starting SCF solution at       0.3s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754185338
+      One electron energy =   -115.830488776531
+      Two electron energy =     32.335713193241
+ Nuclear repulsion energy =      8.841021397951
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653754185338
+          Correlation energy          -0.032368792726
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686122978065
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.008000    0.000019    0.000135
+ Y       0.000000    0.000000    0.000000
+ Z       0.000000   -1.081620   -1.028187
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.001000   0.000000   0.267248    0.000665   0.000000  -0.036339
+   2 H       1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+   3 H      -1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+
+ atom:   1 xyz: 1(-) wall time:       0.7      date:  Sat May  4 08:32:29 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       0.7s
+
+
+ Starting SCF solution at       0.7s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754185338
+      One electron energy =   -115.830488776531
+      Two electron energy =     32.335713193241
+ Nuclear repulsion energy =      8.841021397951
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653754185338
+          Correlation energy          -0.032368792726
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686122978065
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X      -0.008000   -0.000019   -0.000135
+ Y       0.000000    0.000000    0.000000
+ Z       0.000000   -1.081620   -1.028187
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O      -0.001000   0.000000   0.267248   -0.000665   0.000000  -0.036339
+   2 H       1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+   3 H      -1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+
+ atom:   1 xyz: 2(+) wall time:       1.1      date:  Sat May  4 08:32:29 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       1.1s
+
+
+ Starting SCF solution at       1.1s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754524302
+      One electron energy =   -115.830486259656
+      Two electron energy =     32.335712115619
+ Nuclear repulsion energy =      8.841019619735
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653754524302
+          Correlation energy          -0.032368799057
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686123323359
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000    0.000000    0.000000
+ Y       0.008000   -0.000009    0.000031
+ Z       0.000000   -1.081620   -1.028187
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.001000   0.267248    0.000000  -0.000027  -0.036338
+   2 H       1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+   3 H      -1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+
+ atom:   1 xyz: 2(-) wall time:       1.4      date:  Sat May  4 08:32:30 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       1.4s
+
+
+ Starting SCF solution at       1.4s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754524302
+      One electron energy =   -115.830486259656
+      Two electron energy =     32.335712115619
+ Nuclear repulsion energy =      8.841019619735
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653754524302
+          Correlation energy          -0.032368799057
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686123323359
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000    0.000000    0.000000
+ Y      -0.008000    0.000009   -0.000031
+ Z       0.000000   -1.081620   -1.028187
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000  -0.001000   0.267248    0.000000   0.000027  -0.036338
+   2 H       1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+   3 H      -1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+
+ atom:   1 xyz: 3(+) wall time:       1.8      date:  Sat May  4 08:32:30 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       1.8s
+
+
+ Starting SCF solution at       1.8s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653760170257
+      One electron energy =   -115.825711568057
+      Two electron energy =     32.334098161136
+ Nuclear repulsion energy =      8.837853236664
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653760170257
+          Correlation energy          -0.032399174688
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686159344945
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000    0.000000    0.000000
+ Y       0.000000    0.000000    0.000000
+ Z       0.008000   -1.081258   -1.027709
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.268248    0.000000   0.000000  -0.035726
+   2 H       1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+   3 H      -1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+
+ atom:   1 xyz: 3(-) wall time:       2.1      date:  Sat May  4 08:32:30 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       2.2s
+
+
+ Starting SCF solution at       2.2s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653748235376
+      One electron energy =   -115.835265794628
+      Two electron energy =     32.337328000014
+ Nuclear repulsion energy =      8.844189559238
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7565
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653748235376
+          Correlation energy          -0.032338430062
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686086665438
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000    0.000000    0.000000
+ Y       0.000000    0.000000    0.000000
+ Z      -0.008000   -1.081983   -1.028665
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.266248    0.000000   0.000000  -0.036950
+   2 H       1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+   3 H      -1.336238   0.000000  -1.068990    0.000000   0.000000   0.000000
+
+ atom:   3 xyz: 1(+) wall time:       2.5      date:  Sat May  4 08:32:31 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       2.5s
+
+
+ Starting SCF solution at       2.5s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653689673485
+      One electron energy =   -115.832802543113
+      Two electron energy =     32.336367620711
+ Nuclear repulsion energy =      8.842745248917
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7565
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653689673485
+          Correlation energy          -0.032361442917
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686051116402
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.001000    0.000490    0.000432
+ Y       0.000000    0.000000    0.000000
+ Z       0.000000   -1.081653   -1.028238
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.267248   -0.000333   0.000000  -0.036603
+   2 H       1.336238   0.000000  -1.068990   -0.072059   0.000000   0.018128
+   3 H      -1.335238   0.000000  -1.068990    0.072392   0.000000   0.018475
+
+ atom:   3 xyz: 1(-) wall time:       2.9      date:  Sat May  4 08:32:31 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       2.9s
+
+
+ Starting SCF solution at       2.9s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653818968676
+      One electron energy =   -115.828174232516
+      Two electron energy =     32.335058204811
+ Nuclear repulsion energy =      8.839297059029
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653818968676
+          Correlation energy          -0.032376140830
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686195109506
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X      -0.001000   -0.000491   -0.000433
+ Y       0.000000    0.000000    0.000000
+ Z       0.000000   -1.081588   -1.028136
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.267248    0.000333   0.000000  -0.036074
+   2 H       1.336238   0.000000  -1.068990   -0.071933   0.000000   0.018210
+   3 H      -1.337238   0.000000  -1.068990    0.071601   0.000000   0.017864
+
+ atom:   3 xyz: 2(+) wall time:       3.2      date:  Sat May  4 08:32:32 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       3.2s
+
+
+ Starting SCF solution at       3.2s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754534722
+      One electron energy =   -115.830487167486
+      Two electron energy =     32.335712446486
+ Nuclear repulsion energy =      8.841020186278
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653754534722
+          Correlation energy          -0.032368792366
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686123327088
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000    0.000000    0.000000
+ Y       0.001000    0.000505    0.000485
+ Z       0.000000   -1.081620   -1.028187
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.267248    0.000000   0.000014  -0.036338
+   2 H       1.336238   0.000000  -1.068990   -0.071996   0.000020   0.018169
+   3 H      -1.336238   0.001000  -1.068990    0.071996  -0.000034   0.018169
+
+ atom:   3 xyz: 2(-) wall time:       3.6      date:  Sat May  4 08:32:32 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       3.6s
+
+
+ Starting SCF solution at       3.6s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754534722
+      One electron energy =   -115.830487167486
+      Two electron energy =     32.335712446486
+ Nuclear repulsion energy =      8.841020186278
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653754534722
+          Correlation energy          -0.032368792366
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686123327088
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000    0.000000    0.000000
+ Y      -0.001000   -0.000505   -0.000485
+ Z       0.000000   -1.081620   -1.028187
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.267248    0.000000  -0.000014  -0.036338
+   2 H       1.336238   0.000000  -1.068990   -0.071996  -0.000020   0.018169
+   3 H      -1.336238  -0.001000  -1.068990    0.071996   0.000034   0.018169
+
+ atom:   3 xyz: 3(+) wall time:       4.0      date:  Sat May  4 08:32:32 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       4.0s
+
+
+ Starting SCF solution at       4.0s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653751385899
+      One electron energy =   -115.832876917533
+      Two electron energy =     32.336520375604
+ Nuclear repulsion energy =      8.842605156030
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7565
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653751385899
+          Correlation energy          -0.032353606162
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686104992061
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000   -0.000014   -0.000052
+ Y       0.000000    0.000000    0.000000
+ Z       0.001000   -1.081302   -1.027926
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.267248   -0.000347   0.000000  -0.036644
+   2 H       1.336238   0.000000  -1.068990   -0.071955   0.000000   0.018176
+   3 H      -1.336238   0.000000  -1.067990    0.072302   0.000000   0.018468
+
+ atom:   3 xyz: 3(-) wall time:       4.3      date:  Sat May  4 08:32:33 2013
+
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = ./h2o_freq.movecs
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Forming initial guess at       4.3s
+
+
+ Starting SCF solution at       4.3s
+
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653757353321
+      One electron energy =   -115.828099859655
+      Two electron energy =     32.334905511592
+ Nuclear repulsion energy =      8.839436994743
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+                   NWChem MP2 Semi-direct Energy/Gradient Module
+                   ---------------------------------------------
+
+
+                              H2O+ : STO-3G mp2 freq
+
+
+  Basis functions       =      7
+  Molecular orbitals    =      7
+  Frozen core           =      0
+  Frozen virtuals       =      0
+  Active alpha occupied =      5
+  Active beta occupied  =      4
+  Active alpha virtual  =      2
+  Active beta virtual   =      3
+  Use MO symmetry       = F
+  Use skeleton AO sym   = F
+
+  AO/Fock/Back tols     =   1.0D-09  1.0D-09  1.0D-09
+
+
+          -------------------------------------------
+          SCF energy                 -74.653757353321
+          Correlation energy          -0.032383977196
+          Singlet pairs                0.000000000000
+          Triplet pairs                0.000000000000
+          Total MP2 energy           -74.686141330517
+          -------------------------------------------
+
+
+ CPHF converged to   6.2D-05 in    6 iters
+
+                Dipole Moments (a.u.)
+                --------------
+         Nuclear       SCF       SCF+MP2
+       ----------- ----------- -----------
+ X       0.000000    0.000014    0.000052
+ Y       0.000000    0.000000    0.000000
+ Z      -0.001000   -1.081939   -1.028448
+
+
+
+                         mp2 ENERGY GRADIENTS
+
+    atom               coordinates                        gradient
+                 x          y          z           x          y          z
+   1 O       0.000000   0.000000   0.267248    0.000346   0.000000  -0.036032
+   2 H       1.336238   0.000000  -1.068990   -0.072037   0.000000   0.018162
+   3 H      -1.336238   0.000000  -1.069990    0.071691   0.000000   0.017870
+
+  
+  finite difference hessian delta =   1.000000000000000E-003
+
+              1        2        3        4        5        6        7        8
+    1    0.6654   0.0000   0.0000  -0.3327   0.0000   0.3463  -0.3327   0.0000
+    2    0.0000  -0.0272   0.0000   0.0000   0.0136   0.0000   0.0000   0.0136
+    3    0.0000   0.0000   0.6122   0.2644   0.0000  -0.3061  -0.2644   0.0000
+    4   -0.3327   0.0000   0.2644   0.3957   0.0000  -0.3054  -0.0630   0.0000
+    5    0.0000   0.0136   0.0000   0.0000  -0.0337   0.0000   0.0000   0.0201
+    6    0.3463   0.0000  -0.3061  -0.3054   0.0000   0.2993  -0.0409   0.0000
+    7   -0.3327   0.0000  -0.2644  -0.0630   0.0000  -0.0409   0.3957   0.0000
+    8    0.0000   0.0136   0.0000   0.0000   0.0201   0.0000   0.0000  -0.0337
+    9   -0.3463   0.0000  -0.3061   0.0409   0.0000   0.0068   0.3054   0.0000
+
+              9      
+    1   -0.3463
+    3   -0.3061
+    4    0.0409
+    6    0.0068
+    7    0.3054
+    9    0.2993
+  
+
+  finite difference derivative dipole; delta =   1.000000000000000E-003
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.1349     [    0.6482]
+ d_dipole_x/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,x> =     0.4325     [    2.0775]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =     0.0522     [    0.2508]
+ d_dipole_x/<atom=   3,x> =     0.4325     [    2.0775]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =    -0.0522     [   -0.2508]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =     0.0305     [    0.1467]
+ d_dipole_y/<atom=   1,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   2,y> =     0.4847     [    2.3283]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,y> =     0.4847     [    2.3283]
+ d_dipole_y/<atom=   3,z> =     0.0000     [    0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.4776     [    2.2941]
+ d_dipole_z/<atom=   2,x> =     0.0511     [    0.2455]
+ d_dipole_z/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   2,z> =     0.2612     [    1.2548]
+ d_dipole_z/<atom=   3,x> =    -0.0511     [   -0.2455]
+ d_dipole_z/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   3,z> =     0.2612     [    1.2548]
+  
+  
+  triangle hessian written to ./h2o_freq.hess
+  derivative dipole written to ./h2o_freq.fd_ddipole
+
+ Deleting state for mp2 with suffix hess
+        ./h2o_freq.movecs
+
+
+
+  Vibrational analysis via the FX method 
+
+  See chapter 2 in "Molecular Vibrations" by Wilson, Decius and Cross
+
+  Vib: Default input used 
+
+  Nuclear Hessian passed symmetry test 
+
+
+
+ ---------------------------- Atom information ----------------------------
+     atom    #        X              Y              Z            mass
+ --------------------------------------------------------------------------
+    O        1  0.0000000D+00  0.0000000D+00  2.6724761D-01  1.5994910D+01
+    H        2  1.3362381D+00  0.0000000D+00 -1.0689904D+00  1.0078250D+00
+    H        3 -1.3362381D+00  0.0000000D+00 -1.0689904D+00  1.0078250D+00
+ --------------------------------------------------------------------------
+
+
+
+
+          ----------------------------------------------------
+          MASS-WEIGHTED NUCLEAR HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          ----------------------------------------------------
+
+
+              1           2           3           4           5           6           7           8           9
+   ----- ----- ----- ----- -----
+    1   4.16031D+01
+    2   0.00000D+00-1.70021D+00
+    3   0.00000D+00 0.00000D+00 3.82723D+01
+    4  -8.28693D+01 0.00000D+00 6.58643D+01 3.92632D+02
+    5   0.00000D+00 3.38669D+00 0.00000D+00 0.00000D+00-3.34770D+01
+    6   8.62568D+01 0.00000D+00-7.62364D+01-3.03010D+02 0.00000D+00 2.96936D+02
+    7  -8.28693D+01 0.00000D+00-6.58643D+01-6.24970D+01 0.00000D+00-4.06183D+01 3.92632D+02
+    8   0.00000D+00 3.38669D+00 0.00000D+00 0.00000D+00 1.99850D+01 0.00000D+00 0.00000D+00-3.34770D+01
+    9  -8.62568D+01 0.00000D+00-7.62364D+01 4.06183D+01 0.00000D+00 6.77475D+00 3.03010D+02 0.00000D+00 2.96936D+02
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+                 (Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ Frequency      -1188.58     -974.82     -633.60       -4.35        0.56        1.08
+ 
+           1     0.00000     0.05577     0.00000     0.00000     0.00000    -0.23563
+           2     0.00000     0.00000    -0.08365     0.00000     0.23563     0.00000
+           3     0.00000     0.00000     0.00000    -0.23563     0.00000     0.00000
+           4     0.00000    -0.44250     0.00000     0.00000     0.00000    -0.23564
+           5     0.70436     0.00000     0.66377     0.00000     0.23563     0.00000
+           6     0.00000    -0.52501     0.00000    -0.23563     0.00000    -0.00001
+           7     0.00000    -0.44250     0.00000     0.00000     0.00000    -0.23564
+           8    -0.70436     0.00000     0.66377     0.00000     0.23563     0.00000
+           9     0.00000     0.52501     0.00000    -0.23563     0.00000     0.00001
+
+                    7           8           9
+ 
+ Frequency       1738.93     4247.30     4294.27
+ 
+           1     0.00000     0.00000    -0.06235
+           2     0.00000     0.00000     0.00000
+           3    -0.06477     0.05293     0.00000
+           4     0.44572     0.54539     0.49476
+           5     0.00000     0.00000     0.00000
+           6     0.51397    -0.42004    -0.46956
+           7    -0.44572    -0.54539     0.49476
+           8     0.00000     0.00000     0.00000
+           9     0.51397    -0.42004     0.46956
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||         Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1    -1188.576 ||       0.000               0.000             0.000
+    2     -974.821 ||      -2.066               0.000             0.000
+    3     -633.598 ||       0.000               3.079             0.000
+    4       -4.353 ||       0.000               0.000             1.132
+    5        0.557 ||       0.000               1.132             0.000
+    6        1.083 ||      -1.132               0.000             0.000
+    7     1738.928 ||       0.000               0.000             1.360
+    8     4247.300 ||       0.000               0.000            -0.665
+    9     4294.267 ||       1.780               0.000             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||                 Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1    -1188.576 ||    0.000000           0.000         0.000       0.000
+    2     -974.821 ||    0.184981           4.268       180.328      16.664
+    3     -633.598 ||    0.410820           9.478       400.488      37.010
+    4       -4.353 ||    0.055533           1.281        54.136       5.003
+    5        0.557 ||    0.055523           1.281        54.126       5.002
+    6        1.083 ||    0.055528           1.281        54.131       5.002
+    7     1738.928 ||    0.080185           1.850        78.168       7.224
+    8     4247.300 ||    0.019161           0.442        18.679       1.726
+    9     4294.267 ||    0.137306           3.168       133.853      12.369
+ ----------------------------------------------------------------------------
+
+
+
+
+
+        Vibrational analysis via the FX method 
+  --- with translations and rotations projected out ---
+  --- via the Eckart algorithm                      ---
+ Projected Nuclear Hessian trans-rot subspace norm:8.4741D-33
+                         (should be close to zero!) 
+
+
+From the projected analysis 
+The Zero-Point Energy (Kcal/mol) =          14.74255953
+
+ center of mass
+ --------------
+ x =   0.00000000 y =   0.00000000 z =   0.11770266
+
+ moments of inertia (a.u.)
+ ------------------
+           3.196225286295           0.000000000000           0.000000000000
+           0.000000000000           6.795233176450           0.000000000000
+           0.000000000000           0.000000000000           3.599007890155
+
+ Rotational Constants
+ --------------------
+ A=  18.834772 cm-1  ( 27.098430 K)
+ B=  16.726881 cm-1  ( 24.065712 K)
+ C=   8.859177 cm-1  ( 12.746095 K)
+
+
+ Temperature                      =   298.15K
+ frequency scaling parameter      =   1.0000
+
+ Zero-Point correction to Energy  =   14.731 kcal/mol  (  0.023476 au)
+ Thermal correction to Energy     =   16.509 kcal/mol  (  0.026309 au)
+ Thermal correction to Enthalpy   =   17.101 kcal/mol  (  0.027252 au)
+
+ Total Entropy                    =   45.349 cal/mol-K
+   - Translational                =   34.593 cal/mol-K (mol. weight =  18.0106)
+   - Rotational                   =   10.752 cal/mol-K (symmetry #  =        2)
+   - Vibrational                  =    0.004 cal/mol-K
+
+ Cv (constant volume heat capacity) =    5.991 cal/mol-K
+   - Translational                  =    2.979 cal/mol-K
+   - Rotational                     =    2.979 cal/mol-K
+   - Vibrational                    =    0.032 cal/mol-K
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+             (Projected Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ P.Frequency        0.00        0.00        0.00        0.00        0.00        0.00
+ 
+           1     0.00000     0.00000     0.00000    -0.23631     0.02158    -0.05005
+           2     0.25004     0.00000     0.00000     0.00000     0.00000     0.00000
+           3     0.00000     0.00000     0.00000    -0.00001    -0.21640    -0.09324
+           4     0.00000     0.00000     0.00000    -0.23009    -0.18125     0.42068
+           5     0.00000     0.99611     0.00000     0.00000     0.00000     0.00000
+           6     0.00000     0.00000     0.00000     0.00621    -0.41923     0.37749
+           7     0.00000     0.00000     0.00000    -0.23009    -0.18125     0.42068
+           8     0.00000     0.00000     0.99611     0.00000     0.00000     0.00000
+           9     0.00000     0.00000     0.00000    -0.00623    -0.01357    -0.56397
+
+                    7           8           9
+ 
+ P.Frequency     1738.92     4247.29     4323.27
+ 
+           1     0.00000     0.00000    -0.06088
+           2     0.00000     0.00000     0.00000
+           3    -0.06477     0.05293     0.00000
+           4     0.44572     0.54539     0.48307
+           5     0.00000     0.00000     0.00000
+           6     0.51397    -0.42004    -0.48307
+           7    -0.44572    -0.54539     0.48307
+           8     0.00000     0.00000     0.00000
+           9     0.51397    -0.42004     0.48307
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||    Projected Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1        0.000 ||       0.000               0.037             0.000
+    2        0.000 ||       0.000               2.319             0.000
+    3        0.000 ||       0.000               2.319             0.000
+    4        0.000 ||       1.106               0.000             0.000
+    5        0.000 ||       0.841               0.000             1.040
+    6        0.000 ||      -1.952               0.000             0.448
+    7     1738.915 ||       0.000               0.000             1.360
+    8     4247.295 ||       0.000               0.000             0.665
+    9     4323.272 ||       1.725               0.000             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||           Projected Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1        0.000 ||    0.000058           0.001         0.057       0.005
+    2        0.000 ||    0.233142           5.379       227.279      21.003
+    3        0.000 ||    0.233142           5.379       227.279      21.003
+    4        0.000 ||    0.053029           1.223        51.696       4.777
+    5        0.000 ||    0.077485           1.788        75.536       6.980
+    6        0.000 ||    0.173793           4.010       169.422      15.656
+    7     1738.915 ||    0.080185           1.850        78.168       7.224
+    8     4247.295 ||    0.019161           0.442        18.679       1.726
+    9     4323.272 ||    0.129041           2.977       125.795      11.625
+ ----------------------------------------------------------------------------
+
+
+
+ vib:animation  F
+
+ Task  times  cpu:        1.8s     wall:        4.6s
+ Summary of allocated global arrays
+-----------------------------------
+  No active global arrays
+
+
+
+                         GA Statistics for process    0
+                         ------------------------------
+
+       create   destroy   get      put      acc     scatter   gather  read&inc
+calls: 8056     8056     3.00e+04 1.38e+04 9290     1582        0        0     
+number of processes/call 1.00e+00 1.00e+00 1.00e+00 1.00e+00 0.00e+00
+bytes total:             3.25e+06 1.40e+06 6.50e+05 1.39e+05 0.00e+00 0.00e+00
+bytes remote:            0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+Max memory consumed for GA by this process: 15104 bytes
+MA_summarize_allocated_blocks: starting scan ...
+MA_summarize_allocated_blocks: scan completed: 0 heap blocks, 0 stack blocks
+MA usage statistics:
+
+	allocation statistics:
+					      heap	     stack
+					      ----	     -----
+	current number of blocks	         0	         0
+	maximum number of blocks	        23	        51
+	current total bytes		         0	         0
+	maximum total bytes		   1054624	  22509200
+	maximum total K-bytes		      1055	     22510
+	maximum total M-bytes		         2	        23
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+
+
+
+                                     CITATION
+                                     --------
+                Please cite the following reference when publishing
+                           results obtained with NWChem:
+
+                 M. Valiev, E.J. Bylaska, N. Govind, K. Kowalski,
+              T.P. Straatsma, H.J.J. van Dam, D. Wang, J. Nieplocha,
+                        E. Apra, T.L. Windus, W.A. de Jong
+                 "NWChem: a comprehensive and scalable open-source
+                  solution for large scale molecular simulations"
+                      Comput. Phys. Commun. 181, 1477 (2010)
+                           doi:10.1016/j.cpc.2010.04.018
+
+                              AUTHORS & CONTRIBUTORS
+                              ----------------------
+      E. J. Bylaska, W. A. de Jong, N. Govind, K. Kowalski, T. P. Straatsma,
+     M. Valiev, H. J. J. van Dam, D. Wang, E. Apra, T. L. Windus, J. Hammond,
+     J. Autschbach, P. Nichols, S. Hirata, M. T. Hackler, Y. Zhao, P.-D. Fan,
+      R. J. Harrison, M. Dupuis, D. M. A. Smith, K. Glaesemann, J. Nieplocha,
+      V. Tipparaju, M. Krishnan, A. Vazquez-Mayagoitia, L. Jensen, M. Swart,
+      Q. Wu, T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown,
+             G. Cisneros, G. I. Fann, H. Fruchtl, J. Garza, K. Hirao,
+        R. Kendall, J. A. Nichols, K. Tsemekhman, K. Wolinski, J. Anchell,
+       D. Bernholdt, P. Borowski, T. Clark, D. Clerc, H. Dachsel, M. Deegan,
+        K. Dyall, D. Elwood, E. Glendening, M. Gutowski, A. Hess, J. Jaffe,
+        B. Johnson, J. Ju, R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield,
+    X. Long, B. Meng, T. Nakajima, S. Niu, L. Pollack, M. Rosing, G. Sandrone,
+       M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe, A. Wong, Z. Zhang.
+
+ Total times  cpu:        1.8s     wall:        4.8s

@@ -1,0 +1,142 @@
+<Aug16-2024> <10:48:35>  AMS 2024.102  RunTime: Aug16-2024 10:48:35  ShM Nodes: 1  Procs: 10
+<Aug16-2024> <10:48:37>  ADF 2024.102  RunTime: Aug16-2024 10:48:37  ShM Nodes: 1  Procs: 10
+<Aug16-2024> <10:48:37>  *** (NO TITLE) ***
+<Aug16-2024> <10:48:39>  DIRAC 2024.102  RunTime: Aug16-2024 10:48:39  ShM Nodes: 1  Procs: 1
+<Aug16-2024> <10:48:40>  Fluorine (DZ)
+<Aug16-2024> <10:48:40>  Net Charge: 0 (Nuclei minus Electrons)
+<Aug16-2024> <10:48:40>  Symmetry  : ATOM
+<Aug16-2024> <10:48:40>  Coordinates
+<Aug16-2024> <10:48:40>     Atom         X           Y           Z   (Angstrom)
+<Aug16-2024> <10:48:40>     1.F         0.000000    0.000000    0.000000
+<Aug16-2024> <10:48:40>  >>>> CORORT
+<Aug16-2024> <10:48:40>  >>>> CLSMAT
+<Aug16-2024> <10:48:40>  >>>> ORTHON
+<Aug16-2024> <10:48:40>  >>>> GENPT
+<Aug16-2024> <10:48:40>  Block Length= 115
+<Aug16-2024> <10:48:40>  >>>> PTBAS
+<Aug16-2024> <10:48:40>  >>>> CYCLE
+<Aug16-2024> <10:48:40>  CalcFitR12Fit
+<Aug16-2024> <10:48:40>  CalcFitCoeff
+<Aug16-2024> <10:48:40>              |Error|         MaxErr       Wt(A-DIIS)
+<Aug16-2024> <10:48:40>      1      0.00000000      0.00000000
+<Aug16-2024> <10:48:40>      2      7.49866092      5.35928142
+<Aug16-2024> <10:48:40>      3      3.81598347      2.32184544    100.0
+<Aug16-2024> <10:48:40>      4      1.45235527      0.70408188    100.0
+<Aug16-2024> <10:48:40>      5      1.22133499      0.64972609    100.0
+<Aug16-2024> <10:48:40>      6      0.16077416      0.07938672     79.2
+<Aug16-2024> <10:48:40>      7      0.10626352      0.05490715     54.5
+<Aug16-2024> <10:48:40>      8      0.01655192      0.00846371      7.5
+<Aug16-2024> <10:48:40>      9      0.00099093      0.00051334      0.0
+<Aug16-2024> <10:48:40>     10      0.00001934      0.00001199      0.0
+<Aug16-2024> <10:48:40>     11      0.00000104      0.00000048      0.0
+<Aug16-2024> <10:48:40>     12      0.00000001      0.00000000      0.0
+<Aug16-2024> <10:48:40>  SCF converged
+<Aug16-2024> <10:48:41>     13      0.00000000      0.00000000      0.0
+<Aug16-2024> <10:48:41>  >>>> POPAN
+<Aug16-2024> <10:48:41>  >>>> DEBYE
+<Aug16-2024> <10:48:41>  *** adf ***
+<Aug16-2024> <10:48:41>  Net Charge: 0 (Nuclei minus Electrons)
+<Aug16-2024> <10:48:41>  Spin polar: 1 (Spin_A minus Spin_B electrons)
+<Aug16-2024> <10:48:41>  Symmetry  : ATOM
+<Aug16-2024> <10:48:41>  >>>> FRAGM
+<Aug16-2024> <10:48:41>  Coordinates
+<Aug16-2024> <10:48:41>     Atom         X           Y           Z   (Angstrom)
+<Aug16-2024> <10:48:41>     1.F         0.000000    0.000000    0.000000
+<Aug16-2024> <10:48:41>  >>>> CORORT
+<Aug16-2024> <10:48:41>  >>>> CLSMAT
+<Aug16-2024> <10:48:41>  >>>> ORTHON
+<Aug16-2024> <10:48:41>  >>>> GENPT
+<Aug16-2024> <10:48:41>  Block Length= 114
+<Aug16-2024> <10:48:41>  >>>> PTBAS
+<Aug16-2024> <10:48:41>  >>>> CYCLE
+<Aug16-2024> <10:48:41>  CalcFitR12Fit
+<Aug16-2024> <10:48:41>  CalcFitCoeff
+<Aug16-2024> <10:48:41>              |Error|         MaxErr       Wt(A-DIIS)
+<Aug16-2024> <10:48:41>      1      0.00018682      0.00004257
+<Aug16-2024> <10:48:41>      2      0.09575504      0.03072570    100.0
+<Aug16-2024> <10:48:41>      3      0.02952954      0.00955239    100.0
+<Aug16-2024> <10:48:41>      4      0.01208317      0.00440112      3.4
+<Aug16-2024> <10:48:41>      5      0.00150714      0.00068922      0.0
+<Aug16-2024> <10:48:41>      6      0.00002444      0.00001191      0.0
+<Aug16-2024> <10:48:41>      7      0.00000496      0.00000147      0.0
+<Aug16-2024> <10:48:41>      8      0.00000025      0.00000010      0.0
+<Aug16-2024> <10:48:41>  SCF converged
+<Aug16-2024> <10:48:42>      9      0.00000001      0.00000000      0.0
+<Aug16-2024> <10:48:42>  WARNING: partially occupied orbitals
+<Aug16-2024> <10:48:42>   Solutions with partially occupied orbitals may not be
+<Aug16-2024> <10:48:42>   lowest in energy. You might consider lowering the
+<Aug16-2024> <10:48:42>   symmetry in the input and explicitly specifying integer
+<Aug16-2024> <10:48:42>   occupations. In that case always check that you obtain
+<Aug16-2024> <10:48:42>   an aufbau solution.
+<Aug16-2024> <10:48:42>  >>>> TOTEN
+<Aug16-2024> <10:48:42>  >>>> POPAN
+<Aug16-2024> <10:48:42>  >>>> DEBYE
+<Aug16-2024> <10:48:42>  >>>> AMETS
+<Aug16-2024> <10:48:42>   Bond Energy          -0.04934171 a.u.
+<Aug16-2024> <10:48:42>   Bond Energy          -1.34265628 eV
+<Aug16-2024> <10:48:42>   Bond Energy         -30.96       kcal/mol
+<Aug16-2024> <10:48:42>  >>>> POPUL
+<Aug16-2024> <10:48:42>  >>>> ENGRAD
+<Aug16-2024> <10:48:42>  CalcFitCoeff for gradient
+<Aug16-2024> <10:48:42>  Numerical nuclear derivatives calculation:
+<Aug16-2024> <10:48:42>   -> Hessian
+<Aug16-2024> <10:48:42>   -> Dipole moment gradients
+<Aug16-2024> <10:48:42>  Recalculating central point on continuous PES
+<Aug16-2024> <10:48:45>      *** adf_CentralGeo ***
+<Aug16-2024> <10:48:45>      Net Charge: 0 (Nuclei minus Electrons)
+<Aug16-2024> <10:48:45>      Spin polar: 1 (Spin_A minus Spin_B electrons)
+<Aug16-2024> <10:48:45>      Symmetry  : NOSYM
+<Aug16-2024> <10:48:45>      >>>> FRAGM
+<Aug16-2024> <10:48:45>      Coordinates
+<Aug16-2024> <10:48:45>         Atom         X           Y           Z   (Angstrom)
+<Aug16-2024> <10:48:45>         1.F         0.000000    0.000000    0.000000
+<Aug16-2024> <10:48:45>      >>>> CORORT
+<Aug16-2024> <10:48:45>      >>>> CLSMAT
+<Aug16-2024> <10:48:45>      >>>> ORTHON
+<Aug16-2024> <10:48:45>      >>>> GENPT
+<Aug16-2024> <10:48:45>      Block Length= 100
+<Aug16-2024> <10:48:45>      >>>> PTBAS
+<Aug16-2024> <10:48:45>      >>>> CYCLE
+<Aug16-2024> <10:48:45>      CalcFitR12Fit
+<Aug16-2024> <10:48:45>      CalcFitCoeff
+<Aug16-2024> <10:48:45>      inconsistent nsym on restart file, restart orbitals not used
+<Aug16-2024> <10:48:45>                  |Error|         MaxErr       Wt(A-DIIS)
+<Aug16-2024> <10:48:45>          1      0.00000000      0.00000000
+<Aug16-2024> <10:48:45>          2      0.00000000      0.00000000    100.0
+<Aug16-2024> <10:48:45>      SCF converged
+<Aug16-2024> <10:48:45>          3      0.00000000      0.00000000    100.0
+<Aug16-2024> <10:48:45>      >>>> TOTEN
+<Aug16-2024> <10:48:45>      >>>> POPAN
+<Aug16-2024> <10:48:45>      >>>> DEBYE
+<Aug16-2024> <10:48:46>  Number of displacements: 6 (total), 6 (calc), 0 (skipped)
+<Aug16-2024> <10:48:46>  Parallel evaluation by 6 groups of up to 2 processes with static scheduling
+<Aug16-2024> <10:48:46>  Displacement: 1/6
+<Aug16-2024> <10:48:49>      *** adf-NumNuclDerivs_displ1 ***
+<Aug16-2024> <10:48:49>      >>>> FRAGM
+<Aug16-2024> <10:48:49>      Coordinates
+<Aug16-2024> <10:48:49>         Atom         X           Y           Z   (Angstrom)
+<Aug16-2024> <10:48:49>         1.F         0.002646    0.000000    0.000000
+<Aug16-2024> <10:48:49>      >>>> CORORT
+<Aug16-2024> <10:48:49>      >>>> CLSMAT
+<Aug16-2024> <10:48:49>      >>>> ORTHON
+<Aug16-2024> <10:48:49>      >>>> GENPT
+<Aug16-2024> <10:48:49>      Block Length= 100
+<Aug16-2024> <10:48:49>      >>>> PTBAS
+<Aug16-2024> <10:48:49>      >>>> CYCLE
+<Aug16-2024> <10:48:49>      CalcFitR12Fit
+<Aug16-2024> <10:48:49>      CalcFitCoeff
+<Aug16-2024> <10:48:49>      using orbital data from restart file
+<Aug16-2024> <10:48:49>                  |Error|         MaxErr       Wt(A-DIIS)
+<Aug16-2024> <10:48:49>          1      0.00000000      0.00000000
+<Aug16-2024> <10:48:49>          2      0.00000000      0.00000000    100.0
+<Aug16-2024> <10:48:49>      SCF converged
+<Aug16-2024> <10:48:51>          3      0.00000000      0.00000000    100.0
+<Aug16-2024> <10:48:51>      >>>> TOTEN
+<Aug16-2024> <10:48:51>      >>>> POPAN
+<Aug16-2024> <10:48:51>      >>>> DEBYE
+<Aug16-2024> <10:48:51>      >>>> ENGRAD
+<Aug16-2024> <10:48:51>      CalcFitCoeff for gradient
+<Aug16-2024> <10:48:52>  Numerical nuclear derivatives calculation complete.
+<Aug16-2024> <10:48:52>  PES point character: Geometry corresponds to a local minimum on the PES.
+<Aug16-2024> <10:48:52>  NORMAL TERMINATION
+Job freq has finished

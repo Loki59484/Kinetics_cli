@@ -1,0 +1,25 @@
+***,optimisation
+memory,100,m;
+GPRINT,orbitals,civector,basis
+nosym
+ANGSTROM
+orient,mass
+geomtyp=xyz
+geometry={
+3
+
+C  0.0000000000    .0000000000    .0159630000
+N  0.0000000000    .0000000000   1.1689880000
+H  0.0000000000    .0000000000  -1.0539500000
+}
+
+basis=STO-3G;
+endbasis;
+
+{rhf;wf,14,1,0;}
+optg,savexyz=hcn-thermo.xyz;
+frequencies,analytical;
+thermo
+put,molden,test.molden;
+---;
+

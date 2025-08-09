@@ -1,0 +1,12 @@
+ $CONTRL SCFTYP=RHF RUNTYP=HESSIAN DFTTYP=B3LYP  $END
+ $BASIS GBASIS=N31 NGAUSS=6 NDFUNC=1 NPFUNC=1 $END
+ $DATA 
+acetonitrile geometry and frequencies using RHF with 6-31G(d,p) and MP2
+C1
+C   6.0     0.00    0.00     0.00
+H   1.0     0.99    0.33    -0.38
+C   6.0     0.00   -0.00     1.46
+H   1.0    -0.21   -1.02    -0.37
+H   1.0    -0.78    0.70    -0.37
+N   7.0    -0.00    0.00     2.62
+ $END

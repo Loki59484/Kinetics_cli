@@ -1,0 +1,60 @@
+**POINT resultats ccsd(t)/cc-pVDZ//MP2:cc-pvDZ ts avec h en dessous
+*IRC
+0.0
+*END
+*MASS (in uma)
+91.03952
+*END
+*FREQUENCIES (in cm-1)
+1778.1551i 
+68.2231               
+130.1603
+185.3104               
+216.8739               
+295.8916
+408.2380               
+546.7721               
+630.0821
+677.1886               
+797.3948              
+ 929.4716
+983.4851              
+1124.9403              
+1133.9927
+1179.3696              
+1204.8082              
+1238.0432
+ 1253.8298              
+1354.3953              
+1379.4485
+1448.6720              
+1475.2638              
+1489.1257
+ 1503.0337              
+1510.0044             
+ 1718.8772
+3013.7179              
+3072.3057              
+3089.9243
+3164.3214              
+3204.1032             
+ 3209.926
+*END
+*LINEAR
+not linear
+*END
+*NUMBER OF SYMMETRY
+1
+*END
+*MOMENT OF INERTIA (in au)
+294.77510 
+658.21516 
+841.48962
+*END
+*POTENTIAL ENERGY (in hartree)
+-343.206882
+*END
+*ELECTRONIC DEGENERACY
+2
+*END
+**END

@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Mozilla/4.79 [fr] (X11; U; Linux 2.4.18-3 i686) [Netscape]">
+</head>
+
+<body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 153);" link="#ff0000" alink="#ff0000" vlink="#ff0000">
+<font color="#ff0000"><font size="+1"><a href="userIndex.html#2%204%20calculation">Back
+to Summary</a></font></font>
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+<p><b><i><font color="#000000"><font size="+2">II.2 <u>How to generate the KiSThelP input file directly from Gamess output</u></font></font></i></b>
+
+<br><br>
+After having created a new session (menu Session/New), run a new calculation using the menu Calculation/Atom,Molecule <br>(or
+Calculation/k / TST, or . . .) and select your gamess outputfile upon request.
+<br><br>
+
+Prior to that, you must run a frequency job to get all necessary data to be read next by KiSThelP. This can be done by <br> inserting the
+keyword ** RUNTYP=HESSIAN ** in the gamess $CONTRL input section.
+
+<br><br>
+A Gamess parser has been designed to analyze Gamess outputfiles up to release Gamess2018. More recent versions might be parsed, but without guarantees.
+
+<br><br>
+When comparing KiSThelP thermochemistry analysis with Gamess's one, caution: 
+
+<ul>
+
+<li> The default pressure taken by gamess is 1.0 atm. Using KiSThelP you can screen interactively any pressure, but default is 1.0 bar.
+
+<li> The default temperature taken by gamess is 298.15K. Using KiSThelP you can screen interactively any temperature, but default is 298.0K.
+
+<li> Make sure KiSThelP has read the proper Rotational symmetry number. Anyway, this value can be changed interactively directly from the graphical interface.
+ 
+</ul>
+
+
+All the data used by KiSThelP to get the thermochemistry results can be interactively changed directly from the KiSThelP graphical interface:
+
+
+<ul>
+
+<li> The Mass (amu).
+
+<li> The potential energy (hartree).
+
+<li> The Electronic degeneracy.
+
+<li> The Rotational Symmetry number.
+
+<li> The inertia moments (a.u.).
+
+<li> The real vib. frequencies (cm-1).
+
+</ul>
+
+Also, a scaling factor applied to vib. frequencies can applied through the KiSThelP graphical interface. Default value in KiSThelP is 1.0.
+</body>

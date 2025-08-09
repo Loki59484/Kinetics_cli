@@ -1,0 +1,4 @@
+3reverse -0.19450
+2reverse -0.12966
+1reverse -0.06483
+

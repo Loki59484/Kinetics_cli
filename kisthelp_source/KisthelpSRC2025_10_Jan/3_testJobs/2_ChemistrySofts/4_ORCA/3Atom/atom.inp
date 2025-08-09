@@ -1,0 +1,5 @@
+! RKS BP def2-TZVP RI def2/J
+! TightSCF Grid5 NoFinalGrid
+* xyz 0 2
+F      0.000000    0.000000    0.000000
+*

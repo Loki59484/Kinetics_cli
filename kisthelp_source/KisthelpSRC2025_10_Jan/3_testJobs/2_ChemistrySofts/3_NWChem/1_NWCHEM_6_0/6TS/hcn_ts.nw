@@ -1,0 +1,13 @@
+start TS _freq
+geometry units angstroms
+C   -0.6451630708  -0.0592749086   0.0000000000
+N    0.5757965236  -0.0281902285   0.0000000000
+H   -0.3184701482   1.0974610142   0.0000000000
+end
+basis
+ * library sto-3g
+end
+scf 
+end
+title "TS : STO-3G freq "
+task scf freq

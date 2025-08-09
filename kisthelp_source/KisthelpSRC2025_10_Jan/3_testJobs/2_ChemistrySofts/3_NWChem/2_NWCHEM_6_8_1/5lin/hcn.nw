@@ -1,0 +1,14 @@
+start hcn_freq
+geometry units angstroms
+C   0.0000000000    .0000000000  -0.5186980000
+N   0.0000000000    .0000000000   0.6741570000
+H   0.0000000000    .0000000000  -1.6069070000
+end
+basis
+ * library sto-3g
+end
+dft
+xc b3lyp
+end
+title "HCN : STO-3G B3LYP freq /   GEOM g09 "
+task dft freq

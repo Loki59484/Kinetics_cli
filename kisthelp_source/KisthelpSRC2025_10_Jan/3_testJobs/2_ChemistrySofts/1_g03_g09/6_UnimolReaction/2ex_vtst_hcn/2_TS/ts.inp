@@ -1,0 +1,16 @@
+%NPROC=1
+%MEM=800MB
+#P B3LYP 6-311G** OPT=(TS, maxcyc=100, noeigentest, calcall)
+# POP=full GFINPUT IOP(6/7=3) FREQ
+
+ essai ts
+
+0 1
+ c
+ n   1 nc2
+ h    1 hc3         2 hcn3
+
+nc2         1.1834
+hc3         1.1847
+hcn3         73.000
+

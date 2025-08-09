@@ -1,0 +1,24 @@
+***,optimisation
+memory,100,m;
+GPRINT,orbitals,civector,basis
+nosym
+ANGSTROM
+orient,mass
+geomtyp=xyz
+geometry={
+3
+
+C     0.000000     0.000000     0.000000
+H     0.000000     0.000000     1.089000
+H     1.026720     0.000000    -0.362996
+}
+
+basis=STO-3G;
+endbasis;
+
+{uhf;wf,8,1,2;}
+optg,savexyz=ch2.xyz;
+frequencies,analytical;
+put,molden,test.molden;
+---;
+

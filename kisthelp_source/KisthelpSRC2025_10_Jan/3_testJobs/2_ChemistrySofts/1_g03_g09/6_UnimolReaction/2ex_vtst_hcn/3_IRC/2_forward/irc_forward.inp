@@ -1,0 +1,19 @@
+%NPROC=1
+%MEM=800MB
+#P B3LYP 6-311G** IRC=(reverse, maxpoints=10, stepsize=2, calcfc)
+# POP=full GFINPUT IOP(6/7=3) 
+
+ irc forward
+
+0 1
+ c
+ n   1 nc2     
+ h    1 hc3         2 hcn3      
+
+
+nc2         1.1838  
+hc3         1.191    
+hcn3        71.7135  
+
+ 
+ 

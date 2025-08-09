@@ -1,0 +1,660 @@
+
+
+ Parallel Execution: Process Information
+ ==============================================================================
+ Rank   Node Name                              NodeID   MyNodeRank  NodeMaster
+    0   M3MAX.local                               0          0          0
+    1   M3MAX.local                               0          1         -1
+    2   M3MAX.local                               0          2         -1
+    3   M3MAX.local                               0          3         -1
+    4   M3MAX.local                               0          4         -1
+    5   M3MAX.local                               0          5         -1
+    6   M3MAX.local                               0          6         -1
+    7   M3MAX.local                               0          7         -1
+    8   M3MAX.local                               0          8         -1
+    9   M3MAX.local                               0          9         -1
+ ==============================================================================
+
+
+May use up to 17578MB of RAM as shared memory on node 0
+
+ *******************************************************************************
+ *                                                                             *
+ *  --------------------------------                                           *
+ *   Amsterdam Modeling Suite (AMS)              2024.102                      *
+ *  --------------------------------                                           *
+ *                                               r122055 2024-06-07            *
+ *                                                                             *
+ *                                                                             *
+ *                              =================                              *
+ *                              |               |                              *
+ *                              |     A M S     |                              *
+ *                              |               |                              *
+ *                              =================                              *
+ *                                                                             *
+ *                                                                             *
+ *   Online information and documentation:  https://www.scm.com/support/       *
+ *   E-mail:  support@scm.com   info@scm.com                                   *
+ *                                                                             *
+ *   Scientific publications using AMS results must be properly referenced     *
+ *   See the User Manuals (or the web site) for recommended citations          *
+ *   The terms and conditions of the End User License Agreement apply to       *
+ *   the use of AMS, https://www.scm.com/license-terms/                        *
+ *                                                                             *
+ **********************  x86_64_darwin_intel / openmpi  ************************
+ 
+ Licensed to: Prof. Eric HENON / Institut de Chimie Moléculaire de Reims / Reims / FRANCE 2024-12-09 12:22:38
+ SCM User ID: u27163
+  
+ AMS 2024.102  RunTime: Jan07-2025 17:40:34  ShM Nodes: 1  Procs: 10
+
+ AMS jobname: ams
+ AMS jobid  : 1416709027
+
+ Start   directory: /Users/henon1/ENSEIGNEMENT/5_LMD_2024_2028/14_CH0801/2_Fascicule/1TP/4_H3SiSiH+/2_reaction2/_reactantb/tmp.henon1.24079.0.noindex/
+ Results directory: /Users/henon1/ENSEIGNEMENT/5_LMD_2024_2028/14_CH0801/2_Fascicule/1TP/4_H3SiSiH+/2_reaction2/_reactantb/mol.results/
+ Scratch directory: /tmp/amstmp_ams_kid0.1416709027/
+
+
+ Communication costs MPI_COMM_WORLD:      0.963 usec per message,   0.0115 usec per 8-byte item
+ Communication costs for intra-node:      0.815 usec per message,   0.0122 usec per 8-byte item
+
+ RNG seed: 759722829 1697545421 -1296234684 1276777215 1024462893 -1905748623 -333876793 -57341013
+
+       ***************************
+       *  GEOMETRY OPTIMIZATION  *
+       ***************************
+
+Optimization Method                    Quasi Newton
+Optimization Coordinates               Delocalized Coordinates
+Optimize lattice                       F
+ 
+ ------------------------------------------------------
+ Convergence criteria (Hartree,Angstrom)
+ ------------------------------------------------------
+ Maximum gradient               0.001000000000
+ Maximum rms gradient           0.000666666667
+ Maximum step allowed           0.010000000000
+ Maximum rms step allowed       0.006666666667
+ Maximum energy change allowe   0.000060000000
+ Maximum stress energy allowe   0.000500000000
+ 
+Initial model Hessian                  Calculated initial Hessian
+ 
+------------------------------------
+Quasi-Newton Optimizer Parameters
+------------------------------------
+Hessian Update Method                  BFGS
+Maximum number of steps                  250
+First GDIIS cycle                          0
+Maximum GDIIS vectors                      0
+Trust radius (bohr)                        0.200000
+Trust radius varies                        T
+Constraints converged at all steps         T
+Use projector                              T
+ 
+ Rigid motions settings for: old optimizer
+ Atomic rotations (x,y,z):     T T T
+ Atomic translations (x,y,z):  T T T
+ Tolerance:                   1.000000000000000E-006
+ 
+--------
+Geometry
+--------
+Formula: H4Si2
+Atoms
+  Index Symbol   x (angstrom)   y (angstrom)   z (angstrom)
+      1     Si    -1.61429196    -1.24638458    -0.11778794
+      2     Si     0.62297485    -0.77804853     0.33702205
+      3      H    -1.52353526    -1.88347273    -1.45742927
+      4      H     1.22275656     0.31682761    -0.52044080
+      5      H    -2.20181274    -2.12465172     0.92070803
+      6      H    -2.19725851     0.12123557    -0.15887534
+ 
+Total System Charge             1.00000
+Bonding info available!
+ 
+ 
+-------------------------
+DFTB Engine configuration
+-------------------------
+DFTB Resources dir                     /Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3
+ 
+SCC convergence enabled.
+Maximum SCC cycles                       500
+SCC charge convergence                   0.000000010000
+SCC Multi Stepper from                 DFTB/default2023.inc
+Spin polarization                      T
+Orbital-dependent SCC                  F
+Orbital fill strategy                  Aufbau
+Defined number of unpaired electrons       1
+Use of symmetry                        T
+Radial function extrapolation method   Auto
+
+---------------------
+Periodic DFTB options
+---------------------
+ kpoints config
+ grid method with params
+Assume insulator                        F
+Ewald tolerance                    1.00E-10
+Ewald range factor                  2.00
+
+ BZStruct config
+ ---------------
+ Enabled        T
+ Automatic      T
+ CalcFatBands   T
+ useSymmetry    T
+ deltaK          0.100000000000000     
+ 
+ 
+----------------------------------------------------------------------
+Geometry Convergence after Step   1       (Hartree/Angstrom,Angstrom)
+----------------------------------------------------------------------
+current energy                               -3.51199864 Hartree
+energy change                      -3.51199864     0.00006000    F
+constrained gradient max            0.00070476     0.00100000    T
+constrained gradient rms            0.00038332     0.00066667    T
+gradient max                        0.00070476
+gradient rms                        0.00038332
+cart. step max                      0.05124889     0.01000000    F
+cart. step rms                      0.02588549     0.00666667    F
+ 
+ 
+--------
+Geometry
+--------
+Formula: H4Si2
+Atoms
+  Index Symbol   x (angstrom)   y (angstrom)   z (angstrom)
+      1     Si    -1.61607792    -1.23920426    -0.10994482
+      2     Si     0.60633471    -0.74039327     0.37327378
+      3      H    -1.48980808    -1.85382766    -1.45764098
+      4      H     1.23746901     0.26557872    -0.56879520
+      5      H    -2.20292352    -2.14283120     0.90657717
+      6      H    -2.22616126     0.11618329    -0.14027321
+ 
+Total System Charge             1.00000
+Bonding info available!
+ 
+
+ dE(predicted):    -0.35042E-04, dE(actual):    -0.30309E-04, Trust radius:    0.400000, all in a.u.
+ 
+----------------------------------------------------------------------
+Geometry Convergence after Step   2       (Hartree/Angstrom,Angstrom)
+----------------------------------------------------------------------
+current energy                               -3.51202895 Hartree
+energy change                      -0.00003031     0.00006000    T
+constrained gradient max            0.00014834     0.00100000    T
+constrained gradient rms            0.00005568     0.00066667    T
+gradient max                        0.00014834
+gradient rms                        0.00005568
+cart. step max                      0.03975693     0.01000000    F
+cart. step rms                      0.01858202     0.00666667    F
+ 
+ 
+--------
+Geometry
+--------
+Formula: H4Si2
+Atoms
+  Index Symbol   x (angstrom)   y (angstrom)   z (angstrom)
+      1     Si    -1.61726297    -1.23634386    -0.10697817
+      2     Si     0.59276866    -0.70571646     0.39909076
+      3      H    -1.47319604    -1.83402019    -1.46055799
+      4      H     1.25121456     0.22582179    -0.59898743
+      5      H    -2.20026586    -2.15567646     0.89759534
+      6      H    -2.24442541     0.11144080    -0.12696576
+ 
+Total System Charge             1.00000
+Bonding info available!
+ 
+
+ dE(predicted):    -0.60998E-05, dE(actual):    -0.54070E-05, Trust radius:    0.400000, all in a.u.
+ 
+---------------------------------------------------------
+Geometry Convergence after Step   3       ** CONVERGED **
+---------------------------------------------------------
+current energy                               -3.51203435 Hartree
+energy change                      -0.00000541     0.00006000    T
+constrained gradient max            0.00011134     0.00100000    T
+constrained gradient rms            0.00006048     0.00066667    T
+gradient max                        0.00011134
+gradient rms                        0.00006048
+cart. step max                      0.00407832     0.01000000    T
+cart. step rms                      0.00213205     0.00666667    T
+ 
+Geometry optimization converged
+
+Optimized geometry:
+ 
+--------
+Geometry
+--------
+Formula: H4Si2
+Atoms
+  Index Symbol   x (angstrom)   y (angstrom)   z (angstrom)
+      1     Si    -1.61726297    -1.23634386    -0.10697817
+      2     Si     0.59276866    -0.70571646     0.39909076
+      3      H    -1.47319604    -1.83402019    -1.46055799
+      4      H     1.25121456     0.22582179    -0.59898743
+      5      H    -2.20026586    -2.15567646     0.89759534
+      6      H    -2.24442541     0.11144080    -0.12696576
+ 
+Total System Charge             1.00000
+Bonding info available!
+ 
+Performing a single point calculation on the final geometry ...
+
+------------------------
+DFTB Database file paths
+------------------------
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/metainfo.yaml
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/additional_parameters.yaml
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/additional_parameters.yaml
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/Si-Si.skf
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/Si.yaml
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/H-H.skf
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/H.yaml
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/Si-Si.skf
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/Si-H.skf
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/H-Si.skf
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/H-H.skf
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/Si.rkf
+/Applications/AMS2024.102.app/Contents/Resources/amshome/atomicdata/DFTB/DFTB.org/pbc-0-3/H.rkf
+
+Numerical atomic basis set definitions found for all atom types.
+ * Reference
+
+E. Rauls, R. Gutierrez, J. Elsner, Th. Frauenheim
+"Stoichiometric and non-stoichiometric (1010) and (1120) surfaces in 2H–SiC: a theoretical study"
+Sol. State Comm. 111, 459 (1999)
+
+C. Koehler, Z. Hajnal, P. Deak, Th. Frauenheim, S. Suhai
+"Theoretical investigation of carbon defects and diffusion in alpha-quartz"
+Phys. Rev. B 64, 85333 (2001)
+[Citation reference for Si-O]
+
+A. Sieck, Th. Frauenheim, K. A. Jackson
+"Shape transition of medium-sized neutral silicon clusters"
+Phys. Stat. Sol. (B) 240, 537 (2003)
+
+C. Koehler, Th. Frauenheim
+"Molecular dynamics simulations of CFx (x = 2, 3) molecules at Si3N4 and SiO2 surfaces"
+Surf. Sci. 600, 453 (2006)
+[Citation reference for F - (Si,O,N,C,H)]
+
+C. Koehler, G. Seifert, Th. Frauenheim
+"Density functional based calculations for Fe_n (n <= 32)"
+Chem. Phys. 309, 23 (2005)
+[Citation reference for Fe-Fe]
+
+A. Sieck, Ph.D. Thesis, University of Paderborn, 2000
+[Citation reference for Si-Si]
+
+
+Estimated upper bound for memory consumption:    0.055 MiB
+
+Number of basis functions:           12
+cyc=  1 err=1.8E-09 method=1 nvec= 1 mix=0.075 e=    0.0000
+ Evaluation was successful
+Scanning modes in range provided by user.
+
+
+    =====================
+     CALCULATION RESULTS
+    =====================
+
+Energy (hartree)            -3.51203435
+
+Gradients (hartree/bohr)
+  Index   Atom            d/dx            d/dy            d/dz
+      1     Si   -0.0000400434   -0.0000589670    0.0000378445
+      2     Si    0.0000383812    0.0000567865   -0.0000449099
+      3      H    0.0000239535    0.0000199584   -0.0000012651
+      4      H   -0.0000281662   -0.0000340793    0.0000244302
+      5      H   -0.0000204157   -0.0000041914   -0.0000103793
+      6      H    0.0000262906    0.0000204928   -0.0000057203
+
+ -----------------------
+ Normal Mode Frequencies
+ -----------------------
+
+ Index   Frequency (cm-1)   Red. mass (u)  F const (Ha/Bohr^2)   Intensity (km/mol)
+     7            94.0634          1.0523             0.000352               1.8432
+     8           327.2700          1.0952             0.004439              12.2191
+     9           344.0170          1.4902             0.006674              19.8173
+    10           403.4981          2.6899             0.016573              14.4532
+    11           542.1257          1.1508             0.012799               0.2876
+    12           655.4407          1.0843             0.017629             113.8459
+    13           778.4076          1.0345             0.023720              17.8946
+    14           792.3242          1.0383             0.024668              18.8370
+    15          2007.5794          1.0428             0.159058              51.4297
+    16          2204.1815          1.0172             0.187023               3.9501
+    17          2244.2630          1.0536             0.200817              21.2614
+    18          2280.5377          1.0510             0.206856              28.3064
+
+ Zero-point energy (Hartree):     0.0289
+
+ ------------
+ Normal Modes
+ ------------
+
+ Number of removed rigid normal modes: 6
+ 
+ Mode:     7      Frequency (cm-1):       94.0634     Intensity (km/mol):        1.8432
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.003028   0.007620   0.005206
+     2    Si       0.012249  -0.031069  -0.020933
+     3     H       0.044645  -0.261904   0.129724
+     4     H      -0.271680   0.687695   0.462627
+     5     H      -0.078883   0.196585   0.134098
+     6     H       0.049945   0.028542  -0.289859
+ 
+ Mode:     8      Frequency (cm-1):      327.2700     Intensity (km/mol):       12.2191
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.015703   0.039490   0.027106
+     2    Si       0.008478  -0.020784  -0.014023
+     3     H       0.661926   0.003720   0.101462
+     4     H       0.011656  -0.042856  -0.032573
+     5     H       0.095255  -0.244017  -0.167974
+     6     H      -0.568279  -0.236112  -0.264100
+ 
+ Mode:     9      Frequency (cm-1):      344.0170     Intensity (km/mol):       19.8173
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si       0.091814   0.009460   0.038712
+     2    Si      -0.084392  -0.021846  -0.016356
+     3     H       0.365678   0.185708  -0.016702
+     4     H      -0.577344  -0.007822  -0.328161
+     5     H      -0.378845   0.014470  -0.237960
+     6     H       0.384475   0.151480  -0.037770
+ 
+ Mode:    10      Frequency (cm-1):      403.4981     Intensity (km/mol):       14.4532
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.156024  -0.052836  -0.014055
+     2    Si       0.177470   0.042188   0.041982
+     3     H       0.221462   0.143768  -0.063692
+     4     H      -0.425383   0.068310  -0.351938
+     5     H      -0.625526  -0.047636  -0.289708
+     6     H       0.234113   0.131158  -0.069908
+ 
+ Mode:    11      Frequency (cm-1):      542.1257     Intensity (km/mol):        0.2876
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.004034  -0.029619   0.041433
+     2    Si      -0.018743   0.021775  -0.043192
+     3     H       0.199098   0.167797  -0.030237
+     4     H       0.661686  -0.007685   0.398153
+     5     H      -0.457126  -0.025132  -0.230111
+     6     H       0.228619   0.082751  -0.088964
+ 
+ Mode:    12      Frequency (cm-1):      655.4407     Intensity (km/mol):      113.8459
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.049041  -0.008393  -0.015856
+     2    Si      -0.009444  -0.000667  -0.004546
+     3     H       0.572037   0.022876   0.045962
+     4     H       0.066768  -0.000356   0.038679
+     5     H       0.496787  -0.005950   0.292081
+     6     H       0.487918   0.234912   0.189620
+ 
+ Mode:    13      Frequency (cm-1):      778.4076     Intensity (km/mol):       17.8946
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.006111  -0.019799   0.022962
+     2    Si       0.001521  -0.002679   0.004626
+     3     H      -0.150955   0.606560  -0.273546
+     4     H      -0.035886   0.000146  -0.018948
+     5     H       0.251712   0.009725   0.183095
+     6     H       0.062539   0.007554  -0.656423
+ 
+ Mode:    14      Frequency (cm-1):      792.3242     Intensity (km/mol):       18.8370
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si       0.010485  -0.025549  -0.018828
+     2    Si       0.001112  -0.002853  -0.002198
+     3     H       0.243316   0.333307  -0.141722
+     4     H      -0.004241   0.015248   0.011235
+     5     H      -0.246473   0.601868   0.406760
+     6     H      -0.314527  -0.161992   0.307399
+ 
+ Mode:    15      Frequency (cm-1):     2007.5794     Intensity (km/mol):       51.4297
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si       0.000963   0.000080   0.000450
+     2    Si      -0.016730  -0.022088   0.023010
+     3     H      -0.001590   0.002088   0.003427
+     4     H       0.443600   0.613839  -0.651962
+     5     H      -0.005178  -0.000773  -0.001852
+     6     H       0.000852  -0.004197  -0.000861
+ 
+ Mode:    16      Frequency (cm-1):     2204.1815     Intensity (km/mol):        3.9501
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.011488   0.004888  -0.013851
+     2    Si      -0.000112   0.000129  -0.000245
+     3     H      -0.070411   0.271887   0.608369
+     4     H      -0.003190  -0.002664   0.002304
+     5     H       0.116682   0.199343  -0.223641
+     6     H       0.278910  -0.607832   0.004263
+ 
+ Mode:    17      Frequency (cm-1):     2244.2630     Intensity (km/mol):       21.2614
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.012811   0.032286   0.022121
+     2    Si      -0.000110   0.000281   0.000193
+     3     H       0.060594  -0.278993  -0.645471
+     4     H      -0.000582   0.001336   0.000922
+     5     H      -0.004592   0.012078   0.007950
+     6     H       0.303267  -0.638485   0.017189
+ 
+ Mode:    18      Frequency (cm-1):     2280.5377     Intensity (km/mol):       28.3064
+ Index  Atom      ---- Displacements (x/y/z) ----
+     1    Si      -0.010741  -0.024588   0.029675
+     2    Si       0.000168  -0.000215   0.000411
+     3     H       0.017147  -0.098294  -0.195740
+     4     H      -0.000499   0.001684  -0.002872
+     5     H       0.376502   0.589385  -0.642426
+     6     H      -0.099626   0.195749   0.005878
+
+ Vibrational polarizability tensor (a.u.):
+                  X                   Y                   Z
+ X              62.21238            11.71067           -15.88113
+ Y              11.71067            58.57328             9.96738
+ Z             -15.88113             9.96738            37.15615
+
+ Isotropic =      52.647    atomic units
+
+PES point character: Geometry corresponds to a local minimum on the PES.
+
+
+
+
+ ============================
+ Statistical Thermal Analysis  ***  ideal gas assumed  ***
+ ============================
+  
+ Pressure:                  1.000000 atm.
+ Temperature:             298.150000 K
+
+
+
+ Moments of Inertia [amu*bohr^2] and principal axis
+ ==================================================
+
+          28.5449        319.0130        325.3949
+ ------------------------------------------------
+          -0.9503         -0.0191          0.3109
+          -0.2467         -0.5632         -0.7887
+          -0.1901          0.8261         -0.5305
+
+
+ The rotational contribution to the molecular entropy includes
+ a term, dependent on the symmetry number sigma. The results 
+ reported below were computed using sigma = 1, determined from
+ the point group symmetry of the input geometry (NOSYM). 
+ If this is not the correct symmetry, try symmetrizing the molecule before
+ running the calculation (note: linear molecules should be aligned along one
+ of the Cartesian axes).
+ Contributions from frequencies below 20 1/cm are not included in vibrational sums.
+ Their contributions, if any, are reported separately.
+
+
+     Temp                                                        Transl      Rotat     Vibrat     Total
+     ----                                                        ------      -----     ------     -----
+
+     298.15   Entropy (cal/mol-K):                               38.195     22.609      8.357     69.161
+              Nuclear Internal Energy (kcal/mol):                 0.889      0.889     19.562     21.339
+              Constant Volume Heat Capacity (cal/mol-K):          2.981      2.981     10.074     16.036
+          (c) Constant Volume Heat Capacity (cal/mol-K):          2.981      2.981      9.525     15.486
+
+       Summary of energy terms
+                                                   hartree              eV         kcal/mol           kJ/mol
+                                      --------------------     -----------       ----------      -----------
+      Energy from Engine:               -3.512034353676364        -95.5673         -2203.84         -9220.84
+      Nuclear Internal Energy:           0.034005889112610          0.9253            21.34            89.28
+  (c) Nuclear Internal Energy:           0.033716125537853          0.9175            21.16            88.52
+      Internal Energy U:                -3.478028464563754        -94.6420         -2182.50         -9131.56
+      pV/n = RT:                         0.000944186013486          0.0257             0.59             2.48
+      Enthalpy H:                       -3.477084278550268        -94.6163         -2181.90         -9129.08
+      -T*S:                             -0.032860545739688         -0.8942           -20.62           -86.28
+  (c) -T*S:                             -0.032689809461531         -0.8895           -20.51           -85.83
+      Gibbs free energy:                -3.509944824289956        -95.5105         -2202.52         -9215.36
+ 
+ 
+ 
+  (c) The properties marked with this symbol have been corrected using 'low vibrational frequency free rotor
+      interpolation corrections'. For those terms all positive frequencies are used (also ones below 20 1/cm),
+      but the contribution to the partition function of small vibrational frequencies is modified as described
+      in the following paper:
+      S. Grimme, 'Supramolecular Binding Thermodynamics by Dispersion-Corrected Density Functional Theory'
+      (Chem. Eur. J. 2012, 18, 9955-9964)
+      Configuration: Dampener Frequency          :   100.000 1/cm
+                     Dampener Alpha              :     4.000
+                     Averaging Moment of Inertia : 1.000E-44 kg m2
+
+--------------
+Atomic charges
+--------------
+  Index   Atom    Charge
+      1     Si    0.4408
+      2     Si    0.6505
+      3      H   -0.0189
+      4      H   -0.0288
+      5      H   -0.0248
+      6      H   -0.0189
+
+
+-----------------------
+Molecular orbitals info
+-----------------------
+n orbitals:               12
+n spin:                    2
+
+                     spin-alpha   spin-beta
+HOMO (eV):             -11.4243    -12.7494
+LUMO (eV):             -10.4116    -10.9738
+HOMO-LUMO gap (eV):      1.0127      1.7756
+
+Smallest gap (eV):       0.4506
+
+          |======= spin-alpha =======|       |======= spin-beta ========|
+
+   Index   Energy (eV)    Occupation          Energy (eV)    Occupation
+      12       -1.8179         0.000              -1.6771         0.000       
+      11       -2.3752         0.000              -2.2505         0.000       
+      10       -3.5105         0.000              -3.3153         0.000       
+       9       -3.9096         0.000              -3.6696         0.000       
+       8       -5.3598         0.000              -5.0499         0.000       
+       7      -10.4116         0.000 < LUMO       -9.8345         0.000       
+       6      -11.4243         1.000 < HOMO      -10.9738         0.000 < LUMO
+       5      -13.0209         1.000             -12.7494         1.000 < HOMO
+       4      -13.3623         1.000             -13.2431         1.000       
+       3      -13.3669         1.000             -13.2497         1.000       
+       2      -16.9878         1.000             -16.6632         1.000       
+       1      -18.7833         1.000             -18.4778         1.000       
+ 
+--------------------
+Energy Decomposition
+--------------------
+Total Energy (hartree)                -3.51203435
+Total Energy (eV)                    -95.56731726
+Electronic Energy (hartree)           -3.62352442
+Coulomb Energy (hartree)               0.10946372
+Repulsion Energy (hartree)             0.00650506
+Spin Energy (hartree)                 -0.00447871
+ 
+----------------------
+Gradient Decomposition
+----------------------
+Total Gradients (hartree/bohr)
+  Index   Atom            d/dx            d/dy            d/dz
+      1     Si   -0.0000400434   -0.0000589670    0.0000378445
+      2     Si    0.0000383812    0.0000567865   -0.0000449099
+      3      H    0.0000239535    0.0000199584   -0.0000012651
+      4      H   -0.0000281662   -0.0000340793    0.0000244302
+      5      H   -0.0000204157   -0.0000041914   -0.0000103793
+      6      H    0.0000262906    0.0000204928   -0.0000057203
+ 
+Total Gradients (eV/angstrom)
+  Index   Atom            d/dx            d/dy            d/dz
+      1     Si   -0.0020591159   -0.0030322067    0.0019460398
+      2     Si    0.0019736425    0.0029200800   -0.0023093614
+      3      H    0.0012317408    0.0010263009   -0.0000650517
+      4      H   -0.0014483667   -0.0017524266    0.0012562505
+      5      H   -0.0010498197   -0.0002155297   -0.0005337266
+      6      H    0.0013519190    0.0010537820   -0.0002941506
+ 
+Electronic Gradients (hartree/bohr)
+  Index   Atom            d/dx            d/dy            d/dz
+      1     Si    0.0033389617    0.0005315801    0.0011266245
+      2     Si    0.0059876874   -0.0044994834    0.0102076428
+      3      H    0.0021503403   -0.0079092097   -0.0180161765
+      4      H    0.0048601238    0.0070644285   -0.0076567991
+      5      H   -0.0082031625   -0.0132309024    0.0145615754
+      6      H   -0.0081339506    0.0180435869   -0.0002228671
+ 
+Coulomb Gradients (hartree/bohr)
+  Index   Atom            d/dx            d/dy            d/dz
+      1     Si    0.0055195837    0.0012908901    0.0013143645
+      2     Si   -0.0050268706   -0.0015097959   -0.0007019943
+      3      H   -0.0001675504   -0.0001972637   -0.0003893209
+      4      H    0.0004643883    0.0004742095   -0.0004324085
+      5      H   -0.0004271792   -0.0003502125    0.0002638270
+      6      H   -0.0003623719    0.0002921725   -0.0000544679
+ 
+Repulsion Gradients (hartree/bohr)
+  Index   Atom            d/dx            d/dy            d/dz
+      1     Si   -0.0088985889   -0.0018814373   -0.0024031446
+      2     Si   -0.0009224355    0.0060660658   -0.0095505584
+      3      H   -0.0019588364    0.0081264318    0.0184042323
+      4      H   -0.0053526783   -0.0075727172    0.0081136377
+      5      H    0.0086099259    0.0135769235   -0.0148357817
+      6      H    0.0085226132   -0.0183152666    0.0002716147
+ 
+----------------
+Mulliken Charges
+----------------
+  Index   Atom          Charge      Population
+      1     Si    0.4408125685        3.559187
+      2     Si    0.6505337873        3.349466
+      3      H   -0.0188586038        1.018859
+      4      H   -0.0287860770        1.028786
+      5      H   -0.0247981548        1.024798
+      6      H   -0.0189035202        1.018904
+         Total    1.0000000000       11.000000
+ 
+------------------------
+Mulliken Spin Population
+------------------------
+  Index   Atom   Population Up Population Down
+      1     Si    1.8734309766    1.6857564549
+      2     Si    2.0551916199    1.2942745928
+      3      H    0.5191663545    0.4996922493
+      4      H    0.5273273300    0.5014587471
+      5      H    0.5060907397    0.5187074151
+      6      H    0.5187929793    0.5001105409
+ 
+
+Final PES point is a local minimum. Geometry optimization successful!
+
+
+AMS application finished. Exiting.
+NORMAL TERMINATION
+     Total cpu time:       0.97
+  Total system time:       0.81
+ Total elapsed time:       2.05

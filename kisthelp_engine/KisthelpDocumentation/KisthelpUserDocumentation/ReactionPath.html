@@ -1,0 +1,616 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <meta name="GENERATOR" content="Mozilla/4.73 [fr] (X11; I; Linux 2.2.15-4mdk i686) [Netscape]"><title>KiSThelP</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 153);" alink="#ff0000" link="#ff0000" vlink="#ff0000">
+<font color="#ff0000"><font size="+1"><a href="userIndex.html#1%202%20TS">Back to
+Summary</a></font></font>
+<p><b><i><font color="#000000"><font size="+2">I.2 <u>Description of
+KiSThelP
+Input File for a ReactionPath</u></font></font></i></b>: 
+<br>
+&nbsp;
+<br>&nbsp;
+<br>
+</p>
+<p><font size="+1">In order to perform a rate constant calculation, the user
+must prepare two (unimolecular) or three (bimolecular) files. For an unimolecular reaction one file need for the reactant and another one for the transition state.
+For a bimolecular reaction, two files are expected for the two reactants and one for the transition state. For reactant(s), the expected file format
+is exactly the same as the one used for Molecular System single calculations. For the transition state, a so-called 
+reactionpath .kinp input file must be supplied. This reactionpath .kinp file has a specific file format. It is important to note that in KiSThelP a transition
+state is considered as a reaction path involving only one point. Thus, if you want to compute TST rate constant,
+a reactionpath file must be supplied. Of course, for VTST calculations, this reactionpath file
+will include several path points. <BR> <BR>
+
+We focus here on the specific format of the reactionpath input file
+that slightly differs from the "Molecular" input file format. 
+</font></p>
+
+
+
+<p><font size="+1">The first way to build a ReactionPath input file is by manually writing an ASCII input file.
+Alternatively, it is to be noted that KiSThelP provides a "build reaction path" tool in the "Data" menu. Then, a 
+single ReactionPath.kinp file is built (<a href="dataMenu.html#buildFacility">see section II.2</a>).
+This is the easiest way to build  (automatically) a ReactionPath .kinp file from existing individual .kinp files or either quantum chemistry output files directly !</font><font size="+1">
+Using this possibility involves the following procedure:</font></p>
+<p><font size="+1">a) perform an IRC calculation</font></p>
+<p><font size="+1">b) perform a frequency calculation on each individual reaction path points, including the TS !</font></p>
+<p><font size="+1">c) run the <a href="dataMenu.html#buildFacility"> "build reaction path" facility ( see section II.2 </a>) to generate the reactionpath.kinp file, which will be used for VTST calculations next.<br></font></p>
+ 
+ <br> <br>
+
+<p><font size="+1"><br>
+A ReactionPath input file describes one (transition state) or&nbsp; more&nbsp; points along the reaction path.
+In the extrem case, this file reduces to the description of the transition state alone. For each point along
+the reaction path, the 7 keywords (MASS, FREQUENCIES,
+NUMBER OF SYMMETRY, LINEAR, MOMENT
+&nbsp;OF INERTIA, POTENTIAL ENERGY,
+ELECTRONIC DEGENERACY), the same as before for a molecular
+system,&nbsp; are wrapped into a new section entitled : **POINT ... **END. But additionnaly, a 8th keyword
+appears: *IRC, that tells KiSThelP the IRC coordinate of that point and that enables VTST calculations to be run.</font><br>
+<br>
+ <br>
+<p><b><i><font color="#ff0000"><font size="+1"><u>DIFFERENT SECTIONS</u>
+:</font></font></i></b>
+</p>
+
+<p><font color="#000000"><font size="+1">**POINT&nbsp;</font></font>
+</p>
+
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*IRC</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0.0 (signed reaction coordinate corresponding to the transition state point on
+the reaction path)</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*END</font></font>
+</p>
+
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*MASS</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+mass of the system in amu</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*END</font></font>
+</p>
+
+
+
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*FREQUENCIES</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+list of vibrational frequencies in cm-1, including the imaginary
+frequency</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*END<br>
+</font></font></p>
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *LINEAR</font></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+<font color="#000000"><font size="+1">only "linear" o</font></font><font color="#000000"><font size="+1">r "not
+linear" text values are allowed</font></font>
+here<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font color="#000000"><font size="+1">*END</font></font>
+</p>
+<p><font color="#000000"><font size="+1"></font></font>
+</p>
+
+
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*NUMBER OF SYMMETRY</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rotational symmetry number</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*END</font></font>
+</p>
+
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*MOMENT OF INERTIA</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font></font><font color="#000000"><font size="+1">list of
+moments of inertia in amu bohr**2</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*END</font></font>
+</p>
+
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*POTENTIAL ENERGY</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+electronic energy in hartree</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*END</font></font>
+</p>
+
+<p><font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*ELECTRONIC DEGENERACY</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+degeneracy of the electronic state</font></font>
+<br>
+<font color="#000000"><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*END</font></font>
+</p>
+
+<p><font color="#000000"><font size="+1">**END</font></font>
+<br>
+&nbsp;
+<br></p>
+<p>****** Remark 1 ******</p>
+
+
+<p>Though
+the "NUMBER OF SYMMETRY" section must always be
+<br>
+given, the reaction path degeneracy (given through GUI) will&nbsp; be
+used
+instead to<br>
+perform rate constant calculations. In this case (rate constant
+calculation),<br>
+the symetry number is unused in statistical calculations.<br>
+</p>
+
+
+<p>****** Remark 2 ******</p>
+
+
+<p>To account for deviations from the harmonic oscillator, a hindered
+rotor approach has been implemented in KiSThelP&nbsp; (HRDS treatment).<br>
+To perform such calculation on a selected vibrational mode, a second
+parameter (rotational energy barrier in kJ/mol) is required in addition
+<br>
+to the vibrational frequency number (<a href="molecularSystem.html#HRDS">see section I.1)</a>.
+</p>
+
+
+<p>*********************</p>
+ <br>
+<p><b><i><font color="#ff0000"><font size="+1"><u>EXAMPLE 1 for a
+Transition
+State</u> :</font></font></i></b>
+</p>
+
+<p><font color="#ff0000"><font size="+1">**POINT</font></font>
+<br>
+<font color="#ff0000"><font size="+1">*IRC</font></font>
+<font size="+1"><br>
+0.0<br>
+<span style="color: red;">*END</span><br>
+*MASS (in uma)<br>
+75.04460<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+3772.7857<br>
+3265.5143<br>
+3260.2959<br>
+3219.8950<br>
+3174.8060<br>
+3130.8936<br>
+1795.7441<br>
+1575.8614<br>
+1533.3768<br>
+1522.9003<br>
+1486.8323<br>
+1438.1602<br>
+1301.6499<br>
+1237.1175<br>
+1151.1885<br>
+1126.8853<br>
+990.9077<br>
+936.8436<br>
+895.1968<br>
+821.3156<br>
+725.8243<br>
+530.7972<br>
+489.6153<br>
+451.7419<br>
+338.7840<br>
+249.6141<br>
+182.3330<br>
+129.7635<br>
+41.1522<br>
+2272.1539i<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*MOMENT OF INERTIA (in au)<br>
+189.08579<br>
+640.69700<br>
+799.95573<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-268.09618214<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2</font><br>
+<font size="+1">*END</font>
+<br>
+<font color="#ff0000"><font size="+1">**END</font></font></p>
+<p><br>
+</p>
+<p><b><i><font color="#ff0000"><font size="+1"><u>EXAMPLE 2 for a Reaction Path</u> :</font></font></i></b></p>
+<p><span style="color: red;">**POINT</span><br style="color: red;">
+<span style="color: red;">*IRC</span><br>
+0.0<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+1770.0579i<br>
+570.0592<br>
+570.0614<br>
+1139.3232<br>
+1203.1477<br>
+1203.1480<br>
+1502.7396<br>
+1502.7400<br>
+1903.6500<br>
+3185.6870<br>
+3349.6264<br>
+3349.6268<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+11.92294961757795<br>
+30.48669371604351<br>
+30.48669371604351<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8323867<br>
+*END<br>
+<span style="color: red;">**END<br>
+</span><span style="color: red;">**POINT</span><br>
+<span style="color: red;">*IRC</span><br>
+-0.1<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+2114.0966i<br>
+545.2454<br>
+545.2486<br>
+1192.0494<br>
+1289.5267<br>
+1289.5271<br>
+1509.8776<br>
+1509.8786<br>
+1551.5818<br>
+3179.1802<br>
+3338.7423<br>
+3338.7467<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+11.889417921927286<br>
+30.071718150999292<br>
+30.07172316173638<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8333658<br>
+*END<br>
+**END<br>
+**POINT<br>
+*IRC<br>
+-0.2<br>
+*END<br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+1969.125i<br>
+450.7630<br>
+450.7636<br>
+1246.8886<br>
+1352.5269<br>
+1352.5270<br>
+1394.3540<br>
+1521.8283<br>
+1521.8288<br>
+3173.3135<br>
+3328.0834<br>
+3328.0878<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+11.859106454739242<br>
+29.798236748052844<br>
+29.798246588080772<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8352914<br>
+*END<br>
+<span style="color: red;">**END</span><br style="color: red;">
+<span style="color: red;">**POINT</span><br style="color: red;">
+<span style="color: red;">*IRC</span><br>
+-0.3<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+1329.825i<br>
+297.1806<br>
+297.1825<br>
+1321.2164<br>
+1387.2080<br>
+1392.9268<br>
+1392.9274<br>
+1540.1792<br>
+1540.1795<br>
+3168.2341<br>
+3317.8268<br>
+3317.8289<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+11.82726308294923<br>
+29.630046350884125<br>
+29.63005121551389<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8380552<br>
+*END<br>
+<span style="color: red;">**END</span><br style="color: red;">
+<span style="color: red;">**POINT</span><br style="color: red;">
+<span style="color: red;">*IRC</span><br>
+-0.4<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+198.0781i<br>
+105.8839i<br>
+105.8749i<br>
+1330.1773<br>
+1410.4263<br>
+1410.4268<br>
+1561.5494<br>
+1561.5496<br>
+1767.1986<br>
+3164.4650<br>
+3308.5387<br>
+3308.5430<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+11.789673900467806<br>
+29.566461320842393<br>
+29.566466164615896<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8412647<br>
+*END<br>
+<span style="color: red;">**END</span><br style="color: red;">
+<span style="color: red;">**POINT</span><br style="color: red;">
+<span style="color: red;">*IRC</span><br>
+0.1<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+1242.2258i<br>
+538.1267<br>
+538.1315<br>
+1086.7276<br>
+1093.4453<br>
+1093.4457<br>
+1498.5914<br>
+1498.5927<br>
+2458.3411<br>
+3192.4154<br>
+3360.0432<br>
+3360.0486<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+11.961791238427828<br>
+31.066591258301905<br>
+31.066601953834386<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8323049<br>
+*END<br>
+<span style="color: red;">**END</span><br style="color: red;">
+<span style="color: red;">**POINT</span><br style="color: red;">
+<span style="color: red;">*IRC</span><br>
+0.2<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+843.9706i<br>
+487.1358<br>
+487.1406<br>
+977.2909<br>
+977.2911<br>
+1038.8413<br>
+1496.1562<br>
+1496.1574<br>
+2985.7624<br>
+3199.4437<br>
+3368.8246<br>
+3368.8293<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+12.004385481520156<br>
+31.77531951968226<br>
+31.775325114230053<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8328432<br>
+*END<br>
+<span style="color: red;">**END</span><br style="color: red;">
+<span style="color: red;">**POINT</span><br style="color: red;">
+<span style="color: red;">*IRC</span><br>
+0.3<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+564.8542i<br>
+442.3524<br>
+442.3549<br>
+879.8362<br>
+879.8363<br>
+994.9133<br>
+1494.4878<br>
+1494.4883<br>
+3199.0251<br>
+3368.8540<br>
+3376.7781<br>
+3376.7800<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+12.047765887046097<br>
+32.59172289909308<br>
+32.59172289909308<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8337871<br>
+*END<br>
+<span style="color: red;">**END</span><br style="color: red;">
+<span style="color: red;">**POINT</span><br style="color: red;">
+<span style="color: red;">*IRC</span><br>
+0.4<br>
+<span style="color: red;">*END</span><br>
+*MASS (in amu)<br>
+17.03913<br>
+*END<br>
+*NUMBER OF SYMMETRY<br>
+1<br>
+*END<br>
+*FREQUENCIES (in cm-1)<br>
+320.1659i<br>
+405.5857<br>
+405.5921<br>
+800.3698<br>
+800.3702<br>
+953.9149<br>
+1493.3058<br>
+1493.3071<br>
+3204.8097<br>
+3383.4875<br>
+3383.4929<br>
+3635.4116<br>
+*END<br>
+*ELECTRONIC DEGENERACY<br>
+2<br>
+*END<br>
+*MOMENT OF INERTIA (in Amu.bohr**2)<br>
+12.090603115464381<br>
+33.465705324450965<br>
+33.465705324450965<br>
+*END<br>
+*LINEAR<br>
+not linear<br>
+*END<br>
+*POTENTIAL ENERGY (in hartree)<br>
+-40.8349497<br>
+*END<br>
+<span style="color: red;">**END</span><br>
+<br>
+</p>
+<p><br>
+</p>
+<p><br>
+</p>
+<p><b><i><font color="#ff0000"><font size="+1"><br>
+</font></font></i></b>
+</p>
+
+
+<p><font color="#ff0000"><font size="+1"><a href="userIndex.html#1%202%20TS">Back
+to Summary</a></font></font>
+</p>
+
+</body></html>

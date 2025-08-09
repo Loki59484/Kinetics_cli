@@ -1,0 +1,60 @@
+**POINT resultats ccsd(t)/cc-pVDZ//MP2:cc-pvDZ ts isomerisation 1-6
+*IRC
+0.0
+*END
+*MASS (in uma)
+91.03952
+*END
+*FREQUENCIES (in cm-1)
+   3217.53 
+      3207.31    
+      3123.82    
+      3060.44 
+   2997.03    
+   2988.72    
+   1588.02    
+   1499.38 
+   1474.74   
+    1471.21   
+     1445.65    
+     1422.50 
+   1367.37    
+   1342.28    
+   1304.80    
+   1259.82 
+   1224.39    
+   1186.63   
+    1160.84    
+    1131.11 
+   1087.92    
+   1055.68     
+   988.66     
+   969.15 
+    737.39    
+     650.46    
+      508.03     
+      499.02 
+    444.21     
+    372.44     
+    214.80     
+    175.82 
+  2174.16i 
+*END
+*LINEAR
+not linear
+*END
+*NUMBER OF SYMMETRY
+1
+*END
+*MOMENT OF INERTIA (in au)
+345.58016
+ 501.18894 
+ 762.35311
+*END
+*POTENTIAL ENERGY (in hartree)
+-343.214287
+*END
+*ELECTRONIC DEGENERACY
+2
+*END
+**END

@@ -1,0 +1,81 @@
+#------------------------------------------------------------------------------------
+# Copyright 2013  Sebastien Canneaux, Frederic Bohr and Eric Henon
+# 
+# KiSThelP is a chemical code for the calculation of thermodynamical and
+# kinetical properties from quantum chemical data. It is a NON-COMMERCIAL 
+# programm.
+#
+# The terms of the free license are as follow:
+#
+# KiSThelP can be used, modified and copied for NON-COMMERCIAL purpose,
+# provided that a reference to the authors appears in all copies 
+# and  associated documentation.
+# Anyone who receives a copy of KiSThelP, or a modified release of KiSThelP,
+# or a part of KiSThelP, has the right to redistribute copies, modified
+# or not of it, but without fee. Clearly, there is no right to sell co-
+# pies or modified copies, or part of KiSThelP program. In redistributed,
+# modified or unmodified form, all the conditions are granted for only 
+# NON-COMMERCIAL purpose.
+#
+#
+# Redistributions of the source code, or parts of the source codes, invol-
+# ves this copyright notice be put in the package, as well as
+# the disclaimer (see below). Redistribution of KiSThelP (or part of it) 
+# in binary form must be accompanied by this copyright notice in the 
+# documentation and/or other materials provided with the distribution.
+#
+#
+# There is no guarranty that KiSThelP software is bug-free. No consulting or
+# maintenance services are guaranted or implied. The authors are not  
+# liable for any damages suffered as a result of using, modifying or distri-
+# buting this software or its derivatives.
+#
+#------------------------------------------------------------------------------------
+ KiSThelP employs the Apache library which is distributed under the following terms:
+
+   Licensed under the Apache License, Version 2.0;
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+#------------------------------------------------------------------------------------
+ KiSThelP employs the JMathPlot library which is distributed under the following terms:
+
+BSD license
+
+Copyright © 2003, Yann RICHET All rights reserved.
+
+   Redistribution and use in source and binary forms, with or without modification, 
+   are permitted provided that the following conditions are met:
+
+    *
+      Redistributions of source code must retain the above copyright notice,
+      this list of conditions and the following disclaimer.
+    *
+      Redistributions in binary form must reproduce the above copyright notice,
+      this list of conditions and the following disclaimer in the documentation 
+      and/or other materials provided with the distribution.
+    *
+      Neither the name of JMATHTOOLS nor the names of its contributors may be 
+      used to endorse or promote products derived from this software without 
+      specific prior written permission.
+
+      THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS IS”
+      AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+      IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+      ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
+      LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+      CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+      SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+      INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+      CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+      ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
+      POSSIBILITY OF SUCH DAMAGE.
+#------------------------------------------------------------------------------------
+

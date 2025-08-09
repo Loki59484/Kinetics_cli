@@ -1,0 +1,28 @@
+# Compiled Java / Python
+*.class
+*.pyc
+__pycache__/
+bin/
+build/
+dist/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+
+# Chemistry Software / Job outputs
+*.logfile
+*.err
+*.pid
+*.rkf
+*.ams
+*.out~
+*.tbz2
+
+# Generated Documentation 
+kisthelp_engine/KisthelpDocumentation/KisthelpProgDocumentation/
+docs/_build/
+
+# OS generated files
+.DS_Store

@@ -1,0 +1,34 @@
+#!/bin/sh
+
+"$AMSBIN/ams" << eor
+
+Task GeometryOptimization
+Properties
+    NormalModes Yes
+End
+System
+    Atoms
+        C 2.638142758809876e-05 0.0 -0.0002164148200871373 
+        H -8.339458680849243e-05 0.0 1.083681266316322 
+        H 1.022661517161874 0.0 -0.3611803545760084 
+        H -0.5113022520013265 -0.8850352597011105 -0.3610717484601129 
+        H -0.5113022520013265 0.8850352597011105 -0.3610717484601129 
+    End
+    BondOrders
+         1 2 1.0
+         1 3 1.0
+         1 4 1.0
+         1 5 1.0
+    End
+End
+
+Engine ADF
+    Basis
+        Core None
+    End
+    XC
+        MetaGGA M06L
+    End
+EndEngine
+eor
+

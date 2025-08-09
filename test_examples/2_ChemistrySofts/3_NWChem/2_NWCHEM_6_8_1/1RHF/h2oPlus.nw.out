@@ -1,0 +1,924 @@
+ argument  1 = h2oPlus.nw
+                                         
+                                         
+
+
+              Northwest Computational Chemistry Package (NWChem) 6.8
+              ------------------------------------------------------
+
+
+                    Environmental Molecular Sciences Laboratory
+                       Pacific Northwest National Laboratory
+                                Richland, WA 99352
+
+                              Copyright (c) 1994-2017
+                       Pacific Northwest National Laboratory
+                            Battelle Memorial Institute
+
+             NWChem is an open-source computational chemistry package
+                        distributed under the terms of the
+                      Educational Community License (ECL) 2.0
+             A copy of the license is included with this distribution
+                              in the LICENSE.TXT file
+
+                                  ACKNOWLEDGMENT
+                                  --------------
+
+            This software and its documentation were developed at the
+            EMSL at Pacific Northwest National Laboratory, a multiprogram
+            national laboratory, operated for the U.S. Department of Energy
+            by Battelle under Contract Number DE-AC05-76RL01830. Support
+            for this work was provided by the Department of Energy Office
+            of Biological and Environmental Research, Office of Basic
+            Energy Sciences, and the Office of Advanced Scientific Computing.
+
+
+           Job information
+           ---------------
+
+    hostname        = romeologin1.ro18.urca
+    program         = /home/henon/lib/nwchem-6.8.1/bin/LINUX64/nwchem
+    date            = Thu Apr 11 18:14:36 2019
+
+    compiled        = Thu_Apr_11_18:01:01_2019
+    source          = /home/henon/lib/nwchem-6.8.1
+    nwchem branch   = 6.8.1
+    nwchem revision = v6.8-133-ge032219
+    ga revision     = 5.6.5
+    use scalapack   = F
+    input           = h2oPlus.nw
+    prefix          = h2o_freq.
+    data base       = ./h2o_freq.db
+    status          = startup
+    nproc           =        1
+    time left       =     -1s
+
+
+
+           Memory information
+           ------------------
+
+    heap     =   13107200 doubles =    100.0 Mbytes
+    stack    =   13107197 doubles =    100.0 Mbytes
+    global   =   26214400 doubles =    200.0 Mbytes (distinct from heap & stack)
+    total    =   52428797 doubles =    400.0 Mbytes
+    verify   = yes
+    hardfail = no 
+
+
+           Directory information
+           ---------------------
+
+  0 permanent = .
+  0 scratch   = .
+
+
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+
+ Scaling coordinates for geometry "geometry" by  1.889725989
+ (inverse scale =  0.529177249)
+
+ C2V symmetry detected
+
+          ------
+          auto-z
+          ------
+
+
+                             Geometry "geometry" -> ""
+                             -------------------------
+
+ Output coordinates in angstroms (scale by  1.889725989 to convert to a.u.)
+
+  No.       Tag          Charge          X              Y              Z
+ ---- ---------------- ---------- -------------- -------------- --------------
+    1 O                    8.0000     0.00000000     0.00000000    -0.14142136
+    2 H                    1.0000     0.70710678     0.00000000     0.56568542
+    3 H                    1.0000    -0.70710678     0.00000000     0.56568542
+
+      Atomic Mass 
+      ----------- 
+
+      O                 15.994910
+      H                  1.007825
+
+
+ Effective nuclear repulsion energy (a.u.)       8.8410208052
+
+            Nuclear Dipole moment (a.u.) 
+            ----------------------------
+        X                 Y               Z
+ ---------------- ---------------- ----------------
+     0.0000000000     0.0000000000     0.0000000000
+
+      Symmetry information
+      --------------------
+
+ Group name             C2v       
+ Group number             16
+ Group order               4
+ No. of unique centers     2
+
+      Symmetry unique atoms
+
+     1    2
+
+
+
+                                Z-matrix (autoz)
+                                -------- 
+
+ Units are Angstrom for bonds and degrees for angles
+
+      Type          Name      I     J     K     L     M      Value
+      ----------- --------  ----- ----- ----- ----- ----- ----------
+    1 Stretch                  1     2                       1.00000
+    2 Stretch                  1     3                       1.00000
+    3 Bend                     2     1     3                90.00000
+
+
+            XYZ format geometry
+            -------------------
+     3
+ geometry
+ O                     0.00000000     0.00000000    -0.14142136
+ H                     0.70710678     0.00000000     0.56568542
+ H                    -0.70710678     0.00000000     0.56568542
+
+ ==============================================================================
+                                internuclear distances
+ ------------------------------------------------------------------------------
+       center one      |      center two      | atomic units |  angstroms
+ ------------------------------------------------------------------------------
+    2 H                |   1 O                |     1.88973  |     1.00000
+    3 H                |   1 O                |     1.88973  |     1.00000
+ ------------------------------------------------------------------------------
+                         number of included internuclear distances:          2
+ ==============================================================================
+
+
+
+ ==============================================================================
+                                 internuclear angles
+ ------------------------------------------------------------------------------
+        center 1       |       center 2       |       center 3       |  degrees
+ ------------------------------------------------------------------------------
+    2 H                |   1 O                |   3 H                |    90.00
+ ------------------------------------------------------------------------------
+                            number of included internuclear angles:          1
+ ==============================================================================
+
+
+
+                      Basis "ao basis" -> "" (cartesian)
+                      -----
+  H (Hydrogen)
+  ------------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  3.42525091E+00  0.154329
+  1 S  6.23913730E-01  0.535328
+  1 S  1.68855400E-01  0.444635
+
+  O (Oxygen)
+  ----------
+            Exponent  Coefficients 
+       -------------- ---------------------------------------------------------
+  1 S  1.30709320E+02  0.154329
+  1 S  2.38088610E+01  0.535328
+  1 S  6.44360830E+00  0.444635
+
+  2 S  5.03315130E+00 -0.099967
+  2 S  1.16959610E+00  0.399513
+  2 S  3.80389000E-01  0.700115
+
+  3 P  5.03315130E+00  0.155916
+  3 P  1.16959610E+00  0.607684
+  3 P  3.80389000E-01  0.391957
+
+
+
+ Summary of "ao basis" -> "" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ H                           sto-3g                  1        1   1s
+ O                           sto-3g                  3        5   2s1p
+
+
+                              H2O+ : STO-3G UHF freq
+                              ----------------------
+
+
+                   NWChem Nuclear Hessian and Frequency Analysis
+                   ---------------------------------------------
+
+
+
+                              NWChem Analytic Hessian
+                              -----------------------
+
+ restr:                     0
+                                 NWChem SCF Module
+                                 -----------------
+
+
+                              H2O+ : STO-3G UHF freq
+
+
+
+  ao basis        = "ao basis"
+  functions       =     7
+  atoms           =     3
+  alpha electrons =     5
+  beta  electrons =     4
+  charge          =   1.00
+  wavefunction    = UHF 
+  input vectors   = atomic
+  output vectors  = ./h2o_freq.movecs
+  use symmetry    = F
+  symmetry adapt  = F
+
+
+ Summary of "ao basis" -> "ao basis" (cartesian)
+ ------------------------------------------------------------------------------
+       Tag                 Description            Shells   Functions and Types
+ ---------------- ------------------------------  ------  ---------------------
+ H                           sto-3g                  1        1   1s
+ O                           sto-3g                  3        5   2s1p
+
+
+
+ Forming initial guess at       0.1s
+
+
+      Superposition of Atomic Density Guess
+      -------------------------------------
+
+ Sum of atomic energies:         -74.71095592
+
+ Renormalizing density from      10.00 to      9
+
+      Non-variational initial energy
+      ------------------------------
+
+ Total energy =     -69.642010
+ 1-e energy   =    -109.045238
+ 2-e energy   =      30.562207
+ HOMO         =      -0.966058
+ LUMO         =      -0.080499
+
+
+ Starting SCF solution at       0.1s
+
+
+
+ ----------------------------------------------
+         Quadratically convergent UHF
+
+ Convergence threshold     :          1.000E-06
+ Maximum no. of iterations :           30
+ Integral*density screening:          1.000E-08
+ ----------------------------------------------
+
+
+ #quartets = 1.200D+02 #integrals = 2.560D+02 #direct =  0.0% #cached =100.0%
+
+
+ Integral file          = ./h2o_freq.aoints.0
+ Record size in doubles =    65536    No. of integs per rec  =    43688
+ Max. records in memory =        2    Max. records in file   = ********
+ No. of bits per label  =        8    No. of bits per value  =       64
+
+
+              iter       energy          gnorm     gmax       time
+             ----- ------------------- --------- --------- --------
+                 1      -74.5962070298  5.45D-01  3.25D-01      0.0
+                 2      -74.6526399073  7.00D-02  5.48D-02      0.0
+                 3      -74.6537542071  9.75D-04  7.78D-04      0.0
+                 4      -74.6537545220  2.77D-07  2.09D-07      0.0
+
+
+       Final UHF  results 
+       ------------------ 
+
+         Total SCF energy =    -74.653754521982
+      One electron energy =   -115.830487771540
+      Two electron energy =     32.335712444345
+ Nuclear repulsion energy =      8.841020805213
+
+                       Sz =      0.5000
+                 Sz(Sz+1) =      0.7500
+                      S^2 =      0.7566
+
+        Time for solution =      0.0s
+
+
+          Final alpha eigenvalues
+          -----------------------
+
+              1      
+    1  -21.0354
+    2   -1.9160
+    3   -1.1493
+    4   -1.1093
+    5   -1.0780
+    6    0.0543
+    7    0.1301
+
+          Final beta eigenvalues
+          ----------------------
+
+              1      
+    1  -21.0044
+    2   -1.7453
+    3   -1.1034
+    4   -1.0180
+    5   -0.2210
+    6    0.0862
+    7    0.1466
+
+                    UHF Final Alpha Molecular Orbital Analysis
+                    ------------------------------------------
+
+ Vector    2  Occ=1.000000D+00  E=-1.916007D+00
+              MO Center=  1.4D-16, -2.5D-16,  3.7D-02, r^2= 4.7D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     2      0.917901  1 O  s                  1     -0.244878  1 O  s          
+     5      0.177806  1 O  pz         
+
+ Vector    3  Occ=1.000000D+00  E=-1.149299D+00
+              MO Center=  1.7D-16,  2.3D-29,  4.6D-02, r^2= 6.9D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     3      0.765230  1 O  px                 6      0.324066  2 H  s          
+     7     -0.324066  3 H  s          
+
+ Vector    4  Occ=1.000000D+00  E=-1.109267D+00
+              MO Center= -1.7D-29,  2.2D-15, -1.4D-01, r^2= 4.2D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     4      1.000000  1 O  py         
+
+ Vector    5  Occ=1.000000D+00  E=-1.078029D+00
+              MO Center= -9.2D-16, -1.9D-15, -1.9D-01, r^2= 5.8D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     5      0.818861  1 O  pz                 2     -0.449360  1 O  s          
+     6      0.215021  2 H  s                  7      0.215021  3 H  s          
+
+ Vector    6  Occ=0.000000D+00  E= 5.428280D-02
+              MO Center= -2.8D-16,  3.8D-17,  5.1D-01, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     6     -0.788647  2 H  s                  7     -0.788647  3 H  s          
+     2      0.767916  1 O  s                  5      0.700790  1 O  pz         
+
+ Vector    7  Occ=0.000000D+00  E= 1.301391D-01
+              MO Center=  7.2D-16, -4.0D-32,  4.0D-01, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     6     -0.881318  2 H  s                  7      0.881318  3 H  s          
+     3      0.816497  1 O  px         
+
+
+                     UHF Final Beta Molecular Orbital Analysis
+                     -----------------------------------------
+
+ Vector    2  Occ=1.000000D+00  E=-1.745306D+00
+              MO Center=  2.4D-16, -1.9D-16,  8.6D-02, r^2= 5.1D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     2      0.850081  1 O  s                  1     -0.231431  1 O  s          
+     5      0.185445  1 O  pz         
+
+ Vector    3  Occ=1.000000D+00  E=-1.103355D+00
+              MO Center= -6.7D-16, -1.9D-32,  8.8D-02, r^2= 7.4D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     3      0.716750  1 O  px                 6      0.374472  2 H  s          
+     7     -0.374472  3 H  s          
+
+ Vector    4  Occ=1.000000D+00  E=-1.018020D+00
+              MO Center= -5.8D-16,  4.4D-16, -2.2D-01, r^2= 5.8D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     5      0.792761  1 O  pz                 2     -0.516195  1 O  s          
+     6      0.226274  2 H  s                  7      0.226274  3 H  s          
+
+ Vector    5  Occ=0.000000D+00  E=-2.209946D-01
+              MO Center= -1.9D-31, -2.8D-16, -1.4D-01, r^2= 4.2D-01
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     4      1.000000  1 O  py         
+
+ Vector    6  Occ=0.000000D+00  E= 8.621295D-02
+              MO Center= -1.6D-15,  4.2D-17,  4.9D-01, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     2      0.803239  1 O  s                  6     -0.777852  2 H  s          
+     7     -0.777852  3 H  s                  5      0.728285  1 O  pz         
+
+ Vector    7  Occ=0.000000D+00  E= 1.466234D-01
+              MO Center=  2.7D-15, -9.9D-32,  3.6D-01, r^2= 1.1D+00
+   Bfn.  Coefficient  Atom+Function         Bfn.  Coefficient  Atom+Function  
+  ----- ------------  ---------------      ----- ------------  ---------------
+     3      0.859369  1 O  px                 6     -0.861110  2 H  s          
+     7      0.861110  3 H  s          
+
+
+ center of mass
+ --------------
+ x =   0.00000000 y =   0.00000000 z =  -0.11770266
+
+ moments of inertia (a.u.)
+ ------------------
+           3.196225286295           0.000000000000           0.000000000000
+           0.000000000000           6.795233176450           0.000000000000
+           0.000000000000           0.000000000000           3.599007890155
+
+  Mulliken analysis of the total density
+  --------------------------------------
+
+    Atom       Charge   Shell Charges
+ -----------   ------   -------------------------------------------------------
+    1 O    8     7.86   2.00  1.91  3.95
+    2 H    1     0.57   0.57
+    3 H    1     0.57   0.57
+
+  Mulliken analysis of the alpha density
+  --------------------------------------
+
+    Atom       Charge   Shell Charges
+ -----------   ------   -------------------------------------------------------
+    1 O    8     4.49   1.00  0.97  2.52
+    2 H    1     0.25   0.25
+    3 H    1     0.25   0.25
+
+   Mulliken analysis of the beta density
+   -------------------------------------
+
+    Atom       Charge   Shell Charges
+ -----------   ------   -------------------------------------------------------
+    1 O    8     3.37   1.00  0.94  1.43
+    2 H    1     0.32   0.32
+    3 H    1     0.32   0.32
+
+   Mulliken analysis of the spin density
+   -------------------------------------
+
+    Atom       Charge   Shell Charges
+ -----------   ------   -------------------------------------------------------
+    1 O    8     1.13   0.00  0.04  1.09
+    2 H    1    -0.06  -0.06
+    3 H    1    -0.06  -0.06
+
+       Multipole analysis of the density wrt the origin
+       ------------------------------------------------
+
+     L   x y z        total         alpha         beta         nuclear
+     -   - - -        -----         -----         ----         -------
+     0   0 0 0      1.000000     -5.000000     -4.000000     10.000000
+
+     1   1 0 0      0.000000      0.000000      0.000000      0.000000
+     1   0 1 0     -0.000000      0.000000     -0.000000      0.000000
+     1   0 0 1      1.081620      0.735741      0.345879      0.000000
+
+     2   2 0 0     -2.197217     -2.920083     -2.848199      3.571064
+     2   1 1 0      0.000000      0.000000     -0.000000      0.000000
+     2   1 0 1      0.000000      0.000000      0.000000      0.000000
+     2   0 2 0     -3.502709     -2.178709     -1.324000      0.000000
+     2   0 1 1      0.000000      0.000000      0.000000      0.000000
+     2   0 0 2     -2.783224     -2.925739     -2.714336      2.856851
+
+
+ Parallel integral file used       1 records with       0 large values
+
+
+ HESSIAN: the one electron contributions are done in       0.0s
+
+
+ HESSIAN: 2-el 1st deriv. term done in                     0.0s
+
+
+ HESSIAN: 2-el 2nd deriv. term done in                     0.0s
+
+  stpr_wrt_fd_from_sq: overwrite of existing file:./h2o_freq.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./h2o_freq.fd_ddipole
+
+ HESSIAN: the two electron contributions are done in       0.0s
+
+                                NWChem CPHF Module
+                                ------------------
+
+
+  scftype          =     UHF 
+  nalpha           =        5
+  nbeta            =        4
+  variables        =       22
+  # of vectors     =        9
+  tolerance        = 0.10D-03
+  level shift      = 0.00D+00
+  max iterations   =       50
+  max subspace     =       90
+
+
+ #quartets = 1.200D+02 #integrals = 2.560D+02 #direct =  0.0% #cached =100.0%
+
+
+ Integral file          = ./h2o_freq.aoints.0
+ Record size in doubles =    65536    No. of integs per rec  =    43688
+ Max. records in memory =        2    Max. records in file   = ********
+ No. of bits per label  =        8    No. of bits per value  =       64
+
+ SCF residual:    2.7737508979777225E-007
+
+
+Iterative solution of linear equations
+  No. of variables       22
+  No. of equations        9
+  Maximum subspace       90
+        Iterations       50
+       Convergence  1.0D-04
+        Start time      0.2
+
+
+   iter   nsub   residual    time
+   ----  ------  --------  ---------
+     1      9    1.23D-01       0.2
+     2     18    7.26D-02       0.2
+     3     27    2.24D-02       0.2
+     4     36    2.50D-03       0.2
+     5     45    4.18D-12       0.2
+
+ Parallel integral file used       1 records with       0 large values
+
+ HESSIAN: the CPHF contributions are done
+  stpr_wrt_fd_from_sq: overwrite of existing file:./h2o_freq.hess
+ stpr_wrt_fd_dipole: overwrite of existing file./h2o_freq.fd_ddipole
+
+ Derivative Dipole
+
+  
+  
+ X vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_x/<atom=   1,x> =     0.0189     [    0.0906]
+ d_dipole_x/<atom=   1,y> =    -0.0000     [   -0.0000]
+ d_dipole_x/<atom=   1,z> =    -0.0000     [   -0.0000]
+ d_dipole_x/<atom=   2,x> =     0.4906     [    2.3563]
+ d_dipole_x/<atom=   2,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   2,z> =    -0.0142     [   -0.0680]
+ d_dipole_x/<atom=   3,x> =     0.4906     [    2.3563]
+ d_dipole_x/<atom=   3,y> =     0.0000     [    0.0000]
+ d_dipole_x/<atom=   3,z> =     0.0142     [    0.0680]
+  
+ Y vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_y/<atom=   1,x> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   1,y> =    -0.0095     [   -0.0454]
+ d_dipole_y/<atom=   1,z> =    -0.0000     [   -0.0000]
+ d_dipole_y/<atom=   2,x> =    -0.0000     [   -0.0000]
+ d_dipole_y/<atom=   2,y> =     0.5047     [    2.4243]
+ d_dipole_y/<atom=   2,z> =     0.0000     [    0.0000]
+ d_dipole_y/<atom=   3,x> =    -0.0000     [   -0.0000]
+ d_dipole_y/<atom=   3,y> =     0.5047     [    2.4243]
+ d_dipole_y/<atom=   3,z> =    -0.0000     [   -0.0000]
+  
+ Z vector of derivative dipole (au) [debye/angstrom]
+ d_dipole_z/<atom=   1,x> =    -0.0000     [   -0.0000]
+ d_dipole_z/<atom=   1,y> =     0.0000     [    0.0000]
+ d_dipole_z/<atom=   1,z> =     0.3625     [    1.7413]
+ d_dipole_z/<atom=   2,x> =    -0.0329     [   -0.1578]
+ d_dipole_z/<atom=   2,y> =    -0.0000     [   -0.0000]
+ d_dipole_z/<atom=   2,z> =     0.3187     [    1.5309]
+ d_dipole_z/<atom=   3,x> =     0.0329     [    0.1578]
+ d_dipole_z/<atom=   3,y> =    -0.0000     [   -0.0000]
+ d_dipole_z/<atom=   3,z> =     0.3187     [    1.5309]
+  
+  
+ HESSIAN: the Hessian is done
+
+
+  Vibrational analysis via the FX method 
+
+  See chapter 2 in "Molecular Vibrations" by Wilson, Decius and Cross
+
+  Vib: Default input used 
+
+  Nuclear Hessian passed symmetry test 
+
+
+
+ ---------------------------- Atom information ----------------------------
+     atom    #        X              Y              Z            mass
+ --------------------------------------------------------------------------
+    O        1  0.0000000D+00  0.0000000D+00 -2.6724761D-01  1.5994910D+01
+    H        2  1.3362381D+00  0.0000000D+00  1.0689904D+00  1.0078250D+00
+    H        3 -1.3362381D+00  0.0000000D+00  1.0689904D+00  1.0078250D+00
+ --------------------------------------------------------------------------
+
+
+
+
+          ----------------------------------------------------
+          MASS-WEIGHTED NUCLEAR HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          ----------------------------------------------------
+
+
+               1            2            3            4            5            6            7            8            9
+   ----- ----- ----- ----- -----
+    1    4.21052D+01
+    2    7.71488D-15 -2.79197D-01
+    3    9.37130D-15 -1.58000D-14  3.99198D+01
+    4   -8.38696D+01  6.44714D-15 -6.56683D+01  3.98861D+02
+    5   -1.61705D-14  5.56133D-01  2.70877D-13 -9.88670D-14 -2.51101D+01
+    6   -8.44257D+01  2.69095D-14 -7.95163D+01  2.98973D+02 -3.89191D-14  3.02554D+02
+    7   -8.38696D+01  1.17381D-14  6.56683D+01 -6.47403D+01 -1.32482D-14  3.73631D+01  3.98861D+02
+    8   -1.45641D-14  5.56133D-01  2.83176D-13 -8.34355D-14  2.28945D+01 -5.81876D-13  1.41456D-13 -2.51101D+01
+    9    8.44257D+01  3.60348D-14 -7.95163D+01 -3.73631D+01 -6.62429D-14  1.42232D+01 -2.98973D+02 -8.31800D-14  3.02554D+02
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+                 (Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ Frequency      -1126.28     -849.61     -256.75        0.00        0.00        0.00
+ 
+           1     0.00000     0.05542     0.00000     0.00001    -0.23563     0.00000
+           2     0.00000     0.00000    -0.08365     0.00000     0.00000     0.23563
+           3     0.00000    -0.00000     0.00000     0.23563     0.00001     0.00000
+           4     0.00000    -0.43974     0.00000     0.00001    -0.23563     0.00000
+           5     0.70436     0.00000     0.66377     0.00000     0.00000     0.23563
+           6     0.00000     0.52761     0.00000     0.23563     0.00001     0.00000
+           7     0.00000    -0.43974     0.00000     0.00001    -0.23563     0.00000
+           8    -0.70436     0.00000     0.66377     0.00000     0.00000     0.23563
+           9     0.00000    -0.52761     0.00000     0.23563     0.00001     0.00000
+
+                    7           8           9
+ 
+ Frequency       1835.13     4275.80     4278.83
+ 
+           1    -0.00000     0.06266    -0.00000
+           2     0.00000     0.00000     0.00000
+           3     0.06450    -0.00000    -0.05326
+           4     0.44851    -0.49721     0.54310
+           5     0.00000     0.00000     0.00000
+           6    -0.51181    -0.46663     0.42266
+           7    -0.44851    -0.49721    -0.54310
+           8     0.00000     0.00000     0.00000
+           9    -0.51181     0.46663     0.42266
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||         Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1    -1126.278 ||      -0.000               0.000            -0.000
+    2     -849.606 ||      -2.139               0.000             0.000
+    3     -256.753 ||       0.000               3.222            -0.000
+    4        0.002 ||       0.000              -0.000             1.132
+    5        0.003 ||      -1.132               0.000             0.000
+    6        0.004 ||      -0.000               1.132            -0.000
+    7     1835.128 ||       0.000               0.000             1.596
+    8     4275.801 ||      -2.274              -0.000             0.000
+    9     4278.826 ||       0.000               0.000             1.030
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||                 Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1    -1126.278 ||    0.000000           0.000         0.000       0.000
+    2     -849.606 ||    0.198330           4.576       193.342      14.931
+    3     -256.753 ||    0.450023          10.382       438.705      33.879
+    4        0.002 ||    0.055523           1.281        54.127       4.180
+    5        0.003 ||    0.055523           1.281        54.127       4.180
+    6        0.004 ||    0.055523           1.281        54.127       4.180
+    7     1835.128 ||    0.110459           2.548       107.681       8.316
+    8     4275.801 ||    0.224138           5.171       218.501      16.874
+    9     4278.826 ||    0.045979           1.061        44.823       3.461
+ ----------------------------------------------------------------------------
+
+
+
+
+
+        Vibrational analysis via the FX method 
+  --- with translations and rotations projected out ---
+  --- via the Eckart algorithm                      ---
+ Projected Nuclear Hessian trans-rot subspace norm:8.8600D-33
+                         (should be close to zero!) 
+
+          --------------------------------------------------------
+          MASS-WEIGHTED PROJECTED HESSIAN (Hartree/Bohr/Bohr/Kamu)
+          --------------------------------------------------------
+
+
+               1            2            3            4            5            6            7            8            9
+   ----- ----- ----- ----- -----
+    1    4.18493D+01
+    2    0.00000D+00  0.00000D+00
+    3    3.18938D-15 -2.15773D-29  3.99198D+01
+    4   -8.33598D+01  1.30475D-29 -6.56683D+01  3.97845D+02
+    5   -4.60499D-30  1.08016D-16  6.13998D-29 -2.44605D-29  0.00000D+00
+    6   -8.33598D+01  4.91198D-29 -7.95163D+01  2.96849D+02 -1.34533D-28  3.24433D+02
+    7   -8.33598D+01 -6.13998D-30  6.56683D+01 -6.57558D+01  1.37590D-29  3.52398D+01  3.97845D+02
+    8    6.13998D-30  1.08016D-16  1.22800D-29 -1.22302D-29  0.00000D+00 -1.16187D-28  4.89210D-29  0.00000D+00
+    9    8.33598D+01  4.29799D-29 -7.95163D+01 -3.52398D+01 -8.56117D-29 -7.65583D+00 -2.96849D+02 -1.46763D-28  3.24433D+02
+
+ center of mass
+ --------------
+ x =   0.00000000 y =   0.00000000 z =  -0.11770266
+
+ moments of inertia (a.u.)
+ ------------------
+           3.196225286295           0.000000000000           0.000000000000
+           0.000000000000           6.795233176450           0.000000000000
+           0.000000000000           0.000000000000           3.599007890155
+
+ Rotational Constants
+ --------------------
+ A=  18.834772 cm-1  ( 27.098430 K)
+ B=  16.726881 cm-1  ( 24.065712 K)
+ C=   8.859177 cm-1  ( 12.746095 K)
+
+
+ Temperature                      =   298.15K
+ frequency scaling parameter      =   1.0000
+
+ Zero-Point correction to Energy  =   14.908 kcal/mol  (  0.023757 au)
+ Thermal correction to Energy     =   16.685 kcal/mol  (  0.026590 au)
+ Thermal correction to Enthalpy   =   17.278 kcal/mol  (  0.027534 au)
+
+ Total Entropy                    =   45.347 cal/mol-K
+   - Translational                =   34.593 cal/mol-K (mol. weight =  18.0106)
+   - Rotational                   =   10.752 cal/mol-K (symmetry #  =        2)
+   - Vibrational                  =    0.003 cal/mol-K
+
+ Cv (constant volume heat capacity) =    5.981 cal/mol-K
+   - Translational                  =    2.979 cal/mol-K
+   - Rotational                     =    2.979 cal/mol-K
+   - Vibrational                    =    0.022 cal/mol-K
+
+
+
+          -------------------------------------------------
+          NORMAL MODE EIGENVECTORS IN CARTESIAN COORDINATES
+          -------------------------------------------------
+             (Projected Frequencies expressed in cm-1)
+
+                    1           2           3           4           5           6
+ 
+ P.Frequency       -0.00        0.00        0.00        0.00        0.00        0.00
+ 
+           1    -0.23639     0.00000     0.00000     0.00000     0.02141    -0.04976
+           2     0.00000     0.25004     0.00000     0.00000     0.00000     0.00000
+           3     0.00003     0.00000     0.00000     0.00000     0.21649     0.09304
+           4    -0.22944     0.00000     0.00000     0.00000    -0.18098     0.42115
+           5     0.00000     0.00000     0.99611     0.00000     0.00000     0.00000
+           6    -0.00693     0.00000     0.00000     0.00000     0.41888    -0.37786
+           7    -0.22944     0.00000     0.00000     0.00000    -0.18098     0.42115
+           8     0.00000     0.00000     0.00000     0.99611     0.00000     0.00000
+           9     0.00698     0.00000     0.00000     0.00000     0.01409     0.56395
+
+                    7           8           9
+ 
+ P.Frequency     1835.13     4278.83     4319.32
+ 
+           1    -0.00000     0.00000    -0.06088
+           2     0.00000     0.00000     0.00000
+           3     0.06450    -0.05326    -0.00000
+           4     0.44851     0.54310     0.48307
+           5     0.00000     0.00000     0.00000
+           6    -0.51181     0.42266     0.48307
+           7    -0.44851    -0.54310     0.48307
+           8     0.00000     0.00000     0.00000
+           9    -0.51181     0.42266    -0.48307
+
+
+
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||    Projected Derivative Dipole Moments (debye/angs)
+  Mode   [cm**-1]  ||      [d/dqX]             [d/dqY]           [d/dqZ]
+ ------ ---------- || ------------------ ------------------ -----------------
+    1       -0.000 ||      -1.102              -0.000             0.000
+    2        0.000 ||      -0.000              -0.011             0.000
+    3        0.000 ||       0.000               2.415            -0.000
+    4        0.000 ||       0.000               2.415            -0.000
+    5        0.000 ||      -0.878               0.000             1.040
+    6        0.000 ||       2.044              -0.000             0.447
+    7     1835.128 ||       0.000               0.000             1.596
+    8     4278.826 ||      -0.000               0.000             1.030
+    9     4319.317 ||       2.205               0.000             0.000
+ ----------------------------------------------------------------------------
+
+
+
+  
+  
+ ----------------------------------------------------------------------------
+ Normal Eigenvalue ||           Projected Infra Red Intensities
+  Mode   [cm**-1]  || [atomic units] [(debye/angs)**2] [(KM/mol)] [arbitrary]
+ ------ ---------- || -------------- ----------------- ---------- -----------
+    1       -0.000 ||    0.052612           1.214        51.288       3.961
+    2        0.000 ||    0.000006           0.000         0.005       0.000
+    3        0.000 ||    0.252770           5.832       246.413      19.029
+    4        0.000 ||    0.252770           5.832       246.413      19.029
+    5        0.000 ||    0.080315           1.853        78.295       6.046
+    6        0.000 ||    0.189794           4.379       185.020      14.288
+    7     1835.128 ||    0.110459           2.548       107.681       8.316
+    8     4278.826 ||    0.045979           1.061        44.823       3.461
+    9     4319.317 ||    0.210794           4.863       205.493      15.869
+ ----------------------------------------------------------------------------
+
+
+
+ vib:animation  F
+
+ Task  times  cpu:        0.1s     wall:        0.2s
+ Summary of allocated global arrays
+-----------------------------------
+  No active global arrays
+
+
+
+                         GA Statistics for process    0
+                         ------------------------------
+
+       create   destroy   get      put      acc     scatter   gather  read&inc
+calls: 1349     1349     1.37e+04 1.01e+04 3410      902        0      197     
+number of processes/call 1.00e+00 1.00e+00 1.00e+00 0.00e+00 0.00e+00
+bytes total:             2.43e+06 1.36e+06 1.53e+06 9.60e+01 0.00e+00 1.58e+03
+bytes remote:            0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00 0.00e+00
+Max memory consumed for GA by this process: 94072 bytes
+MA_summarize_allocated_blocks: starting scan ...
+MA_summarize_allocated_blocks: scan completed: 0 heap blocks, 0 stack blocks
+MA usage statistics:
+
+	allocation statistics:
+					      heap	     stack
+					      ----	     -----
+	current number of blocks	         0	         0
+	maximum number of blocks	        26	        36
+	current total bytes		         0	         0
+	maximum total bytes		   1055712	  64025608
+	maximum total K-bytes		      1056	     64026
+	maximum total M-bytes		         2	        65
+
+
+                                NWChem Input Module
+                                -------------------
+
+
+
+
+
+                                     CITATION
+                                     --------
+                Please cite the following reference when publishing
+                           results obtained with NWChem:
+
+                 M. Valiev, E.J. Bylaska, N. Govind, K. Kowalski,
+              T.P. Straatsma, H.J.J. van Dam, D. Wang, J. Nieplocha,
+                        E. Apra, T.L. Windus, W.A. de Jong
+                 "NWChem: a comprehensive and scalable open-source
+                  solution for large scale molecular simulations"
+                      Comput. Phys. Commun. 181, 1477 (2010)
+                           doi:10.1016/j.cpc.2010.04.018
+
+                                      AUTHORS
+                                      -------
+          E. Apra, E. J. Bylaska, W. A. de Jong, N. Govind, K. Kowalski,
+       T. P. Straatsma, M. Valiev, H. J. J. van Dam, D. Wang, T. L. Windus,
+        J. Hammond, J. Autschbach, K. Bhaskaran-Nair, J. Brabec, K. Lopata,
+    S. A. Fischer, S. Krishnamoorthy, M. Jacquelin, W. Ma, M. Klemm, O. Villa,
+      Y. Chen, V. Anisimov, F. Aquino, S. Hirata, M. T. Hackler, V. Konjkov,
+            D. Mejia-Rodriguez, T. Risthaus, M. Malagoli, A. Marenich,
+   A. Otero-de-la-Roza, J. Mullin, P. Nichols, R. Peverati, J. Pittner, Y. Zhao,
+        P.-D. Fan, A. Fonari, M. J. Williamson, R. J. Harrison, J. R. Rehr,
+      M. Dupuis, D. Silverstein, D. M. A. Smith, J. Nieplocha, V. Tipparaju,
+    M. Krishnan, B. E. Van Kuiken, A. Vazquez-Mayagoitia, L. Jensen, M. Swart,
+      Q. Wu, T. Van Voorhis, A. A. Auer, M. Nooijen, L. D. Crosby, E. Brown,
+      G. Cisneros, G. I. Fann, H. Fruchtl, J. Garza, K. Hirao, R. A. Kendall,
+      J. A. Nichols, K. Tsemekhman, K. Wolinski, J. Anchell, D. E. Bernholdt,
+      P. Borowski, T. Clark, D. Clerc, H. Dachsel, M. J. O. Deegan, K. Dyall,
+    D. Elwood, E. Glendening, M. Gutowski, A. C. Hess, J. Jaffe, B. G. Johnson,
+     J. Ju, R. Kobayashi, R. Kutteh, Z. Lin, R. Littlefield, X. Long, B. Meng,
+      T. Nakajima, S. Niu, L. Pollack, M. Rosing, K. Glaesemann, G. Sandrone,
+      M. Stave, H. Taylor, G. Thomas, J. H. van Lenthe, A. T. Wong, Z. Zhang.
+
+ Total times  cpu:        0.1s     wall:        0.3s

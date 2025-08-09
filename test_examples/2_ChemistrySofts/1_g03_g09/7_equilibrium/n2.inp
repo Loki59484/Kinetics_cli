@@ -1,0 +1,13 @@
+%NPROC=1
+%MEM=100MW
+#P HF 6-31G* OPT FREQ
+# GFINPUT IOP(6/7=3)  
+
+equilibrium job
+
+0 1
+7                   0.000000    1.000000    0.000000
+7                   0.000000    2.000000    0.200000
+
+
+

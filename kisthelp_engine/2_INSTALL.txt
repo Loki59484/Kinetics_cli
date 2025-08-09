@@ -1,0 +1,22 @@
+Two files are provided:
+
+- kisthelp2025_10_Jan.jar (a runnable java archive)
+
+- kisthelpSRC2025_10_Jan.zip   (the code source together with libraries, sample runs, 
+                                documentation, installation instructions)
+
+
+KiSThelP is a cross-platform open-source application. It is distributed
+in the executable jar format. Double-clicking the file <kisthelp2025_10_Jan.jar>
+or upon issuing the command <java  kisthelp2025_10_Jan.jar>, the program will start on  Windows, Linux 
+and MacOS operating systems.
+
+The source is given separately from the runnable JAR. To access the source, unzip 
+kisthelpSRC2025_10_Jan.zip, the files which make up the distribution package will be extracted.
+
+If you published results using KiSThelP, we would appreciate it if you would
+cite us: S. Canneaux, F. Bohr, and E. Henon, "KiSThelP: a program to predict 
+thermodynamic properties and rate constants from quantum chemistry results" , 
+J. Comp. Chem., 35 (2014) 82-93, http://dx.doi.org/10.1002/jcc.23470
+
+

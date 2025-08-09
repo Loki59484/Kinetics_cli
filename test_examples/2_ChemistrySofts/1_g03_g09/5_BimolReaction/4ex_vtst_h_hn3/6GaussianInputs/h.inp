@@ -1,0 +1,11 @@
+%NPROC=4  
+%MEM=500MB
+#P M06 6-311G** FREQ 
+# GFINPUT IOP(6/7=3)  POP=FULL
+
+reactant 2
+
+0 2
+H
+
+

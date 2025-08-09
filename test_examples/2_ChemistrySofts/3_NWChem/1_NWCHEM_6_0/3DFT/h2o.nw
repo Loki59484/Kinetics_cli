@@ -1,0 +1,15 @@
+start h2o_freq
+geometry units angstroms
+ O       0.0  0.0  0.0
+ H       0.0  0.0  1.0
+ H       0.0  1.0  0.0
+end
+basis
+ H library sto-3g
+ O library sto-3g
+end
+dft 
+xc b3lyp
+end
+title "H2O+ : STO-3G b3lyp  freq "
+task dft freq

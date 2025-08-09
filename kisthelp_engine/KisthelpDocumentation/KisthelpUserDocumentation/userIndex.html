@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+  
+  <meta name="GENERATOR" content="Mozilla/4.79 [fr] (X11; U; Linux 2.4.18-3 i686) [Netscape]"><title>KiSThelP</title></head><body style="color: rgb(0, 0, 0); background-color: rgb(255, 204, 153);" alink="#ff0000" link="#ff0000" vlink="#ff0000">
+&nbsp;
+<br>
+
+&nbsp;
+<center>
+<p><b><i><font color="#000000"><font size="+4">KiSThelP 2025 01/10/2025 User Documentation</font></font></i></b></p>
+</center>
+
+<p><br>
+<hr>
+<br>
+<i>
+<font size="+1">
+KiSThelP is intended as a working tool both for the general public and also for more expert users. It has been developed with the aim to facilitate the use of quantum results to compute molecular and reaction properties. It is however far from being exhaustive. Having a Graphical user Interface (GUI), KiSThelP makes it easy to get first results without spending too much time with documentation. Source code is available and free, what enables adding further abilities and improvement of the program by others.
+<br>
+<br>
+KiSThelP can read its inputs directly from Quantum Chemistry Packages: 
+<ul>
+<li> Gaussian
+<li> GAMESS 
+<li> NWChem 
+<li> ORCA 
+<li> MOLPRO 
+<li> ADF
+</ul>
+<br>
+
+KiSThelP is written in the programming language Java. One of the most significant advantages of Java is the ability to run a code on many different systems, thus making KiSThelP platform-independent. Since Java is object-oriented, KiSThelP has been written as a modular program and reusable code. This makes it easy to maintain, modify and extend the existing code as new objects can be created with small differences to existing ones. The reference manual is made available through the Help menu of KiSThelP both for users and developers.
+<br>
+<br>
+KiSThelP can be used to examine the dependence of some well-known <a href="formula.html"> thermodynamic functions </a> (H, S, G, C<sub>v</sub>) on temperature and pressure. For example, the logarithimic dependence of the Gibbs free energy on the pressure at constant temperature, or the variation of the entropy with the temperature can be very easily illustrated for an ideal gas. These features make this program well suited to support and enhance students learning of thermodynamics fundamentals, taking the teaching content directly from results in molecular modelling.
+<br><br>
+KiSThelP is also devoted to <a href="calculationMenu.html#kinetic"> rate constant calculations (TST, VTST, RRKM)</a> for elementary reactions.
+<br><br>
+KiSThelP is an interactive program that allows the user to change input data directly through the GUI, including the vibrational scaling factor, frequency values, potential energy, ...
+<br>
+<br>
+First of all, the input file format is described. Next, a review of the
+menus is undertaken. <br> </font></i>
+<hr>
+<br>
+<br>
+</p>
+
+<p><b><i><font color="#000000"><font size="+2">I <u>Description of KiSThelP Input File</u></font></font></i></b>
+</p>
+
+<br>
+<font color="#000000"><font size="+1">KiSThelP needs data
+calculated prior to any
+KiSThelP calculation and obtained from&nbsp; electronic
+structure calculations using quantum chemistry package (Ex :
+GaussianXX, MOLCAS, GAMESS, NWChem, ORCA, MOLPRO, ADF).</font></font> 
+</p>
+
+
+<p><font color="#000000"><font size="+1">
+Any KisthelP calculation is based on a .kinp input file:
+<ul>
+ <li> The user can prepare this .kinp file himself. He will need data obtained from a Vibrational Frequency job trough a quantum calculation.
+ <li> Or KiSThelP can read the needed data directly from a <span style="font-weight: bold;">Gaussian&nbsp; </span> <span style="font-weight: bold;"> or NWChem  or GAMESS or ORCA or MOLPRO or ADF &nbsp; output file </span>. In this case, a .kinp file is automatically built after reading the quantum chemistry output.</font>
+</ul>
+
+
+
+<p><font size="+1">
+<u>Note that 2 kinds of .kinp input file exists</u>:
+
+<ul>
+<li> "molecular (or atom)" .kinp files : needed for Molecular and Equilibrium constant calculations, or reactant(product) in rate constant calculations.
+<li> "reaction path" .kinp files : required for describing either the Transition State (TS) or a full reaction path in  rate kinetic calculations.
+</ul>
+
+</font></p>
+
+
+<p><font color="#000000"><font size="+1">We describe below the&nbsp;
+input file format for a molecular system (or atom), and
+for a reaction path (transition state alone, or transition
+state together with some other IRC points).</font></font>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+
+<p><i><font size="+2">How to create a KiSThelP Input File on your own:</font></i>
+<br>
+&nbsp;
+</p>
+
+
+<font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1) <a href="molecularSystem.html">For
+a <b><i>molecule (or atom)</i></b><b><i></i></b></a></font><a name="1 1 molecular system"></a>
+</p>
+
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) <a href="ReactionPath.html">For
+a <b><i>ReactionPath</i></b></a></font><a name="1 2 TS"></a>
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp; <br>
+&nbsp;
+</p>
+
+<p><b><i><font color="#000000"><font size="+2">II <u>How to generate the KiSThelP input file directly from Quantum Chemistry packages
+</u></font></font></i></b>
+</p>
+
+<ol>
+<li> <a href="gaussian.html" > Gaussian </a>
+<li> <a href="gamess.html" >  GAMESS </a>
+<li> <a href="nwchem.html" > NWChem </a>
+<li> <a href="orca.html" > ORCA </a>
+<li> <a href="molpro.html" > MOLPRO </a>
+<li> <a href="ADF.html" > ADF </a>
+</ol>
+<br>
+
+
+
+<p><b><i><font color="#000000"><font size="+2">III <u>Description of
+KiSThelP
+Tools Bar</u></font></font></i></b>
+</p>
+
+<p><i><font color="#000000"><font size="+1">Different menus are
+available&nbsp;
+in KiSThelP Tools Bar :</font></font></i>
+</p>
+
+<br>
+<ol>
+  <li><font size="+1"><a href="fileMenu.html">The
+<b><i>Session</i></b>
+Menu</a></font><a name="2 1 file"></a></li>
+  <li><font size="+1"><a href="dataMenu.html">The
+<b><i>Data</i></b>
+Menu&nbsp;</a></font><a name="2 3 data"></a>
+  </li>
+  <li><font size="+1"><a href="calculationMenu.html">The
+<b><i>Calculation</i></b>
+Menu&nbsp;</a></font><a name="2 4 calculation"></a>
+  </li>
+  <li><font size="+1"><a href="windowMenu.html">The
+<b><i>Window</i></b>
+Menu&nbsp;</a></font><a name="2 5 sessions"></a>
+  </li>
+  <li><font size="+1"><a href="unitsMenu.html">The
+<b><i>Units</i></b>
+Menu</a></font><a name="2 6 units"></a></li>
+  <li><font size="+1"><a href="helpMenu.html">The
+<b><i>Help</i></b>
+Menu</a></font><a name="2 7 help"></a>
+  </li>
+</ol>
+&nbsp;
+</p>
+
+<p><b><i><font color="#000000"><font size="+2">IV <u>Description
+of&nbsp;
+KiSThelP Temperature Bar</u></font></font></i></b>
+</p>
+
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1) <a href="oneTemperatureMode.html"><b><i>Single&nbsp;
+Temperature</i></b>&nbsp;&nbsp; Mode</a></font><a name="3 1 one Temperature"></a>
+</p>
+
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) <a href="temperatureRangeMode.html"><b><i>Temperature&nbsp;
+Range</i></b>&nbsp;&nbsp; Mode</a></font><a name="3 2 range temperature"></a>
+<br>
+<br>
+</p>
+
+<p><b><i><font color="#000000"><font size="+2">V <u>Description of
+KiSThelP
+Pressure Bar</u></font></font></i></b>
+</p>
+
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1)<b><i> <a href="onePressureMode.html">Single&nbsp;&nbsp;
+Pressure</a></i></b><a href="onePressureMode.html">&nbsp;&nbsp; Mode</a></font><a name="4 1 one pressure"></a>
+</p>
+
+<p><font size="+1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2) <a href="pressureRangeMode.html"><b><i>Pressure&nbsp;&nbsp;
+Range</i></b>&nbsp;&nbsp; Mode</a></font><a name="4 2 range pressure"></a>
+<br>
+&nbsp;
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+
+</body></html>

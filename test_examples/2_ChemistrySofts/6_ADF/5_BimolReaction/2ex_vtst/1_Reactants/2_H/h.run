@@ -1,0 +1,29 @@
+#!/bin/sh
+
+"$AMSBIN/ams" << eor
+
+Task SinglePoint
+Properties
+    NormalModes Yes
+End
+System
+    Atoms
+        H 0.0 0.0 0.0 
+    End
+End
+
+Engine ADF
+    Basis
+        Core None
+    End
+    SpinPolarization 1
+    XC
+        Hybrid B3LYP
+    End
+    Relativity
+        Level None
+    End
+    Unrestricted Yes
+EndEngine
+eor
+

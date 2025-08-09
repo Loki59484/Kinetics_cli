@@ -1,0 +1,3052 @@
+
+ Running default procedure: UHF-SCF000
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.2
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000000         0.040971142        -0.000000341
+   2        -0.000000000        -0.020485685        -0.011984089
+   3         0.000000000        -0.020485457         0.011984430
+
+ Nuclear force contribution to virial =         0.008405692
+ Reading points  1 to  1 from record 700.2,  wavefunction type=UHF-SCF000      
+
+ Making model hessian for cartesian coordinates
+ No hessian update for point  1
+
+ Entering Rational Function Geometry Optimization
+
+ step scaled: scalefactor =     0.7791
+
+ Optimization point  1
+
+ Variable                      Last           Current        Next           Gradient       Hessian
+ E(UHF-SCF000) / Hartree     0.00000000   -38.42978706   -38.43891122
+ GX1 / ANGSTROM              0.00000000     0.00000000     0.00000000    -0.00000000    -0.00000000
+ GY1 / ANGSTROM              0.00000000     0.09035910     0.00603270     0.07742424    -0.00000000
+ GZ1 / ANGSTROM              0.00000000    -0.00000007     0.00000010    -0.00000064     0.00000000
+ GX2 / ANGSTROM              0.00000000     0.00000000     0.00000000    -0.00000000     0.00000000
+ GY2 / ANGSTROM              0.00000000    -0.53837660    -0.49621334    -0.03871233     0.00000000
+ GZ2 / ANGSTROM              0.00000000     0.88916382     0.97441675    -0.02264665     0.00000000
+ GX3 / ANGSTROM              0.00000000     0.00000000     0.00000000     0.00000000     0.33552889
+ GY3 / ANGSTROM              0.00000000    -0.53837717    -0.49621402    -0.03871190     2.98715571
+ GZ3 / ANGSTROM              0.00000000    -0.88916302    -0.97441612     0.02264729     4.01800221
+ Convergence:                0.00000000  (line search)     0.30000000     0.05296411  (total)
+
+ Geometry written to block  2 of record 700
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  2 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Asymmetric top
+ Rotational constants:     215.1024294    264.0361036   1160.6487401 GHz  (calculated with average atomic masses)
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.136401540   -0.000000015
+   2  H       1.00    0.000000000   -0.812706511    1.841380278
+   3  H       1.00    0.000000000   -0.812706604   -1.841380097
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.071590566  1-3  2.071590421
+     ( 1.096238518)     ( 1.096238441)
+
+ Bond angles
+
+  2-1-3  125.46385601
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.06418609
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.292E+00 0.347E+00 0.884E+00 0.100E+01 0.108E+01 0.152E+01 0.187E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         231. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         231. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.1 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.4 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-06 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.2
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43475072     38.298459    0.00000   -0.04403   -0.00000    0
+    2      0.511D-02      0.419D-02       -38.43547388     38.306977    0.00000   -0.06286   -0.00000    1
+    3      0.508D-02      0.226D-02       -38.43584427     38.315554    0.00000   -0.08075    0.00000    2
+    4      0.235D-02      0.760D-03       -38.43589808     38.319552   -0.00000   -0.08784    0.00000    3
+    5      0.385D-03      0.184D-03       -38.43590020     38.319714   -0.00000   -0.08779    0.00000    4
+    6      0.923D-04      0.519D-04       -38.43590047     38.319679    0.00000   -0.08769    0.00000    5
+    7      0.252D-04      0.962D-05       -38.43590047     38.319709    0.00000   -0.08767    0.00000    6
+    8      0.528D-05      0.161D-05       -38.43590047     38.319715   -0.00000   -0.08766    0.00000    5
+    9      0.104D-05      0.293D-06       -38.43590047     38.319715   -0.00000   -0.08765    0.00000    5
+   10      0.104D-06      0.472D-07       -38.43590047     38.319715   -0.00000   -0.08765    0.00000    4
+   11      0.401D-07      0.151D-07       -38.43590047     38.319715   -0.00000   -0.08765    0.00000    5
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.435900474819
+ Nuclear energy                         6.06418609
+ One-electron energy                  -63.65994401
+ Two-electron energy                   19.15985744
+ Virial quotient                       -0.99634419
+ !UHF STATE 1.1 Dipole moment          -0.00000000    -0.08765485     0.00000000
+ Dipole moment /Debye                  -0.00000000    -0.22278182     0.00000001
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989321    -0.891981    -0.545193    -0.410211    -0.363175     0.627665     0.763204
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.930963    -0.703914    -0.505470     0.315514     0.379613     0.702129     0.847880
+
+ HOMO      5.1    -0.363175 =      -9.8825eV
+ LUMO     -4.1     0.315514 =       8.5856eV
+ LUMO-HOMO         0.678689 =      18.4681eV
+
+ EXPECTATION VALUE OF S**2:             2.01639554
+
+ Natural orbitals saved to record    2200.2 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       19.89       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        2.78       700     1000      520     2200   
+                                         GEOM     BASIS   MCVARS     UHF  
+
+ PROGRAMS   *        TOTAL       UHF       UHF       INT
+ CPU TIMES  *         0.53      0.09      0.03      0.11
+ REAL TIME  *         1.31 SEC
+ DISK USED  *        27.20 MB      
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2_1.xyz                                                                       
+
+    3
+ UHF-SCF000/STO-3G  OPTSTEP=1  ENERGY=-38.43590047
+ C          0.0000000000        0.0721805864       -0.0000000080
+ H          0.0000000000       -0.4300657648        0.9744164795
+ H          0.0000000000       -0.4300658142       -0.9744163838
+
+ **********************************************************************************************************************************
+
+ PROGRESS OF GEOMETRY OPTIMIZATION.    TOTAL CPU:         0.3 SEC
+   1   -38.42978706   -38.43590047    -0.00611342  0.04273237  0.05296411  0.01765470  0.29863871  0.30000000  0.17320508
+
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2.xyz                                                                         
+
+    3
+ UHF-SCF000/STO-3G  ENERGY=-38.43590047
+ C          0.0000000000        0.0721805864       -0.0000000080
+ H          0.0000000000       -0.4300657648        0.9744164795
+ H          0.0000000000       -0.4300658142       -0.9744163838
+
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.2
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1         0.000000000         0.010769529        -0.000000060
+   2         0.000000000        -0.005384779         0.011077880
+   3        -0.000000000        -0.005384750        -0.011077821
+
+ Nuclear force contribution to virial =         0.051018517
+ Reading points  1 to  2 from record 700.2,  wavefunction type=UHF-SCF000      
+
+ Making model hessian for cartesian coordinates
+ BFGS update of hessian using  1 points
+
+ Entering Rational Function Geometry Optimization
+
+ Optimization point  2
+
+ Variable                      Last           Current        Next           Gradient       Hessian
+ E(UHF-SCF000) / Hartree   -38.42978706   -38.43590047   -38.43624456
+ GX1 / ANGSTROM              0.00000000     0.00000000     0.00000000     0.00000000    -0.00000000
+ GY1 / ANGSTROM              0.09035910     0.07218059     0.06922794     0.02035146    -0.00000000
+ GZ1 / ANGSTROM             -0.00000007    -0.00000001     0.00000001    -0.00000011     0.00000000
+ GX2 / ANGSTROM              0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+ GY2 / ANGSTROM             -0.53837660    -0.43006576    -0.42858944    -0.01017576     0.00000000
+ GZ2 / ANGSTROM              0.88916382     0.97441648     0.96015723     0.02093416     0.00000000
+ GX3 / ANGSTROM              0.00000000     0.00000000     0.00000000    -0.00000000     0.37049643
+ GY3 / ANGSTROM             -0.53837717    -0.43006581    -0.42858950    -0.01017570     2.49197262
+ GZ3 / ANGSTROM             -0.88916302    -0.97441638    -0.96015715    -0.02093405     4.34497323
+ Convergence:                0.00000000  (line search)     0.03871537     0.02047954  (total)
+
+ Geometry written to block  3 of record 700
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  3 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Asymmetric top
+ Rotational constants:     221.0538355    271.9367089   1181.3926458 GHz  (calculated with average atomic masses)
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.135198709   -0.000000005
+   2  H       1.00    0.000000000   -0.805539843    1.814434155
+   3  H       1.00    0.000000000   -0.805539875   -1.814434092
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.043810251  1-3  2.043810202
+     ( 1.081537808)     ( 1.081537782)
+
+ Bond angles
+
+  2-1-3  125.18878755
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.14695462
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.283E+00 0.338E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         231. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         231. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.1 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.4 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-06 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.2
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43621686     38.421604   -0.00000   -0.08674   -0.00000    0
+    2      0.870D-03      0.629D-03       -38.43622756     38.427191   -0.00000   -0.08777    0.00000    1
+    3      0.550D-03      0.260D-03       -38.43623065     38.429665   -0.00000   -0.08789    0.00000    2
+    4      0.307D-03      0.104D-03       -38.43623126     38.430094   -0.00000   -0.08747    0.00000    3
+    5      0.389D-04      0.224D-04       -38.43623129     38.429941    0.00000   -0.08726    0.00000    4
+    6      0.895D-05      0.700D-05       -38.43623129     38.429968   -0.00000   -0.08723    0.00000    5
+    7      0.378D-05      0.205D-05       -38.43623129     38.429961   -0.00000   -0.08723    0.00000    6
+    8      0.606D-06      0.346D-06       -38.43623129     38.429962   -0.00000   -0.08724    0.00000    6
+    9      0.487D-06      0.169D-06       -38.43623129     38.429963   -0.00000   -0.08724    0.00000    6
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436231291845
+ Nuclear energy                         6.14695462
+ One-electron energy                  -63.79816729
+ Two-electron energy                   19.21498137
+ Virial quotient                       -0.99586391
+ !UHF STATE 1.1 Dipole moment          -0.00000000    -0.08723621     0.00000000
+ Dipole moment /Debye                  -0.00000000    -0.22171781     0.00000000
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989878    -0.897103    -0.550959    -0.412842    -0.364586     0.644659     0.777403
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931630    -0.710450    -0.510756     0.315713     0.378017     0.718860     0.861771
+
+ HOMO      5.1    -0.364586 =      -9.9209eV
+ LUMO     -4.1     0.315713 =       8.5910eV
+ LUMO-HOMO         0.680299 =      18.5119eV
+
+ EXPECTATION VALUE OF S**2:             2.01577518
+
+ Natural orbitals saved to record    2200.2 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       19.89       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        2.78       700     1000      520     2200   
+                                         GEOM     BASIS   MCVARS     UHF  
+
+ PROGRAMS   *        TOTAL       UHF       UHF       INT
+ CPU TIMES  *         0.84      0.10      0.03      0.11
+ REAL TIME  *         1.75 SEC
+ DISK USED  *        27.20 MB      
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2_2.xyz                                                                       
+
+    3
+ UHF-SCF000/STO-3G  OPTSTEP=2  ENERGY=-38.43623129
+ C          0.0000000000        0.0715440756       -0.0000000028
+ H          0.0000000000       -0.4262733274        0.9601572054
+ H          0.0000000000       -0.4262733445       -0.9601571724
+
+ **********************************************************************************************************************************
+
+ PROGRESS OF GEOMETRY OPTIMIZATION.    TOTAL CPU:         0.6 SEC
+   1   -38.42978706   -38.43590047    -0.00611342  0.04273237  0.05296411  0.01765470  0.29863871  0.30000000  0.17320508
+   2   -38.43590047   -38.43623129    -0.00033082  0.02034420  0.02047954  0.00682651  0.03111401  0.03871537  0.02235233
+
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2.xyz                                                                         
+
+    3
+ UHF-SCF000/STO-3G  ENERGY=-38.43623129
+ C          0.0000000000        0.0715440756       -0.0000000028
+ H          0.0000000000       -0.4262733274        0.9601572054
+ H          0.0000000000       -0.4262733445       -0.9601571724
+
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.2
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000000         0.000260930        -0.000000022
+   2         0.000000000        -0.000130470        -0.000674533
+   3        -0.000000000        -0.000130459         0.000674554
+
+ Nuclear force contribution to virial =        -0.002202363
+ Reading points  1 to  3 from record 700.2,  wavefunction type=UHF-SCF000      
+
+ Making model hessian for cartesian coordinates
+ BFGS update of hessian using  2 points
+
+ Entering Rational Function Geometry Optimization
+
+ Optimization point  3
+
+ Variable                      Last           Current        Next           Gradient       Hessian
+ E(UHF-SCF000) / Hartree   -38.43590047   -38.43623129   -38.43623391
+ GX1 / ANGSTROM              0.00000000     0.00000000     0.00000000    -0.00000000    -0.00000000
+ GY1 / ANGSTROM              0.07218059     0.07154408     0.07020655     0.00049309    -0.00000000
+ GZ1 / ANGSTROM             -0.00000001    -0.00000000     0.00000001    -0.00000004    -0.00000000
+ GX2 / ANGSTROM              0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+ GY2 / ANGSTROM             -0.43006576    -0.42627333    -0.42560456    -0.00024655     0.00000000
+ GZ2 / ANGSTROM              0.97441648     0.96015721     0.96182342    -0.00127468     0.00000000
+ GX3 / ANGSTROM              0.00000000     0.00000000     0.00000000    -0.00000000     0.41396250
+ GY3 / ANGSTROM             -0.43006581    -0.42627334    -0.42560458    -0.00024653     2.62370603
+ GZ3 / ANGSTROM             -0.97441638    -0.96015717    -0.96182340     0.00127472     4.53873388
+ Convergence:                0.00000000  (line search)     0.00542324     0.00100605  (total)
+
+ Geometry written to block  4 of record 700
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  4 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Asymmetric top
+ Rotational constants:     220.7627372    270.9953407   1190.9729746 GHz  (calculated with average atomic masses)
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134653834    0.000000000
+   2  H       1.00    0.000000000   -0.802293389    1.817582828
+   3  H       1.00    0.000000000   -0.802293387   -1.817582833
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.044866116  1-3  2.044866120
+     ( 1.082096548)     ( 1.082096550)
+
+ Bond angles
+
+  2-1-3  125.45862252
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.14344548
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.284E+00 0.338E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         229. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         229. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.1 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.4 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.2
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43623385     38.426003   -0.00000   -0.08677   -0.00000    0
+    2      0.845D-04      0.824D-04       -38.43623410     38.426100   -0.00000   -0.08709   -0.00000    1
+    3      0.792D-04      0.440D-04       -38.43623422     38.426204   -0.00000   -0.08737    0.00000    2
+    4      0.515D-04      0.174D-04       -38.43623424     38.426287    0.00000   -0.08754    0.00000    3
+    5      0.557D-05      0.314D-05       -38.43623425     38.426292    0.00000   -0.08754   -0.00000    4
+    6      0.177D-05      0.922D-06       -38.43623425     38.426289   -0.00000   -0.08753   -0.00000    5
+    7      0.479D-06      0.190D-06       -38.43623425     38.426290   -0.00000   -0.08753   -0.00000    6
+    8      0.429D-07      0.178D-07       -38.43623425     38.426290    0.00000   -0.08753   -0.00000    5
+    9      0.175D-07      0.541D-08       -38.43623425     38.426290    0.00000   -0.08753   -0.00000    5
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436234245480
+ Nuclear energy                         6.14344548
+ One-electron energy                  -63.79282478
+ Two-electron energy                   19.21314506
+ Virial quotient                       -0.99588097
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08753392    -0.00000000
+ Dipole moment /Debye                   0.00000000    -0.22247445    -0.00000000
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989663    -0.896821    -0.551021    -0.412262    -0.364432     0.642738     0.778054
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931418    -0.709972    -0.510945     0.316237     0.378144     0.716987     0.862301
+
+ HOMO      5.1    -0.364432 =      -9.9167eV
+ LUMO     -4.1     0.316237 =       8.6052eV
+ LUMO-HOMO         0.680669 =      18.5219eV
+
+ EXPECTATION VALUE OF S**2:             2.01587485
+
+ Natural orbitals saved to record    2200.2 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       19.89       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        2.78       700     1000      520     2200   
+                                         GEOM     BASIS   MCVARS     UHF  
+
+ PROGRAMS   *        TOTAL       UHF       UHF       INT
+ CPU TIMES  *         1.17      0.12      0.03      0.11
+ REAL TIME  *         2.23 SEC
+ DISK USED  *        27.20 MB      
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2_3.xyz                                                                       
+
+    3
+ UHF-SCF000/STO-3G  OPTSTEP=3  ENERGY=-38.43623425
+ C          0.0000000000        0.0712557401        0.0000000002
+ H          0.0000000000       -0.4245553779        0.9618234117
+ H          0.0000000000       -0.4245553767       -0.9618234140
+
+ **********************************************************************************************************************************
+
+ PROGRESS OF GEOMETRY OPTIMIZATION.    TOTAL CPU:         0.9 SEC
+   1   -38.42978706   -38.43590047    -0.00611342  0.04273237  0.05296411  0.01765470  0.29863871  0.30000000  0.17320508
+   2   -38.43590047   -38.43623129    -0.00033082  0.02034420  0.02047954  0.00682651  0.03111401  0.03871537  0.02235233
+   3   -38.43623129   -38.43623425    -0.00000295  0.00091745  0.00100605  0.00033535  0.00537125  0.00542324  0.00313111
+
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2.xyz                                                                         
+
+    3
+ UHF-SCF000/STO-3G  ENERGY=-38.43623425
+ C          0.0000000000        0.0712557401        0.0000000002
+ H          0.0000000000       -0.4245553779        0.9618234117
+ H          0.0000000000       -0.4245553767       -0.9618234140
+
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.2
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000000         0.000164701         0.000000002
+   2         0.000000000        -0.000082350        -0.000007203
+   3        -0.000000000        -0.000082351         0.000007201
+
+ Nuclear force contribution to virial =         0.000128136
+ Reading points  1 to  4 from record 700.2,  wavefunction type=UHF-SCF000      
+
+ Making model hessian for cartesian coordinates
+ BFGS update of hessian using  3 points
+
+ Entering Rational Function Geometry Optimization
+
+ Optimization point  4
+
+ Variable                      Last           Current        Next           Gradient       Hessian
+ E(UHF-SCF000) / Hartree   -38.43623129   -38.43623425   -38.43623433
+ GX1 / ANGSTROM              0.00000000     0.00000000     0.00000000    -0.00000000    -0.00000000
+ GY1 / ANGSTROM              0.07154408     0.07125574     0.07089618     0.00031124     0.00000000
+ GZ1 / ANGSTROM             -0.00000000     0.00000000    -0.00000000     0.00000000     0.00000000
+ GX2 / ANGSTROM              0.00000000     0.00000000     0.00000000     0.00000000     0.00000000
+ GY2 / ANGSTROM             -0.42627333    -0.42455538    -0.42437560    -0.00015562     0.00000000
+ GZ2 / ANGSTROM              0.96015721     0.96182341     0.96205009    -0.00001361     0.00000000
+ GX3 / ANGSTROM              0.00000000     0.00000000     0.00000000    -0.00000000     0.41330539
+ GY3 / ANGSTROM             -0.42627334    -0.42455538    -0.42437560    -0.00015562     2.61177190
+ GZ3 / ANGSTROM             -0.96015717    -0.96182341    -0.96205009     0.00001361     4.53776049
+ Convergence:                0.00000000  (line search)     0.00102932     0.00020197  (total)
+
+ Geometry written to block  5 of record 700
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  5 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Asymmetric top
+ Rotational constants:     220.7669399    270.8676534   1193.5682909 GHz  (calculated with average atomic masses)
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.000000000
+   2  H       1.00    0.000000000   -0.801420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.044780161  1-3  2.044780162
+     ( 1.082051062)     ( 1.082051063)
+
+ Bond angles
+
+  2-1-3  125.52039083
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.14362735
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.284E+00 0.338E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         228. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         228. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.1 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.4 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.2
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43623431     38.426592    0.00000   -0.08741    0.00000    0
+    2      0.275D-04      0.177D-04       -38.43623433     38.426686    0.00000   -0.08750   -0.00000    1
+    3      0.291D-04      0.103D-04       -38.43623433     38.426760    0.00000   -0.08758   -0.00000    2
+    4      0.892D-05      0.312D-05       -38.43623433     38.426767    0.00000   -0.08760   -0.00000    3
+    5      0.216D-05      0.979D-06       -38.43623433     38.426766    0.00000   -0.08760   -0.00000    4
+    6      0.407D-06      0.306D-06       -38.43623433     38.426768    0.00000   -0.08760   -0.00000    5
+    7      0.162D-06      0.679D-07       -38.43623433     38.426767    0.00000   -0.08760   -0.00000    6
+    8      0.176D-07      0.750D-08       -38.43623433     38.426767    0.00000   -0.08760   -0.00000    6
+    9      0.925D-08      0.268D-08       -38.43623433     38.426767    0.00000   -0.08760   -0.00000    5
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436234334427
+ Nuclear energy                         6.14362735
+ One-electron energy                  -63.79324521
+ Two-electron energy                   19.21338353
+ Virial quotient                       -0.99587889
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08760009    -0.00000000
+ Dipole moment /Debye                   0.00000000    -0.22264264    -0.00000000
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989618    -0.896817    -0.551107    -0.412155    -0.364412     0.642486     0.778388
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931376    -0.709937    -0.511056     0.316365     0.378155     0.716743     0.862602
+
+ HOMO      5.1    -0.364412 =      -9.9162eV
+ LUMO     -4.1     0.316365 =       8.6087eV
+ LUMO-HOMO         0.680777 =      18.5249eV
+
+ EXPECTATION VALUE OF S**2:             2.01589162
+
+ Natural orbitals saved to record    2200.2 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       19.89       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       4        2.78       700     1000      520     2200   
+                                         GEOM     BASIS   MCVARS     UHF  
+
+ PROGRAMS   *        TOTAL       UHF       UHF       INT
+ CPU TIMES  *         1.49      0.09      0.03      0.11
+ REAL TIME  *         2.80 SEC
+ DISK USED  *        27.20 MB      
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2_4.xyz                                                                       
+
+    3
+ UHF-SCF000/STO-3G  OPTSTEP=4  ENERGY=-38.43623433
+ C          0.0000000000        0.0711782280        0.0000000001
+ H          0.0000000000       -0.4240935459        0.9620500880
+ H          0.0000000000       -0.4240935455       -0.9620500887
+
+ **********************************************************************************************************************************
+
+ PROGRESS OF GEOMETRY OPTIMIZATION.    TOTAL CPU:         1.3 SEC
+   1   -38.42978706   -38.43590047    -0.00611342  0.04273237  0.05296411  0.01765470  0.29863871  0.30000000  0.17320508
+   2   -38.43590047   -38.43623129    -0.00033082  0.02034420  0.02047954  0.00682651  0.03111401  0.03871537  0.02235233
+   3   -38.43623129   -38.43623425    -0.00000295  0.00091745  0.00100605  0.00033535  0.00537125  0.00542324  0.00313111
+   4   -38.43623425   -38.43623433    -0.00000009  0.00014480  0.00020197  0.00006732  0.00101029  0.00102932  0.00059428
+
+ **********************************************************************************************************************************
+
+ Current geometry (xyz format, in Angstrom)
+
+
+ Dump information in style XYZ to ch2.xyz                                                                         
+
+    3
+ UHF-SCF000/STO-3G  ENERGY=-38.43623433
+ C          0.0000000000        0.0711782280        0.0000000001
+ H          0.0000000000       -0.4240935459        0.9620500880
+ H          0.0000000000       -0.4240935455       -0.9620500887
+
+ **********************************************************************************************************************************
+ Cartesian Coordinates are in [bohr]
+ Creating new Variables:
+ CX1               0.00000000
+ CY1               0.13450736
+ CZ1               0.00000000
+ HX2               0.00000000
+ HY2              -0.80142065
+ HZ2               1.81801118
+ HX3               0.00000000
+ HY3              -0.80142065
+ HZ3              -1.81801119
+ Task   1   Incrementing variable CX1   by   0.010 BOH (Skipping negative increment due to symmetry).
+ Task   2   Incrementing variable CY1   by   0.010 BOH
+ Task   3   Incrementing variable CY1   by  -0.010 BOH
+ Task   4   Incrementing variable CZ1   by   0.010 BOH (Skipping negative increment due to symmetry).
+ Task   5   Incrementing variable HX2   by   0.010 BOH (Skipping negative increment due to symmetry).
+ Task   6   Incrementing variable HY2   by   0.010 BOH
+ Task   7   Incrementing variable HY2   by  -0.010 BOH
+ Task   8   Incrementing variable HZ2   by   0.010 BOH
+ Task   9   Incrementing variable HZ2   by  -0.010 BOH
+ Starting task   1.  CPU=     0.00 sec, Elapsed=     0.00 sec
+ Incrementing variable CX1              by  0.010000 BOH   to    0.010000 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.010000000    0.134507357    0.000000000
+   2  H       1.00    0.000000000   -0.801420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.044804613  1-3  2.044804614
+     ( 1.082064002)     ( 1.082064003)
+
+ Bond angles
+
+  2-1-3  125.51772908
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.14355717
+
+
+ Eigenvalues of metric
+
+         1 0.284E+00 0.338E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         315. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         315. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43622873     38.426692   -0.00177   -0.08760   -0.00000    0
+    2      0.331D-03      0.271D-03       -38.43623174     38.426678   -0.00157   -0.08760   -0.00000    1
+    3      0.591D-03      0.181D-03       -38.43623427     38.426658   -0.00114   -0.08759   -0.00000    2
+    4      0.987D-04      0.268D-04       -38.43623433     38.426662   -0.00099   -0.08759   -0.00000    3
+    5      0.656D-05      0.402D-05       -38.43623433     38.426664   -0.00094   -0.08759   -0.00000    4
+    6      0.460D-07      0.269D-07       -38.43623433     38.426663   -0.00094   -0.08759   -0.00000    4
+    7      0.239D-07      0.104D-07       -38.43623433     38.426663   -0.00094   -0.08759   -0.00000    3
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436234333674
+ Nuclear energy                         6.14355717
+ One-electron energy                  -63.79312310
+ Two-electron energy                   19.21333160
+ Virial quotient                       -0.99587935
+ !UHF STATE 1.1 Dipole moment          -0.00093589    -0.08759233    -0.00000000
+ Dipole moment /Debye                  -0.00237863    -0.22262292    -0.00000000
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989620    -0.896813    -0.551099    -0.412158    -0.364412     0.642485     0.778362
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931377    -0.709934    -0.511046     0.316359     0.378156     0.716742     0.862577
+
+ HOMO      5.1    -0.364412 =      -9.9162eV
+ LUMO     -4.1     0.316359 =       8.6086eV
+ LUMO-HOMO         0.680771 =      18.5247eV
+
+ EXPECTATION VALUE OF S**2:             2.01589129
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.61       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         1.59      0.09      1.26      0.03      0.11
+ REAL TIME  *         3.00 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1         0.000000245         0.000022956         0.000000001
+   2        -0.000000123        -0.000011478         0.000012886
+   3        -0.000000123        -0.000011478        -0.000012886
+
+ Nuclear force contribution to virial =         0.000068341
+ Starting task   2.  CPU=     0.41 sec, Elapsed=     0.46 sec
+ Incrementing variable CY1              by  0.010000 BOH   to    0.144507 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.144507357    0.000000000
+   2  H       1.00    0.000000000   -0.801420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.049376604  1-3  2.049376605
+     ( 1.084483396)     ( 1.084483396)
+
+ Bond angles
+
+  2-1-3  125.02324689
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.13046496
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.284E+00 0.340E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         228. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         228. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43621762     38.409994   -0.00000   -0.08882   -0.00000    0
+    2      0.338D-03      0.203D-03       -38.43621916     38.408384   -0.00000   -0.08789   -0.00000    1
+    3      0.331D-03      0.111D-03       -38.43621983     38.407270   -0.00000   -0.08714   -0.00000    2
+    4      0.882D-04      0.302D-04       -38.43621989     38.407294    0.00000   -0.08708   -0.00000    3
+    5      0.250D-04      0.973D-05       -38.43621990     38.407302    0.00000   -0.08708   -0.00000    4
+    6      0.326D-05      0.329D-05       -38.43621990     38.407287    0.00000   -0.08708   -0.00000    5
+    7      0.165D-05      0.806D-06       -38.43621990     38.407294    0.00000   -0.08708   -0.00000    6
+    8      0.272D-06      0.163D-06       -38.43621990     38.407295    0.00000   -0.08708   -0.00000    6
+    9      0.131D-06      0.540D-07       -38.43621990     38.407294    0.00000   -0.08708   -0.00000    6
+   10      0.107D-08      0.925D-09       -38.43621990     38.407294   -0.00000   -0.08708   -0.00000    5
+   11      0.367D-09      0.202D-09       -38.43621990     38.407294    0.00000   -0.08708   -0.00000    4
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436219901728
+ Nuclear energy                         6.13046496
+ One-electron energy                  -63.77033203
+ Two-electron energy                   19.20364717
+ Virial quotient                       -0.99596586
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08708272    -0.00000000
+ Dipole moment /Debye                   0.00000000    -0.22132769    -0.00000000
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989920    -0.896136    -0.549556    -0.412718    -0.364380     0.642291     0.773523
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931643    -0.709326    -0.509359     0.315234     0.378289     0.716507     0.858062
+
+ HOMO      5.1    -0.364380 =      -9.9153eV
+ LUMO     -4.1     0.315234 =       8.5780eV
+ LUMO-HOMO         0.679615 =      18.4933eV
+
+ EXPECTATION VALUE OF S**2:             2.01583290
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.60       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         1.91      0.10      1.26      0.03      0.11
+ REAL TIME  *         3.46 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000000         0.002883378         0.000000000
+   2         0.000000000        -0.001441689         0.001569645
+   3        -0.000000000        -0.001441689        -0.001569646
+
+ Nuclear force contribution to virial =         0.008434734
+ Starting task   3.  CPU=     0.79 sec, Elapsed=     0.87 sec
+ Incrementing variable CY1              by -0.010000 BOH   to    0.124507 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.124507357    0.000000000
+   2  H       1.00    0.000000000   -0.801420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.040222377  1-3  2.040222378
+     ( 1.079639187)     ( 1.079639187)
+
+ Bond angles
+
+  2-1-3  126.01976540
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.15673760
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.283E+00 0.335E+00 0.885E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         228. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         228. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43621782     38.443460   -0.00000   -0.08637   -0.00000    0
+    2      0.342D-03      0.204D-03       -38.43621939     38.445069   -0.00000   -0.08730   -0.00000    1
+    3      0.336D-03      0.112D-03       -38.43622007     38.446188   -0.00000   -0.08805   -0.00000    2
+    4      0.898D-04      0.306D-04       -38.43622014     38.446165    0.00000   -0.08811   -0.00000    3
+    5      0.251D-04      0.978D-05       -38.43622015     38.446159    0.00000   -0.08811   -0.00000    4
+    6      0.317D-05      0.326D-05       -38.43622015     38.446173    0.00000   -0.08811   -0.00000    5
+    7      0.158D-05      0.786D-06       -38.43622015     38.446166    0.00000   -0.08811   -0.00000    6
+    8      0.268D-06      0.159D-06       -38.43622015     38.446166    0.00000   -0.08810   -0.00000    6
+    9      0.126D-06      0.520D-07       -38.43622015     38.446166   -0.00000   -0.08810   -0.00000    6
+   10      0.109D-08      0.936D-09       -38.43622015     38.446166   -0.00000   -0.08810   -0.00000    5
+   11      0.383D-09      0.195D-09       -38.43622015     38.446166   -0.00000   -0.08810   -0.00000    4
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436220147520
+ Nuclear energy                         6.15673760
+ One-electron energy                  -63.81604084
+ Two-electron energy                   19.22308310
+ Virial quotient                       -0.99579081
+ !UHF STATE 1.1 Dipole moment          -0.00000000    -0.08810356    -0.00000000
+ Dipole moment /Debye                  -0.00000000    -0.22392226    -0.00000000
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989316    -0.897493    -0.552650    -0.411584    -0.364443     0.642641     0.783275
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931107    -0.710536    -0.512746     0.317490     0.378022     0.716951     0.867159
+
+ HOMO      5.1    -0.364443 =      -9.9170eV
+ LUMO     -4.1     0.317490 =       8.6394eV
+ LUMO-HOMO         0.681933 =      18.5564eV
+
+ EXPECTATION VALUE OF S**2:             2.01595497
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.60       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         2.21      0.10      1.26      0.03      0.11
+ REAL TIME  *         3.90 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1         0.000000000        -0.002840324         0.000000001
+   2        -0.000000000         0.001420162        -0.001579190
+   3         0.000000000         0.001420162         0.001579189
+
+ Nuclear force contribution to virial =        -0.008371904
+ Starting task   4.  CPU=     1.21 sec, Elapsed=     1.35 sec
+ Incrementing variable CZ1              by  0.010000 BOH   to    0.010000 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.010000000
+   2  H       1.00    0.000000000   -0.801420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.035894320  1-3  2.053676249
+     ( 1.077348878)     ( 1.086758669)
+
+ Bond angles
+
+  2-1-3  125.51927548
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.14372360
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.283E+00 0.338E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         231. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         231. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43619422     38.426796   -0.00000   -0.08760   -0.00099    0
+    2      0.158D-03      0.171D-03       -38.43619497     38.426799    0.00000   -0.08760   -0.00044    1
+    3      0.104D-03      0.795D-04       -38.43619527     38.426799    0.00000   -0.08760   -0.00017    2
+    4      0.921D-04      0.427D-04       -38.43619539     38.426800    0.00000   -0.08759   -0.00009    3
+    5      0.268D-04      0.100D-04       -38.43619540     38.426801    0.00000   -0.08759   -0.00018    4
+    6      0.400D-05      0.190D-05       -38.43619540     38.426801    0.00000   -0.08759   -0.00018    5
+    7      0.361D-06      0.520D-06       -38.43619540     38.426801    0.00000   -0.08759   -0.00018    5
+    8      0.411D-06      0.278D-06       -38.43619540     38.426801    0.00000   -0.08759   -0.00018    6
+    9      0.398D-07      0.166D-07       -38.43619540     38.426801    0.00000   -0.08759   -0.00018    5
+   10      0.474D-08      0.343D-08       -38.43619540     38.426801    0.00000   -0.08759   -0.00018    5
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436195401289
+ Nuclear energy                         6.14372360
+ One-electron energy                  -63.79331942
+ Two-electron energy                   19.21340042
+ Virial quotient                       -0.99587650
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08759408    -0.00018004
+ Dipole moment /Debye                   0.00000000    -0.22262736    -0.00045758
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989626    -0.896833    -0.551103    -0.412156    -0.364418     0.642315     0.778593
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931383    -0.709961    -0.511037     0.316359     0.378151     0.716580     0.862802
+
+ HOMO      5.1    -0.364418 =      -9.9163eV
+ LUMO     -4.1     0.316359 =       8.6086eV
+ LUMO-HOMO         0.680777 =      18.5249eV
+
+ EXPECTATION VALUE OF S**2:             2.01589566
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.60       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         2.53      0.10      1.26      0.03      0.11
+ REAL TIME  *         4.36 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1         0.000000000        -0.000051074         0.007786833
+   2        -0.000000000         0.002030039        -0.003927600
+   3        -0.000000000        -0.001978965        -0.003859233
+
+ Nuclear force contribution to virial =        -0.000094225
+ Starting task   5.  CPU=     1.78 sec, Elapsed=     1.95 sec
+ Incrementing variable HX2              by  0.010000 BOH   to    0.010000 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.000000000
+   2  H       1.00    0.010000000   -0.801420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.044804613  1-3  2.044780162
+     ( 1.082064002)     ( 1.082051063)
+
+ Bond angles
+
+  2-1-3  125.51990174
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.14359122
+
+ Eigenvalues of metric
+
+         1 0.284E+00 0.338E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         283. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         283. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43623147     38.426728    0.00088   -0.08760    0.00000    0
+    2      0.228D-03      0.186D-03       -38.43623302     38.426722    0.00079   -0.08760    0.00000    1
+    3      0.419D-03      0.121D-03       -38.43623431     38.426715    0.00056   -0.08760   -0.00000    2
+    4      0.386D-04      0.192D-04       -38.43623433     38.426717    0.00050   -0.08760   -0.00000    3
+    5      0.131D-04      0.567D-05       -38.43623433     38.426717    0.00046   -0.08760   -0.00000    4
+    6      0.363D-06      0.496D-06       -38.43623433     38.426717    0.00047   -0.08760   -0.00000    4
+    7      0.370D-06      0.260D-06       -38.43623433     38.426717    0.00047   -0.08760   -0.00000    5
+    8      0.149D-06      0.449D-07       -38.43623433     38.426717    0.00047   -0.08760   -0.00000    4
+    9      0.902D-08      0.458D-08       -38.43623433     38.426717    0.00047   -0.08760   -0.00000    4
+   10      0.691D-08      0.221D-08       -38.43623433     38.426717    0.00047   -0.08760   -0.00000    5
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436234334139
+ Nuclear energy                         6.14359122
+ One-electron energy                  -63.79318402
+ Two-electron energy                   19.21335847
+ Virial quotient                       -0.99587911
+ !UHF STATE 1.1 Dipole moment           0.00046797    -0.08759838    -0.00000104
+ Dipole moment /Debye                   0.00118939    -0.22263830    -0.00000264
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989619    -0.896815    -0.551104    -0.412155    -0.364412     0.642481     0.778379
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931376    -0.709935    -0.511052     0.316364     0.378156     0.716739     0.862593
+
+ HOMO      5.1    -0.364412 =      -9.9162eV
+ LUMO     -4.1     0.316364 =       8.6087eV
+ LUMO-HOMO         0.680776 =      18.5248eV
+
+ EXPECTATION VALUE OF S**2:             2.01589171
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.61       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         2.85      0.08      1.26      0.03      0.11
+ REAL TIME  *         4.93 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000101         0.000013660        -0.000010706
+   2         0.000000090        -0.000009586         0.000014693
+   3         0.000000011        -0.000004074        -0.000003987
+
+ Nuclear force contribution to virial =         0.000046746
+ Starting task   6.  CPU=     2.15 sec, Elapsed=     2.35 sec
+ Incrementing variable HY2              by  0.010000 BOH   to   -0.791421 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.000000000
+   2  H       1.00    0.000000000   -0.791420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.040222377  1-3  2.044780162
+     ( 1.079639187)     ( 1.082051063)
+
+ Bond angles
+
+  2-1-3  125.77007811
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.15018143
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.283E+00 0.337E+00 0.885E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         231. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         231. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43622671     38.435111   -0.00000   -0.08699   -0.00006    0
+    2      0.222D-03      0.162D-03       -38.43622766     38.435915    0.00000   -0.08745   -0.00002    1
+    3      0.229D-03      0.888D-04       -38.43622816     38.436472    0.00000   -0.08783    0.00008    2
+    4      0.772D-04      0.271D-04       -38.43622822     38.436485    0.00000   -0.08787    0.00016    3
+    5      0.246D-04      0.117D-04       -38.43622823     38.436456    0.00000   -0.08785    0.00020    4
+    6      0.557D-05      0.272D-05       -38.43622824     38.436465    0.00000   -0.08786    0.00019    5
+    7      0.993D-06      0.622D-06       -38.43622824     38.436460    0.00000   -0.08785    0.00019    6
+    8      0.183D-06      0.210D-06       -38.43622824     38.436460    0.00000   -0.08785    0.00019    6
+    9      0.756D-07      0.578D-07       -38.43622824     38.436461    0.00000   -0.08785    0.00019    6
+   10      0.270D-07      0.159D-07       -38.43622824     38.436461    0.00000   -0.08785    0.00019    5
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436228235487
+ Nuclear energy                         6.15018143
+ One-electron energy                  -63.80464007
+ Two-electron energy                   19.21823040
+ Virial quotient                       -0.99583491
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08785339     0.00019020
+ Dipole moment /Debye                   0.00000000    -0.22328643     0.00048342
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989467    -0.897156    -0.551879    -0.411869    -0.364428     0.642553     0.780841
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931242    -0.710238    -0.511900     0.316929     0.378088     0.716836     0.864890
+
+ HOMO      5.1    -0.364428 =      -9.9166eV
+ LUMO     -4.1     0.316929 =       8.6241eV
+ LUMO-HOMO         0.681356 =      18.5407eV
+
+ EXPECTATION VALUE OF S**2:             2.01592318
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.60       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         3.15      0.09      1.26      0.03      0.11
+ REAL TIME  *         5.35 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000000        -0.001417044         0.002012518
+   2         0.000000000         0.001221623        -0.001793076
+   3         0.000000000         0.000195421        -0.000219442
+
+ Nuclear force contribution to virial =        -0.004174919
+ Starting task   7.  CPU=     2.52 sec, Elapsed=     2.76 sec
+ Incrementing variable HY2              by -0.010000 BOH   to   -0.811421 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.000000000
+   2  H       1.00    0.000000000   -0.811420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.049376604  1-3  2.044780162
+     ( 1.084483396)     ( 1.082051063)
+
+ Bond angles
+
+  2-1-3  125.27181886
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.13704511
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.284E+00 0.339E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         231. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         231. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43622661     38.418378    0.00000   -0.08821    0.00006    0
+    2      0.221D-03      0.161D-03       -38.43622755     38.417573    0.00000   -0.08775    0.00002    1
+    3      0.227D-03      0.884D-04       -38.43622804     38.417016    0.00000   -0.08737   -0.00008    2
+    4      0.784D-04      0.270D-04       -38.43622811     38.417009    0.00000   -0.08733   -0.00017    3
+    5      0.238D-04      0.110D-04       -38.43622812     38.417032    0.00000   -0.08734   -0.00021    4
+    6      0.496D-05      0.249D-05       -38.43622812     38.417020    0.00000   -0.08734   -0.00020    5
+    7      0.111D-05      0.653D-06       -38.43622812     38.417025    0.00000   -0.08734   -0.00020    6
+    8      0.190D-06      0.208D-06       -38.43622812     38.417026    0.00000   -0.08734   -0.00020    6
+    9      0.908D-07      0.647D-07       -38.43622812     38.417025    0.00000   -0.08734   -0.00020    6
+   10      0.227D-07      0.148D-07       -38.43622812     38.417025    0.00000   -0.08734   -0.00020    5
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436228119510
+ Nuclear energy                         6.13704511
+ One-electron energy                  -63.78178565
+ Two-electron energy                   19.20851242
+ Virial quotient                       -0.99592243
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08734294    -0.00019904
+ Dipole moment /Debye                   0.00000000    -0.22198906    -0.00050586
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989769    -0.896477    -0.550332    -0.412437    -0.364397     0.642378     0.775966
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931510    -0.709633    -0.510206     0.315800     0.378222     0.716614     0.860342
+
+ HOMO      5.1    -0.364397 =      -9.9157eV
+ LUMO     -4.1     0.315800 =       8.5934eV
+ LUMO-HOMO         0.680197 =      18.5091eV
+
+ EXPECTATION VALUE OF S**2:             2.01586214
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.60       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         3.44      0.08      1.26      0.03      0.11
+ REAL TIME  *         6.17 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000000         0.001444863        -0.001995819
+   2         0.000000000        -0.001241077         0.001785503
+   3        -0.000000000        -0.000203786         0.000210316
+
+ Nuclear force contribution to virial =         0.004228405
+ Starting task   8.  CPU=     2.93 sec, Elapsed=     3.61 sec
+ Incrementing variable HZ2              by  0.010000 BOH   to    1.828011 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.000000000
+   2  H       1.00    0.000000000   -0.801420653    1.828011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.053676248  1-3  2.044780162
+     ( 1.086758669)     ( 1.082051063)
+
+ Bond angles
+
+  2-1-3  125.64808963
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.13016227
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.285E+00 0.339E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         231. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+ SORT2 READ         231. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43621395     38.410390    0.00000   -0.08759    0.00050    0
+    2      0.142D-03      0.140D-03       -38.43621442     38.409580    0.00000   -0.08754    0.00022    1
+    3      0.878D-04      0.627D-04       -38.43621458     38.409248    0.00000   -0.08760    0.00008    2
+    4      0.643D-04      0.304D-04       -38.43621463     38.409184   -0.00000   -0.08773    0.00004    3
+    5      0.141D-04      0.664D-05       -38.43621464     38.409235   -0.00000   -0.08777    0.00008    4
+    6      0.340D-05      0.174D-05       -38.43621464     38.409226    0.00000   -0.08776    0.00009    5
+    7      0.871D-06      0.525D-06       -38.43621464     38.409227    0.00000   -0.08776    0.00008    6
+    8      0.212D-06      0.143D-06       -38.43621464     38.409227    0.00000   -0.08776    0.00008    6
+    9      0.129D-06      0.624D-07       -38.43621464     38.409227    0.00000   -0.08776    0.00008    6
+   10      0.156D-07      0.111D-07       -38.43621464     38.409227    0.00000   -0.08776    0.00008    5
+   11      0.823D-08      0.346D-08       -38.43621464     38.409227    0.00000   -0.08776    0.00008    6
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436214637093
+ Nuclear energy                         6.13016227
+ One-electron energy                  -63.77099045
+ Two-electron energy                   19.20461355
+ Virial quotient                       -0.99595741
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08776286     0.00008360
+ Dipole moment /Debye                   0.00000000    -0.22305634     0.00021248
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989460    -0.895965    -0.550267    -0.411577    -0.364149     0.639292     0.776528
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931202    -0.708818    -0.510325     0.316515     0.378437     0.713601     0.860746
+
+ HOMO      5.1    -0.364149 =      -9.9090eV
+ LUMO     -4.1     0.316515 =       8.6128eV
+ LUMO-HOMO         0.680665 =      18.5218eV
+
+ EXPECTATION VALUE OF S**2:             2.01601682
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.60       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         3.76      0.09      1.26      0.03      0.11
+ REAL TIME  *         6.64 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1         0.000000000         0.001554548        -0.003854764
+   2        -0.000000000        -0.001764654         0.003921972
+   3        -0.000000000         0.000210105        -0.000067208
+
+ Nuclear force contribution to virial =         0.008746540
+ Starting task   9.  CPU=     3.90 sec, Elapsed=     4.64 sec
+ Incrementing variable HZ2              by -0.010000 BOH   to    1.808011 BOH
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 701
+
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.000000000
+   2  H       1.00    0.000000000   -0.801420653    1.808011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.035894320  1-3  2.044780162
+     ( 1.077348878)     ( 1.082051063)
+
+ Bond angles
+
+  2-1-3  125.39157667
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.15719284
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.282E+00 0.337E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         231. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         231. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.4 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.6 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.1
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43621377     38.443187   -0.00000   -0.08761   -0.00050    0
+    2      0.143D-03      0.141D-03       -38.43621424     38.444000   -0.00000   -0.08766   -0.00023    1
+    3      0.886D-04      0.632D-04       -38.43621441     38.444335   -0.00000   -0.08760   -0.00009    2
+    4      0.645D-04      0.305D-04       -38.43621446     38.444399   -0.00000   -0.08747   -0.00005    3
+    5      0.143D-04      0.676D-05       -38.43621446     38.444348    0.00000   -0.08743   -0.00009    4
+    6      0.345D-05      0.179D-05       -38.43621446     38.444358   -0.00000   -0.08743   -0.00010    5
+    7      0.901D-06      0.536D-06       -38.43621446     38.444356   -0.00000   -0.08743   -0.00010    6
+    8      0.209D-06      0.137D-06       -38.43621446     38.444356   -0.00000   -0.08743   -0.00010    6
+    9      0.119D-06      0.617D-07       -38.43621446     38.444357    0.00000   -0.08743   -0.00010    6
+   10      0.170D-07      0.103D-07       -38.43621446     38.444357   -0.00000   -0.08743   -0.00010    5
+   11      0.844D-08      0.340D-08       -38.43621446     38.444357    0.00000   -0.08743   -0.00010    6
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436214463804
+ Nuclear energy                         6.15719284
+ One-electron energy                  -63.81558562
+ Two-electron energy                   19.22217831
+ Virial quotient                       -0.99579787
+ !UHF STATE 1.1 Dipole moment           0.00000000    -0.08743361    -0.00009640
+ Dipole moment /Debye                   0.00000000    -0.22221952    -0.00024502
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989783    -0.897681    -0.551945    -0.412736    -0.364680     0.645610     0.780351
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931556    -0.711072    -0.511776     0.316208     0.377868     0.719821     0.864559
+
+ HOMO      5.1    -0.364680 =      -9.9235eV
+ LUMO     -4.1     0.316208 =       8.6044eV
+ LUMO-HOMO         0.680888 =      18.5279eV
+
+ EXPECTATION VALUE OF S**2:             2.01576955
+
+ Natural orbitals saved to record    2200.1 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      21       22.60       500      610      700      900      701      950      970     1000      129      960   
+                                          VAR    BASINP    GEOM    SYMINP    GEOM     ZMAT    AOBASIS   BASIS     P2S    ABASIS    
+                                         1100     1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           S        T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+                                         2200   
+                                          UHF  
+
+              2       6        3.01       700     1000      520     2200      701     5500   
+                                         GEOM     BASIS   MCVARS     UHF     GEOM     HINFO   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         4.10      0.10      1.26      0.03      0.11
+ REAL TIME  *         7.66 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************
+
+ PROGRAM * ALASKA (Gradient of the energy)     Author: R. Lindh
+
+ Orbitals from record         2200.1
+
+ For positive spin:
+ Number of closed-shell orbitals:  5 (  5 )
+ Number of occupied orbitals:      5 (  5 )
+ For negative spin:
+ Number of closed-shell orbitals:  3 (  3 )
+ Number of occupied orbitals:      3 (  3 )
+
+ Number of electrons=  5+   3-    Space symmetry=1      Wavefunction type: UNRESTRICTED    
+
+
+ UHF GRADIENT FOR STATE 1.1
+
+ Atom          dE/dx               dE/dy               dE/dz
+
+   1        -0.000000000        -0.001594940         0.003932079
+   2         0.000000000         0.001814594        -0.003991835
+   3         0.000000000        -0.000219654         0.000059756
+
+ Nuclear force contribution to virial =        -0.008818668
+
+ Numerical UHF-SCF000 hessian completed. CPU-time:     4.26 sec, Elapsed:     5.03 sec
+
+ Recomputing wavefunction at initial geometry
+
+
+ Recomputing integrals since geometry changed
+
+
+ PROGRAM * SEWARD (Integral evaluation for generally contracted gaussian basis sets)     Author: Roland Lindh, 1990
+
+ Geometry written to block  1 of record 700
+
+ Orientation using atomic masses  
+ Molecule type: Asymmetric top
+ Rotational constants:     220.7669399    270.8676534   1193.5682909 GHz  (calculated with average atomic masses)
+
+ Point group  C1  
+
+
+
+ ATOMIC COORDINATES
+
+ NR  ATOM    CHARGE       X              Y              Z
+
+   1  C       6.00    0.000000000    0.134507357    0.000000000
+   2  H       1.00    0.000000000   -0.801420653    1.818011184
+   3  H       1.00    0.000000000   -0.801420652   -1.818011186
+
+ Bond lengths in Bohr (Angstrom)
+
+ 1-2  2.044780161  1-3  2.044780162
+     ( 1.082051062)     ( 1.082051063)
+
+ Bond angles
+
+  2-1-3  125.52039083
+
+
+ BASIS DATA
+
+   Nr Sym  Nuc  Type         Exponents   Contraction coefficients
+
+    1.1 A     1  1s          71.616837     0.154329
+                             13.045096     0.535328
+                              3.530512     0.444635
+    2.1 A     1  1s           2.941249    -0.099967
+                              0.683483     0.399513
+                              0.222290     0.700115
+    3.1 A     1  2px          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    4.1 A     1  2py          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    5.1 A     1  2pz          2.941249     0.155916
+                              0.683483     0.607684
+                              0.222290     0.391957
+    6.1 A     2  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+    7.1 A     3  1s           3.425251     0.154329
+                              0.623914     0.535328
+                              0.168855     0.444635
+
+ NUCLEAR CHARGE:                    8
+ NUMBER OF PRIMITIVE AOS:          21
+ NUMBER OF SYMMETRY AOS:           21
+ NUMBER OF CONTRACTIONS:            7   (   7A   )
+ NUMBER OF CORE ORBITALS:           1   (   1A   )
+ NUMBER OF VALENCE ORBITALS:        6   (   6A   )
+
+
+ NUCLEAR REPULSION ENERGY    6.14362735
+
+ EXTRA SYMMETRY OF AOS IN SYMMETRY 1:   1 1 2 1 1 1 1
+
+ Eigenvalues of metric
+
+         1 0.284E+00 0.338E+00 0.884E+00 0.100E+01 0.108E+01 0.153E+01 0.189E+01
+
+
+ Contracted 2-electron integrals neglected if value below      1.0D-11
+ AO integral compression algorithm  1   Integral accuracy      1.0D-11
+
+     0.262 MB (compressed) written to integral file (100.0%)
+
+
+ NUMBER OF SORTED TWO-ELECTRON INTEGRALS:        406.     BUFFER LENGTH:  32768
+ NUMBER OF SEGMENTS:   1  SEGMENT LENGTH:        406      RECORD LENGTH: 524288
+
+ Memory used in sort:       0.56 MW
+
+ SORT1 READ         543. AND WROTE         228. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.01 SEC
+ SORT2 READ         228. AND WROTE         406. INTEGRALS IN      1 RECORDS. CPU TIME:     0.00 SEC, REAL TIME:     0.00 SEC
+
+ FILE SIZES:   FILE 1:    20.1 MBYTE,  FILE 4:     4.2 MBYTE,   TOTAL:     24.4 MBYTE
+
+ OPERATOR DM      FOR CENTER  0  COORDINATES:    0.000000    0.000000    0.000000
+
+ PROGRAM * UHF-SCF       Authors: W. Meyer, H.-J. Werner
+
+
+ NUMBER OF ELECTRONS:       5+    3-    SPACE SYMMETRY=1    SPIN SYMMETRY: Triplet 
+ CONVERGENCE THRESHOLDS:    1.00E-07 (Density)    1.00E-08 (Energy)
+ MAX. NUMBER OF ITERATIONS:       60
+ INTERPOLATION TYPE:            DIIS
+ INTERPOLATION STEPS:              2 (START)      1 (STEP)
+ LEVEL SHIFTS:                  0.20 (ALPHA)   0.20 (BETA) 
+
+ Number of closed-shell orbitals:    3 (   3 )
+ Number of open-shell orbitals:      2 (   2 )
+
+
+ Molecular orbitals read from record     2200.2  Type=UHF/ALPHA (state 1.1)
+ Molecular orbitals read from record     2200.2  Type=UHF/BETA (state 1.1)
+
+ Molecular orbital dump at record        2200.2
+
+ Initial alpha occupation   5
+ Initial beta  occupation   3
+
+ ITERATION    DDIFF          GRAD             ENERGY        2-EL.EN.            DIPOLE MOMENTS         DIIS
+    1      0.000D+00      0.000D+00       -38.43623433     38.426767   -0.00000   -0.08760   -0.00000    0
+    2      0.150D-09      0.178D-09       -38.43623433     38.426767   -0.00000   -0.08760   -0.00000    1
+    3      0.183D-09      0.926D-10       -38.43623433     38.426767   -0.00000   -0.08760   -0.00000    2
+ 
+ Final alpha occupancy:   5
+ Final beta  occupancy:   3
+
+ !UHF STATE 1.1 Energy                -38.436234334427
+ Nuclear energy                         6.14362735
+ One-electron energy                  -63.79324521
+ Two-electron energy                   19.21338353
+ Virial quotient                       -0.99587889
+ !UHF STATE 1.1 Dipole moment          -0.00000000    -0.08760009    -0.00000000
+ Dipole moment /Debye                  -0.00000000    -0.22264264    -0.00000000
+
+ Orbital energies for positive spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.989618    -0.896817    -0.551107    -0.412155    -0.364412     0.642486     0.778388
+
+ Orbital energies for negative spin:
+
+         1.1          2.1          3.1          4.1          5.1          6.1          7.1
+    -10.931376    -0.709937    -0.511056     0.316365     0.378155     0.716743     0.862602
+
+ HOMO      5.1    -0.364412 =      -9.9162eV
+ LUMO     -4.1     0.316365 =       8.6087eV
+ LUMO-HOMO         0.680777 =      18.5249eV
+
+ EXPECTATION VALUE OF S**2:             2.01589162
+
+ Natural orbitals saved to record    2200.2 (Orbital set 3)
+
+ Orbital spaces for UNO-CAS (Min. occupation: 0.020  Max. occupation: 1.980):
+
+
+
+ **********************************************************************************************************************************
+ DATASETS  * FILE   NREC   LENGTH (MB)   RECORD NAMES
+              1      19       19.89       500      610      700      900      950      970     1000      129      960     1100   
+                                          VAR    BASINP    GEOM    SYMINP    ZMAT    AOBASIS   BASIS     P2S    ABASIS      S 
+                                         1400     1410     1200     1210     1080     1600     1650     1300     1700   
+                                           T        V       H0       H01     AOSYM     SMH    MOLCAS    ERIS     OPER   
+
+              2       7        2.79       700     1000      520     2200     5300     5400     5450   
+                                         GEOM     BASIS   MCVARS     UHF     HESS     FREQ     NMOD   
+
+ PROGRAMS   *        TOTAL       UHF      OPTG       UHF       INT
+ CPU TIMES  *         4.36      0.09      1.26      0.03      0.11
+ REAL TIME  *         8.05 SEC
+ DISK USED  *        27.64 MB      
+ **********************************************************************************************************************************

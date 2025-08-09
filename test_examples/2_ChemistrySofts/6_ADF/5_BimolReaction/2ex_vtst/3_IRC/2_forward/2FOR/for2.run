@@ -1,0 +1,40 @@
+#!/bin/sh
+
+"$AMSBIN/ams" << eor
+
+Task SinglePoint
+Properties
+    NormalModes Yes
+End
+System
+    Atoms
+        C 0.02031176219437854 -0.04090989165085276 0.01374091271932109 
+        H 0.01089591673353846 -0.02172056530210005 1.10218682151663 
+        H 1.024128085067293 -0.02265075585856413 -0.4068525957729576 
+        H -0.6070238735178606 -0.8244562401746475 -0.4074581828256812 
+        H -0.4887548454285977 0.9947396952424418 -0.3284980143404765 
+        H -0.9594333205689134 1.948693264154531 -0.6451588749273296 
+    End
+    BondOrders
+         1 2 1.0
+         1 3 1.0
+         1 4 1.0
+         1 5 1.0
+    End
+End
+
+Engine ADF
+    Basis
+        Core None
+    End
+    SpinPolarization 1
+    XC
+        Hybrid B3LYP
+    End
+    Relativity
+        Level None
+    End
+    Unrestricted Yes
+EndEngine
+eor
+

@@ -1,0 +1,29 @@
+***,optimisation
+memory,100,m;
+GPRINT,orbitals,civector,basis
+nosym
+ANGSTROM
+orient,mass
+geomtyp=xyz
+geometry={
+6
+
+C    0.00    0.00     0.00
+H    0.99    0.33    -0.38
+C    0.00   -0.00     1.46
+H   -0.21   -1.02    -0.37
+H   -0.78    0.70    -0.37
+N   -0.00    0.00     2.62
+}
+
+basis=6-31G(d,p);
+endbasis;
+
+{rhf;wf,22,1,0;}
+{mp2;wf,22,1,0;}
+optg,savexyz=ch3cn-thermo.xyz;
+frequencies,NUMERICAL;
+thermo
+put,molden,test.molden;
+---;
+

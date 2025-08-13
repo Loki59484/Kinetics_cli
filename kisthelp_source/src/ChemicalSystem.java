@@ -19,6 +19,7 @@ public class ChemicalSystem implements ReadWritable {
 	public static final String saddlePoint1 = "saddlePoint1";
 	public static final String pathPoint = "pathPoint";
 	public static final String anyPoint = "anyPoint"; // an anypoint can have 0, 1, or more imaginary frequencies
+	public static boolean cli = false; // Flag to tell methods if a CLI session is active.
 
 	protected boolean atomic = false;
 	protected boolean linear = false;
@@ -58,8 +59,8 @@ public class ChemicalSystem implements ReadWritable {
 		this.nature = nature; // can be minimum, saddlePoint1, pathPoint, anyPoint;
 
 		openTestReadingFile(null); // call to the openTestReadingFile method: open,test,read a file (contains the
-								// dataRead method)
-								// in the ChemicalSystem class
+									// dataRead method)
+									// in the ChemicalSystem class
 		testCoherenceData(); // call to the testCoherenceData method: test the coherence of data in the
 								// ChemicalSystem class
 
@@ -83,20 +84,19 @@ public class ChemicalSystem implements ReadWritable {
 	// in this case, no possibility to directly read a gaussian file (or GAMESS ...)
 	// is given ...
 
-	public ChemicalSystem(String nature,File clinpFile) throws CancelException, IllegalDataException, IOException {
+	public ChemicalSystem(String nature, File clinpFile) throws CancelException, IllegalDataException, IOException {
 
 		this.nature = nature; // can be minimum, saddlePoint1, pathPoint, anyPoint;
-
+		this.cli = true;
 		openTestReadingFile(clinpFile); // call to the openTestReadingFile method: open,test,read a file (contains the
-								// dataRead method)
-								// in the ChemicalSystem class
+		// dataRead method)
+		// in the ChemicalSystem class
 		testCoherenceData(); // call to the testCoherenceData method: test the coherence of data in the
 								// ChemicalSystem class
 
 		completeProperties(); // complete properties which doesn't need to be read
 
 	} // end of CONSTRUCTOR 1
-
 
 	public ChemicalSystem(String nature, ActionOnFileRead read) throws IllegalDataException, IOException {
 		this.nature = nature;
@@ -118,19 +118,22 @@ public class ChemicalSystem implements ReadWritable {
 	/***********************************************************/
 
 	// Constructor for no file
-	public static File returnKinpFile(String nature, String question) throws CancelException, IllegalDataException, IOException {
-			return returnKinpFile(nature, question,null);
-		}
-	// Constructor for no question but file
-	public static File returnKinpFile(String nature,File clinpfFile) throws CancelException, IllegalDataException, IOException {
-			return returnKinpFile(nature, "",clinpfFile);
-		}
+	public static File returnKinpFile(String nature, String question)
+			throws CancelException, IllegalDataException, IOException {
+		return returnKinpFile(nature, question, null);
+	}
 
-	public static File returnKinpFile(String nature, String question,File clinpFile)
+	// Constructor for no question but file
+	public static File returnKinpFile(String nature, File clinpfFile)
+			throws CancelException, IllegalDataException, IOException {
+		return returnKinpFile(nature, "", clinpfFile);
+	}
+
+	public static File returnKinpFile(String nature, String question, File clinpFile)
 			throws CancelException, IllegalDataException, IOException {
 
 		File temporaryKinpFile; // kinp file that will be returned
-		
+
 		// static method that can be called independently of a session !
 		// this method ask for a filename, and return a filled kinpFile describing a
 		// chemicalSystem
@@ -141,16 +144,15 @@ public class ChemicalSystem implements ReadWritable {
 
 		ActionOnFileRead read;
 		File temporaryFileName;
-
 		// ask for a filename, will serve as input, but can be either a .kinp or .out QM
 		// file
-		if (clinpFile==null){
-		temporaryFileName = KisthepDialog.requireExistingFilename(question,
-				new KisthepInputFileFilter(Constants.anyAllowedDataFile));
-			}else{
-				temporaryFileName=clinpFile;
-			}
-
+		if (clinpFile == null) {
+			temporaryFileName = KisthepDialog.requireExistingFilename(question,
+					new KisthepInputFileFilter(Constants.anyAllowedDataFile));
+		} else {
+			System.err.println("Here: " + clinpFile);
+			temporaryFileName = clinpFile;
+		}
 
 		// DETECT THE OUTPUT TYPE of this file (gaussian09, or GAMESS or NWchem or ORCA
 		// or MOLPRO or kinp);
@@ -190,7 +192,6 @@ public class ChemicalSystem implements ReadWritable {
 
 			String kinpFileName = KisthepFile.getPrefix(temporaryFileName.getAbsolutePath()) + ".kinp";
 			ActionOnFileWrite write = new ActionOnFileWrite(kinpFileName);
-
 			// read all data from gaussian 09 freq file
 			// at the same time, build the corresponding appropriate kinp input file
 			// read g09 file and build the kinp file
@@ -322,9 +323,15 @@ public class ChemicalSystem implements ReadWritable {
 			temporarySystem.dataRead(read, Keywords.endOfFile);
 
 		} // if end ADF
+		if (clinpFile == null) {
+			temporarySystem.testCoherenceData(); // call to the testCoherenceData method: test the coherence of data in
+													// the
+													// ChemicalSystem class
+		} else {
+			temporarySystem.testCoherenceData(true); // call to the testCoherenceData method with disabled popups
+														// warnings for CLI
 
-		temporarySystem.testCoherenceData(); // call to the testCoherenceData method: test the coherence of data in the
-												// ChemicalSystem class
+		}
 
 		temporaryKinpFile = read.getWorkFile();
 		read.end();
@@ -3477,8 +3484,8 @@ public class ChemicalSystem implements ReadWritable {
 						}
 
 					} // end of for
-					// treatment
-					// detect linearity of the molecule
+						// treatment
+						// detect linearity of the molecule
 					double a = Double.parseDouble(buffer[1]);
 					double b = Double.parseDouble(buffer[2]);
 					double c = Double.parseDouble(buffer[3]);
@@ -4102,7 +4109,12 @@ public class ChemicalSystem implements ReadWritable {
 			String message = "Warning: in Class ChemicalSystem, in method kinpFromG09" + Constants.newLine;
 			message = message + "while reading Gaussian output file " + read.getWorkFile() + Constants.newLine;
 			message = message + "Multi-Job detected, last job is considered" + Constants.newLine;
-			JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.WARNING_MESSAGE);
+
+			if (cli) {
+				System.out.println(message);
+			} else {
+				JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.WARNING_MESSAGE);
+			}
 		} // if end
 
 		if (archive.length() == 0) {
@@ -4820,8 +4832,13 @@ public class ChemicalSystem implements ReadWritable {
 	/**************************************/
 	/* t e s t C o h e r e n c e D a t a */ // TEST OF DATA COHERENCE
 	/************************************/
-
+	// Constructor class to prevent dialogue box from popping, instead printing of
+	// the warnings would be made.
 	public void testCoherenceData() throws IllegalDataException {
+		testCoherenceData(false);
+	}
+
+	public void testCoherenceData(boolean flag) throws IllegalDataException {
 
 		// for an atom, 3 section must be given: MASS, Potential energy, Electronic
 		// degeneracy
@@ -5038,8 +5055,11 @@ public class ChemicalSystem implements ReadWritable {
 						+ Constants.newLine;
 				message = message + "=>         " + (negativeCurvature - 1)
 						+ " imaginary frequencies removed from statistical treatments" + Constants.newLine;
-				JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.WARNING_MESSAGE);
-
+				if (this.cli) {
+					System.out.println(message);
+				} else {
+					JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.WARNING_MESSAGE);
+				}
 				// correcting for that by removing any generalized vib. mode (transversal to the
 				// reaction path)
 				// with imaginary frequency; frequency set to 0, except the largest negative

@@ -53,7 +53,7 @@ public class StatisticalSystem extends ChemicalSystem implements ToEquilibrium, 
     } // end of the CONSTRUCTOR1 bis
     
 // Constructors to accept command line inputs
-
+    //without Pressure
     public StatisticalSystem (String nature, double T,File clinpFile) throws CancelException, IllegalDataException, IOException{
 
       super(nature,clinpFile);
@@ -66,10 +66,7 @@ public class StatisticalSystem extends ChemicalSystem implements ToEquilibrium, 
 	 
     	
     } // end of the CONSTRUCTOR
-
-
-/* C O N S T R U C T O R  1 bis (to include pressure effect) */
-
+    //With Pressure
     public StatisticalSystem (String nature, double T, double P,File clinpFile) throws CancelException, IllegalDataException, IOException{
 
       super(nature,clinpFile);
@@ -78,7 +75,7 @@ public class StatisticalSystem extends ChemicalSystem implements ToEquilibrium, 
 	  statistThermCompute();
 	 
     	
-    } // end of the CONSTRUCTOR1 bis
+    } // 
    
  
  

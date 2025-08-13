@@ -14,6 +14,7 @@ public class ReactingStatisticalSystem extends StatisticalSystem{
 
 /* C O N S T R U C T O R  1 */
 
+
     public ReactingStatisticalSystem (String nature, double T) throws CancelException, IllegalDataException, IOException {
 
         super(nature, T);  
@@ -23,7 +24,14 @@ public class ReactingStatisticalSystem extends StatisticalSystem{
     	
     } // end of the CONSTRUCTOR 1
     
+// CONSTRUCTOR TO HANDLE COMMAND LINE INPUT FILES
 
+    public ReactingStatisticalSystem (String nature, double T,File clinpFile) throws CancelException, IllegalDataException, IOException {
+
+        super(nature, T,clinpFile);  
+        symmetryNumber = 1;
+    	
+    } // end of the CONSTRUCTOR 1
 
 /* C O N S T R U C T O R  2*/
 

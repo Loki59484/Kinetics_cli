@@ -38,7 +38,7 @@ public class Interface extends JFrame implements ActionListener {
 			unimolVtst_eck, bimolTst, bimolTst_w, bimolTst_eck, bimolVtst,
 			bimolVtst_w, bimolVtst_eck, rrkmTightTs, rrkmLooseTs, session1,
 			helpDocumentation, helpInputFile, aboutKisthep, kjPerMol;
-			//kcalPerMol;
+	// kcalPerMol;
 
 	private JMenuItem reset, dataRefresh, saveResults, saveInputs, showConstants, reactPathBuild, lennardJones;
 	private JMenuItem[] tJMenuItemFileInactives;
@@ -125,7 +125,6 @@ public class Interface extends JFrame implements ActionListener {
 		sessions = newMainJMenu("Window");
 		units = newMainJMenu("Units");
 		help = newMainJMenu("Help");
-		
 
 		// Use of the newJMenu method
 		molec = newJMenuItem("Atom,Molecule", calculation);
@@ -144,7 +143,7 @@ public class Interface extends JFrame implements ActionListener {
 		open = newJMenuItem("Open", file);
 		save = newJMenuItem("Save", file);
 		save_as = newJMenuItem("Save as", file);
-		//print = newJMenuItem("Print", file); // not yet written
+		// print = newJMenuItem("Print", file); // not yet written
 		print = new JMenuItem();
 		close = newJMenuItem("Close", file);
 		exit = newJMenuItem("Exit", file);
@@ -178,8 +177,8 @@ public class Interface extends JFrame implements ActionListener {
 		// kjPerMol = newJMenuItem("Results in kJ/mol (default)",units) ;
 		kjPerMol = newJMenuItem("Energy units in kJ (default)", units);
 		// the kcalPerMol is include in the Units Menu
-		//kcalPerMol = newJMenuItem("Energy units in kcal", units);
-		//kcalPerMol.setEnabled(false);
+		// kcalPerMol = newJMenuItem("Energy units in kcal", units);
+		// kcalPerMol.setEnabled(false);
 
 		temperatureMenu = new JMenu("T");
 		pressureMenu = new JMenu("P");
@@ -240,7 +239,7 @@ public class Interface extends JFrame implements ActionListener {
 		saveResults.setEnabled(false);
 		saveInputs.setEnabled(false);
 		showConstants.setEnabled(true);
-		lennardJones.setEnabled(true);		
+		lennardJones.setEnabled(true);
 		reactPathBuild.setEnabled(true);
 
 		// Main pane management
@@ -266,24 +265,23 @@ public class Interface extends JFrame implements ActionListener {
 
 		// Radiobutton1 management
 		// Temperature
-		
+
 		ImageIcon icon;
-		URL address =   getClass().getResource("/images/smallLogo.png");
-		
+		URL address = getClass().getResource("/images/smallLogo.png");
+
 		if (address == null) {
-			String message = "Error in class Interface in constructor"+ Constants.newLine;
-			message = message +  "File smallLogo.png not found"+ Constants.newLine;
-			message = message +  "Please contact the authors"+ Constants.newLine;
-			JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);                      
-		}
-		else {
-			icon = new ImageIcon(address); 
+			String message = "Error in class Interface in constructor" + Constants.newLine;
+			message = message + "File smallLogo.png not found" + Constants.newLine;
+			message = message + "Please contact the authors" + Constants.newLine;
+			JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.ERROR_MESSAGE);
+		} else {
+			icon = new ImageIcon(address);
 			JButton smallLogo = new JButton("");
 			smallLogo.setIcon(icon);
 			bar.add(Box.createGlue());
 			bar.add(smallLogo);
 		}
-		
+
 		temperatureRadio1 = new JRadioButton();
 		temperatureRadio1.setBackground(new Color(236, 236, 220));
 		temperatureRadio1.setSelected(true);
@@ -501,18 +499,13 @@ public class Interface extends JFrame implements ActionListener {
 		txtPressureMax.addActionListener(this);
 		txtStepPressure.addActionListener(this);
 
-		
-
 		helpDocumentation.addActionListener(this);
 		aboutKisthep.addActionListener(this);
 		kjPerMol.addActionListener(this);
-		//kcalPerMol.addActionListener(this);
+		// kcalPerMol.addActionListener(this);
 		helpInputFile.addActionListener(this);
 
-		
-
 		rrkm.addActionListener(this);
-		
 
 		// Create a table of the inactives file's submenus
 		tJMenuItemFileInactives = new JMenuItem[fileNumberItem];
@@ -561,7 +554,8 @@ public class Interface extends JFrame implements ActionListener {
 		saveResults.setToolTipText("Save results as a .csv format file");
 		saveInputs.setToolTipText("Save current molecular information as .kinp format file");
 		showConstants.setToolTipText("show constants employed in KiSThelP");
-		lennardJones.setToolTipText("recommended \u03B5/k and \u03C3 Lennard-Jones parameters, from litterature, for rrkm calculations");
+		lennardJones.setToolTipText(
+				"recommended \u03B5/k and \u03C3 Lennard-Jones parameters, from litterature, for rrkm calculations");
 		reactPathBuild.setToolTipText("concatenate several .kinp input files for VTST calculation");
 
 		// Calculation Menu
@@ -603,7 +597,7 @@ public class Interface extends JFrame implements ActionListener {
 		units.setToolTipText("Select units");
 
 		kjPerMol.setToolTipText("Select the kJ unit");
-		//kcalPerMol.setToolTipText("Select the kcal unit");
+		// kcalPerMol.setToolTipText("Select the kcal unit");
 		temperatureMenu.setToolTipText("Set T unit");
 		pressureMenu.setToolTipText("Set P unit");
 
@@ -692,7 +686,9 @@ public class Interface extends JFrame implements ActionListener {
 
 		refreshFillKisthepContentPane();
 		// if and only if a session exists:
-		if (workSession != null) {workSession.calculationErase();}
+		if (workSession != null) {
+			workSession.calculationErase();
+		}
 		saveResults.setEnabled(false);
 		saveInputs.setEnabled(false);
 		dataRefresh.setEnabled(false);
@@ -702,7 +698,6 @@ public class Interface extends JFrame implements ActionListener {
 		getContentPane().validate();
 		getContentPane().repaint();
 
-		
 	} // end of resetCalculation
 
 	/**********************************************/
@@ -717,9 +712,20 @@ public class Interface extends JFrame implements ActionListener {
 	/* a c t i o n P e r f o r m e d */
 	/***********************************/
 
-	public void actionPerformed(ActionEvent ev) {
-		Object source = ev.getSource();
+// trigger to open a session from a file using command line
+	public void triggerOpenAction(File CLInputFile) {
+		actionPerformed(null,open,CLInputFile);
+	}
 
+	public void actionPerformed(ActionEvent ev) {
+		actionPerformed(ev,null,null);
+	}
+
+
+	public void actionPerformed(ActionEvent ev, Object source, File CLInputFile) {
+		if (source == null) {
+			source = ev.getSource();
+		}
 		// Exit management
 		if (source == exit) {
 
@@ -745,9 +751,13 @@ public class Interface extends JFrame implements ActionListener {
 		if (source == open) {
 			try {
 
-				File temporyFileName = KisthepDialog.requireExistingFilename(	"Session filename ?", new KisthepSessionFileFilter());
-
-				filename = temporyFileName.getAbsolutePath();
+				if (CLInputFile == null) {
+					File temporyFileName = KisthepDialog.requireExistingFilename("Session filename ?",
+							new KisthepSessionFileFilter());
+					filename = temporyFileName.getAbsolutePath();
+				} else {
+					filename = CLInputFile.getAbsolutePath();
+				}
 
 				session1 = newJMenuItem("Session 1", sessions);
 				workSession = new Session();
@@ -812,7 +822,7 @@ public class Interface extends JFrame implements ActionListener {
 
 					resetSetEnabled(true);
 
-				}// end of workSession.getSize!=0
+				} // end of workSession.getSize!=0
 
 				fileItemsetEnabled(true);
 				open.setEnabled(false);
@@ -846,7 +856,8 @@ public class Interface extends JFrame implements ActionListener {
 				labelPressure
 						.setText("Pressure ("
 								+ workSession.getUnitSystem()
-										.getPressureSymbol() + ")");
+										.getPressureSymbol()
+								+ ")");
 
 				pressureRadio1.setEnabled(true); // default (selected)
 				pressureRadio2.setEnabled(true);
@@ -900,10 +911,9 @@ public class Interface extends JFrame implements ActionListener {
 
 				} // end of if (tMin==tMax AND pMin==pMax
 
-				
 				// temperature range at fixed pressure
-				if ( (workSession.getTemperatureMin() != workSession.getTemperatureMax()) &&
-					 (workSession.getPressureMin() == workSession.getPressureMax())	){
+				if ((workSession.getTemperatureMin() != workSession.getTemperatureMax()) &&
+						(workSession.getPressureMin() == workSession.getPressureMax())) {
 
 					// make available unique pressure
 					txtPressure.setEnabled(true);
@@ -967,14 +977,14 @@ public class Interface extends JFrame implements ActionListener {
 				} // end of if Tmin!=Tmax at fixed pressure
 
 				// if loaded session corresponds to a pressure range at fixed temperature
-				if  ( (workSession.getPressureMin() != workSession.getPressureMax()) &&
-					  (workSession.getTemperatureMin() == workSession.getTemperatureMax())) {
+				if ((workSession.getPressureMin() != workSession.getPressureMax()) &&
+						(workSession.getTemperatureMin() == workSession.getTemperatureMax())) {
 
 					// make available unique temperature
 					txtTemperature.setEnabled(true);
 					labelTemperature.setEnabled(true);
 
-					// make unavailable the temperature range text and label 
+					// make unavailable the temperature range text and label
 					// but enable temperature range possibility
 					labelTemperatureMin.setEnabled(false);
 					txtTemperatureMin.setEnabled(false);
@@ -983,8 +993,7 @@ public class Interface extends JFrame implements ActionListener {
 					labelStepTemperature.setEnabled(false);
 					txtStepTemperature.setEnabled(false);
 					temperatureRadio2.setEnabled(true);
-					
-					
+
 					pressureRadio2.setSelected(true); // radio2 selected now
 
 					txtPressureMin.setEnabled(true);
@@ -1041,16 +1050,17 @@ public class Interface extends JFrame implements ActionListener {
 							tStepTemporary, "0.00")));
 
 				} // end of if Pmin!=Pmax at fixed temperature
-				
+
 				// if loaded session corresponds to a double range (pressure and temperature)
-				if  ( (workSession.getPressureMin() != workSession.getPressureMax()) &&
-					  (workSession.getTemperatureMin() != workSession.getTemperatureMax())) {
+				if ((workSession.getPressureMin() != workSession.getPressureMax()) &&
+						(workSession.getTemperatureMin() != workSession.getTemperatureMax())) {
 
 					// make available unique temperature
 					txtTemperature.setEnabled(false);
 					labelTemperature.setEnabled(false);
 
-					// make available the temperature range text and label and temperature range possibility
+					// make available the temperature range text and label and temperature range
+					// possibility
 					labelTemperatureMin.setEnabled(true);
 					txtTemperatureMin.setEnabled(true);
 					labelTemperatureMax.setEnabled(true);
@@ -1058,8 +1068,7 @@ public class Interface extends JFrame implements ActionListener {
 					labelStepTemperature.setEnabled(true);
 					txtStepTemperature.setEnabled(true);
 					temperatureRadio2.setEnabled(true);
-					
-					
+
 					pressureRadio2.setSelected(true); // radio2 selected now
 
 					txtPressureMin.setEnabled(true);
@@ -1070,7 +1079,7 @@ public class Interface extends JFrame implements ActionListener {
 					labelPressureMax.setEnabled(true);
 					labelStepPressure.setEnabled(true);
 
-					// put loaded values for temperature and pressure range 
+					// put loaded values for temperature and pressure range
 					txtPressureMin.setText(String.valueOf(Maths.format(
 							Session.getCurrentSession()
 									.getUnitSystem()
@@ -1114,8 +1123,6 @@ public class Interface extends JFrame implements ActionListener {
 							tStepTemporary, "0.00")));
 
 				} // end of if Pmin!=Pmax and Tmin!=Tmax
-				
-				
 
 				if (workSession.getSessionContent().size() != 0) {
 					dataRefresh.setEnabled(true);
@@ -1125,12 +1132,18 @@ public class Interface extends JFrame implements ActionListener {
 
 			} // end of try
 
-			catch (CancelException error) {resetCalculation();}
-			catch (IOException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();}
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
+			catch (CancelException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
+
 		} // end of if (source==open...
 
 		// Save management
@@ -1140,8 +1153,9 @@ public class Interface extends JFrame implements ActionListener {
 				workSession.save(filename);
 			}
 
-			catch (IOException error) {} 
-			catch (IllegalDataException error) {}
+			catch (IOException error) {
+			} catch (IllegalDataException error) {
+			}
 		}
 
 		// Save_as management
@@ -1161,9 +1175,13 @@ public class Interface extends JFrame implements ActionListener {
 
 			} // end of try
 
-			catch (CancelException error) {resetCalculation();}
-			catch (IOException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();}
+			catch (CancelException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			}
 		}
 
 		// Close management
@@ -1189,7 +1207,7 @@ public class Interface extends JFrame implements ActionListener {
 					pressureMenu.setEnabled(false);
 
 				} // end of the "save the session"
-			} // end of if then "to  be saved"
+			} // end of if then "to be saved"
 			else {
 
 				int r = JOptionPane.showConfirmDialog(null,
@@ -1305,24 +1323,25 @@ public class Interface extends JFrame implements ActionListener {
 						.getCurrentSession().getUnitSystem()
 						.convertToTemperatureUnit(Constants.tMinDefault), "0.00")));
 				txtTemperatureMax
-				.setText(String.valueOf(Maths.format(
-						Session.getCurrentSession()
-						.getUnitSystem()
-						.convertToTemperatureUnit(
-								Constants.tMaxDefault + Constants.nStepDefault
-								* Constants.tStepDefault),
+						.setText(String.valueOf(Maths.format(
+								Session.getCurrentSession()
+										.getUnitSystem()
+										.convertToTemperatureUnit(
+												Constants.tMaxDefault + Constants.nStepDefault
+														* Constants.tStepDefault),
 								"0.00")));
 				double tStepTemporary = Session.getCurrentSession().getUnitSystem()
 						.convertToTemperatureUnit(0.0 + Constants.tStepDefault);
 				tStepTemporary = tStepTemporary
 						- Session.getCurrentSession().getUnitSystem()
-						.convertToTemperatureUnit(0.0);
+								.convertToTemperatureUnit(0.0);
 				txtStepTemperature.setText(String.valueOf(Maths.format(
 						tStepTemporary, "0.00")));
 
 				txtPressure.setText(String.valueOf(Maths.format(
 						Session.getCurrentSession().getUnitSystem()
-						.convertToPressureUnit(Constants.P0), "0.00")));
+								.convertToPressureUnit(Constants.P0),
+						"0.00")));
 				txtPressure.setEnabled(true);
 				labelPressure.setEnabled(true);
 
@@ -1330,13 +1349,15 @@ public class Interface extends JFrame implements ActionListener {
 				pressureRadio2.setEnabled(true);
 				txtPressureMin.setText(String.valueOf(Maths.format(
 						Session.getCurrentSession().getUnitSystem()
-						.convertToPressureUnit(Constants.P0), "0.00")));
+								.convertToPressureUnit(Constants.P0),
+						"0.00")));
 				txtPressureMax.setText(String.valueOf(Maths.format(
 						Session.getCurrentSession().getUnitSystem()
-						.convertToPressureUnit(2 * Constants.P0), "0.00")));
+								.convertToPressureUnit(2 * Constants.P0),
+						"0.00")));
 				txtStepPressure.setText(String.valueOf(Maths.format(
 						Session.getCurrentSession().getUnitSystem()
-						.convertToPressureUnit(Constants.pStepDefault),
+								.convertToPressureUnit(Constants.pStepDefault),
 						"0.00")));
 
 				fileItemsetEnabled(true);
@@ -1347,13 +1368,12 @@ public class Interface extends JFrame implements ActionListener {
 				resetSetEnabled(false);
 				session1 = newJMenuItem("Session 1", sessions);
 
-			}// end try
-			catch (runTimeException err){resetCalculation();}
-
-
+			} // end try
+			catch (runTimeException err) {
+				resetCalculation();
+			}
 
 		} // end of if source == new
-
 
 		/*****************************************************************/
 		/* E V E N E M E N T S F O R */
@@ -1373,22 +1393,24 @@ public class Interface extends JFrame implements ActionListener {
 			if (centralPane != null) {
 				centralPane.removeAll();
 			}
-			
-			
-			
 
 			try {
 				workSession.getFilesToBeRead().add("the system");
-				workSession.add(new InertStatisticalSystem(workSession.getTemperatureMin(), workSession.getPressureMin()));
+				workSession
+						.add(new InertStatisticalSystem(workSession.getTemperatureMin(), workSession.getPressureMin()));
 				dataRefresh.setEnabled(true);
-				
-				
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
-				
+
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
+
 				resetSetEnabled(true);
 				saveInputs.setEnabled(true);
 				reactPathBuild.setEnabled(false);
@@ -1396,15 +1418,19 @@ public class Interface extends JFrame implements ActionListener {
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-
-		}// end of source==molec
+		} // end of source==molec
 
 		/***************************/
 		/* Equilibrium management */
@@ -1416,30 +1442,52 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 
-				workSession.add(new Equilibrium(workSession.getTemperatureMin(), workSession.getPressureMin())); // note that here, we give a pressure 
-                                                                                                                // parameter; P will be that of the pressure field
+				workSession.add(new Equilibrium(workSession.getTemperatureMin(), workSession.getPressureMin())); // note
+																													// that
+																													// here,
+																													// we
+																													// give
+																													// a
+																													// pressure
+																													// parameter;
+																													// P
+																													// will
+																													// be
+																													// that
+																													// of
+																													// the
+																													// pressure
+																													// field
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-
 			} // end of try
 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
-
+			catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (equi...)
 
@@ -1451,57 +1499,75 @@ public class Interface extends JFrame implements ActionListener {
 			resetSetEnabled(true);
 
 			try {
-				workSession.add(new BiMolecularReaction(workSession.getTemperatureMin(), "tst")); // note that here, we don't give any pressure 
-				                                                                                  // parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
-				
+				workSession.add(new BiMolecularReaction(workSession.getTemperatureMin(), "tst")); // note that here, we
+																									// don't give any
+																									// pressure
+																									// parameter; P will
+																									// be = P0 (in
+																									// Reaction Class)
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
+
 				// testing the mode (pressure value or pressure range)
-				
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
-					
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
+
 				}
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-
-		}// end of source== bimolTst
-
-		
+		} // end of source== bimolTst
 
 		/***************************/
 		/* Bimolecular/tst_w */
@@ -1513,58 +1579,72 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new BiMolecularReaction(workSession.getTemperatureMin(), "tst_w"));
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-
-
-		}// end of source == bimolTst_w
+		} // end of source == bimolTst_w
 
 		/***************************/
 		/* Bimolecular/tst_eck */
@@ -1576,58 +1656,72 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new BiMolecularReaction(workSession.getTemperatureMin(), "tst_eck"));
-				
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-
-
-		}// end of source == bimolTst_eck
+		} // end of source == bimolTst_eck
 
 		/***************************/
 		/* Bimolecular/vtst */
@@ -1639,57 +1733,72 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new BiMolecularReaction(workSession.getTemperatureMin(), "vtst"));
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-
-
-		}// end of source==bimolVtst
+		} // end of source==bimolVtst
 
 		/***************************/
 		/* Bimolecular/vtst_w */
@@ -1701,57 +1810,72 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new BiMolecularReaction(workSession.getTemperatureMin(), "vtst_w"));
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-
-
-		}// end of source==bimolVtst_w
+		} // end of source==bimolVtst_w
 
 		/***************************/
 		/* Bimolecular/vtst_eck */
@@ -1763,58 +1887,72 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new BiMolecularReaction(workSession.getTemperatureMin(), "vtst_eck"));
-				
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-
-
-		}// end of source==bimolVtst_eck
+		} // end of source==bimolVtst_eck
 
 		/***************************/
 		/* Unimolecular/tst */
@@ -1823,58 +1961,73 @@ public class Interface extends JFrame implements ActionListener {
 
 			centralPane.removeAll();
 			resetSetEnabled(true);
-			
 
 			try {
 				workSession.add(new UnimolecularReaction(workSession.getTemperatureMin(), "tst"));
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-				
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of source==unimolTst
 
@@ -1888,55 +2041,70 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new UnimolecularReaction(workSession.getTemperatureMin(), "tst_w"));
-				
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
-
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of source==unimolTst_w
 
@@ -1950,56 +2118,70 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new UnimolecularReaction(workSession.getTemperatureMin(), "tst_eck"));
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
-
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
-
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of source==unimolTst_eck
 
@@ -2012,54 +2194,70 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new UnimolecularReaction(workSession.getTemperatureMin(), "vtst"));
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
-
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if source==unimolVtst
 
@@ -2072,54 +2270,70 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new UnimolecularReaction(workSession.getTemperatureMin(), "vtst_w"));
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
-
 
 				// display results
 				workSession.displayResults();
 
-			} 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if source==unimolVtst_w
 
@@ -2132,62 +2346,77 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.add(new UnimolecularReaction(workSession.getTemperatureMin(), "vtst_eck"));
-				
-				
-				// note that here, we don't give any pressure 
+
+				// note that here, we don't give any pressure
 				// parameter; P will be = P0 (in Reaction Class)
-				// since pressure is necessary P0 at the beginning of this calculation, we have to 
-				// update the pressure of the current session content to P0 (and also the txt display in the pressure field)	
-				// indeed, the user may have changed the pressure in the previous calculation before reset
+				// since pressure is necessary P0 at the beginning of this calculation, we have
+				// to
+				// update the pressure of the current session content to P0 (and also the txt
+				// display in the pressure field)
+				// indeed, the user may have changed the pressure in the previous calculation
+				// before reset
 
 				// testing the mode (pressure value or pressure range)
 
-				if (workSession.getPressureMin()==workSession.getPressureMax()) // we are in mode single pressure
+				if (workSession.getPressureMin() == workSession.getPressureMax()) // we are in mode single pressure
 				{
 					txtPressure.setText(String.valueOf(Maths.format(Session.getCurrentSession().getUnitSystem()
 							.convertToPressureUnit(Constants.P0), "0.00")));
 
-					try {   // remind that the pressure parameter in method setPressure must always be given as a number in the user unit !!
+					try { // remind that the pressure parameter in method setPressure must always be given
+							// as a number in the user unit !!
 						// the method setpressure will convert it in the Kisthelp unit for pressure (Pa)
-						workSession.setPressureMin(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
-						workSession.setPressureMax(Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMin(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
+						workSession.setPressureMax(
+								Session.getCurrentSession().getUnitSystem().convertToPressureUnit(Constants.P0));
 					}
 
 					catch (PressureException error) {
-						JOptionPane.showMessageDialog(null,"Warning : The Pressure must be positive");						
-					}					
-					catch (runTimeException error) {resetCalculation();}
-					catch (IllegalDataException error) {resetCalculation();}
+						JOptionPane.showMessageDialog(null, "Warning : The Pressure must be positive");
+					} catch (runTimeException error) {
+						resetCalculation();
+					} catch (IllegalDataException error) {
+						resetCalculation();
+					}
 
 				}
-				
+
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				reactPathBuild.setEnabled(false);
-
 
 				// display results
 				workSession.displayResults();
 
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
 
 		} // end of if source==unimolVtst_eck
 
 		/***************************/
 		/* RESET */
 		/*************************/
-		if (source == reset) { 
+		if (source == reset) {
 			resetSetEnabled(false);
 
 			refreshFillKisthepContentPane();
@@ -2196,7 +2425,6 @@ public class Interface extends JFrame implements ActionListener {
 			saveInputs.setEnabled(false); // the menu becomes grey
 			dataRefresh.setEnabled(false); // the menu becomes grey
 			reactPathBuild.setEnabled(true);
-
 
 			// refresh the overall JFrame
 			getContentPane().validate();
@@ -2209,90 +2437,88 @@ public class Interface extends JFrame implements ActionListener {
 		/*************************/
 		if (source == dataRefresh) {
 			try {
-			workSession.displayResults();
+				workSession.displayResults();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
 
 		}
-
 
 		/***************************/
 		/* S H O W C O N S T A N T S */
 		/*************************/
 		if (source == showConstants) {
 
-			try {		
+			try {
 				// create an independant JFrame with kisthelp Constants inside
-				JFrame constantsJFrame = new JFrame(); 			
+				JFrame constantsJFrame = new JFrame();
 				constantsJFrame.setLocation(Interface.getKisthepInterface().getLocation());
 				constantsJFrame.setTitle("K i S T h e l P    c o n s t a n t s ");
-				
+
 				// Bar's instantiation
 				JMenuBar constantsBar = new JMenuBar();
 				constantsJFrame.setJMenuBar(constantsBar);
-				
+
 				ImageIcon icon;
-				URL address =   getClass().getResource("/images/smallLogo.png");
+				URL address = getClass().getResource("/images/smallLogo.png");
 				if (address == null) {
-					String message = "Error in class Interface in constructor"+ Constants.newLine;
-					message = message +  "File smallLogo.png not found"+ Constants.newLine;
-					message = message +  "Please contact the authors"+ Constants.newLine;
-					JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);                      
-				}
-				else {
-					icon = new ImageIcon(address); 
+					String message = "Error in class Interface in constructor" + Constants.newLine;
+					message = message + "File smallLogo.png not found" + Constants.newLine;
+					message = message + "Please contact the authors" + Constants.newLine;
+					JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.ERROR_MESSAGE);
+				} else {
+					icon = new ImageIcon(address);
 					JButton smallLogo = new JButton("");
 					smallLogo.setIcon(icon);
 					constantsBar.add(Box.createGlue());
 					constantsBar.add(smallLogo);
 				}
 
-				
-				
-				
-				
-
 				/* --------------------T A B L E 1 ---------------------------------- */
 
-				// create a JTable with constants			
+				// create a JTable with constants
 				String[] columnNames1 = {
 						"Constant",
 						"  ",
 						"Value"
 				};
 
-
 				// !!! to use html within String in JTable, String MUST START with <html> tag !!
 				Object[][] data1 = {
-						{"<html>Bohr radius (<i>a<sub>0</sub>)</i></html>", "=", Constants.a0+" m"},
-						{"<html>1 Atomic mass unit (amu)</html>", "=", Constants.convertAmuToKg+" kg"},
-						{"<html>Planck's constant (<i>h</i>)</html>", "=", Constants.h + " J.s"},
-						{"<html> Avogadro's number (<i>N<sub>A</sub></i>) </html>", "=", Constants.NA},
-						{"<html>1 cal. </html>", "=", Constants.convertCalToJoule + " J"},
-						{"<html>1 Hartree (<i>E<sub>h</sub></i>)</html>", "=", Constants.convertHartreeToJoule_perMolec + " J"},
-						{"<html>Speed of light in vacuum (<i>c<i>)</html> ", "=", "<html> " + Constants.c+" &nbsp; m.s<sup>-1</sup></html>"},
-						{"<html>Boltzman constant (<i>k</i>)<html>", "=", "<html> " +Constants.kb + "&nbsp; J.K<sup>-1</sup></html>"},
+						{ "<html>Bohr radius (<i>a<sub>0</sub>)</i></html>", "=", Constants.a0 + " m" },
+						{ "<html>1 Atomic mass unit (amu)</html>", "=", Constants.convertAmuToKg + " kg" },
+						{ "<html>Planck's constant (<i>h</i>)</html>", "=", Constants.h + " J.s" },
+						{ "<html> Avogadro's number (<i>N<sub>A</sub></i>) </html>", "=", Constants.NA },
+						{ "<html>1 cal. </html>", "=", Constants.convertCalToJoule + " J" },
+						{ "<html>1 Hartree (<i>E<sub>h</sub></i>)</html>", "=",
+								Constants.convertHartreeToJoule_perMolec + " J" },
+						{ "<html>Speed of light in vacuum (<i>c<i>)</html> ", "=",
+								"<html> " + Constants.c + " &nbsp; m.s<sup>-1</sup></html>" },
+						{ "<html>Boltzman constant (<i>k</i>)<html>", "=",
+								"<html> " + Constants.kb + "&nbsp; J.K<sup>-1</sup></html>" },
 
 				};
 
-				JTable table1 = new JTable(data1, columnNames1);	
+				JTable table1 = new JTable(data1, columnNames1);
 				table1.setRowHeight(21);
 
 				table1.setFont(new Font("Verdana", Font.PLAIN, 12));
 
 				TableColumn column = null;
 				column = table1.getColumnModel().getColumn(0);
-				column.setPreferredWidth(180); 
+				column.setPreferredWidth(180);
 				kisthelpJTable.alignRight(table1, 0);
 
 				column = table1.getColumnModel().getColumn(1);
-				column.setPreferredWidth(10); 
+				column.setPreferredWidth(10);
 				kisthelpJTable.alignCenter(table1, 1);
 
 				column = table1.getColumnModel().getColumn(2);
-				column.setPreferredWidth(180); 
+				column.setPreferredWidth(180);
 				kisthelpJTable.alignLeft(table1, 2);
 
 				TableCellRenderer rendererFromHeader1 = table1.getTableHeader().getDefaultRenderer();
@@ -2301,80 +2527,83 @@ public class Interface extends JFrame implements ActionListener {
 
 				/* --------------------T A B L E 2 ---------------------------------- */
 
-
-				// create a JTable with constants			
+				// create a JTable with constants
 				String[] columnNames2 = {
 						"Common conversion factors",
 						"  ",
 						"Value"
 				};
 
-
 				// !!! to use html within String in JTable, String MUST START with <html> tag !!
 				Object[][] data2 = {
 
-						{"1 Hartree", "=", "<html>" + Maths.format(Constants.convertHartreeToJoule/1000, "0.00")+" &nbsp; kJ.mol<sup>-1</sup></html>"},
-						{"1 Hartree", "=", "<html>" + Maths.format(Constants.convertHartreeToJoule/(1000*Constants.convertCalToJoule), "0.00")+" &nbsp; kcal.mol<sup>-1</sup></html>"},
-						{"<html> 1 cm<sup>-1 </html>", "=", Maths.format(Constants.convertCm_1ToKelvin, "0.00000")+" K"},
-						{"1 GHz", "=", "<html>" + Maths.format(Constants.convertGHzToAmuBohr2, "0.00") + " &nbsp; amu.bohr<sup>2</sup></html>"},
-						{"1 Torr", "=", Constants.convertTorrToPa + " Pa"},
-						{"1 Atm.", "=", Constants.convertAtmToPa + " Pa"}
+						{ "1 Hartree", "=",
+								"<html>" + Maths.format(Constants.convertHartreeToJoule / 1000, "0.00")
+										+ " &nbsp; kJ.mol<sup>-1</sup></html>" },
+						{ "1 Hartree", "=",
+								"<html>" + Maths.format(
+										Constants.convertHartreeToJoule / (1000 * Constants.convertCalToJoule), "0.00")
+										+ " &nbsp; kcal.mol<sup>-1</sup></html>" },
+						{ "<html> 1 cm<sup>-1 </html>", "=",
+								Maths.format(Constants.convertCm_1ToKelvin, "0.00000") + " K" },
+						{ "1 GHz", "=",
+								"<html>" + Maths.format(Constants.convertGHzToAmuBohr2, "0.00")
+										+ " &nbsp; amu.bohr<sup>2</sup></html>" },
+						{ "1 Torr", "=", Constants.convertTorrToPa + " Pa" },
+						{ "1 Atm.", "=", Constants.convertAtmToPa + " Pa" }
 				};
 
-				JTable table2 = new JTable(data2, columnNames2);	
+				JTable table2 = new JTable(data2, columnNames2);
 				table2.setRowHeight(21);
 
 				table2.setFont(new Font("Verdana", Font.PLAIN, 12));
 
 				column = table2.getColumnModel().getColumn(0);
-				column.setPreferredWidth(180); 
+				column.setPreferredWidth(180);
 				kisthelpJTable.alignRight(table2, 0);
 
 				column = table2.getColumnModel().getColumn(1);
-				column.setPreferredWidth(10); 
+				column.setPreferredWidth(10);
 				kisthelpJTable.alignCenter(table2, 1);
 
 				column = table2.getColumnModel().getColumn(2);
-				column.setPreferredWidth(180); 
+				column.setPreferredWidth(180);
 				kisthelpJTable.alignLeft(table2, 2);
 
 				TableCellRenderer rendererFromHeader2 = table2.getTableHeader().getDefaultRenderer();
 				JLabel headerLabel2 = (JLabel) rendererFromHeader2;
 				headerLabel2.setHorizontalAlignment(JLabel.CENTER);
 
-
 				// set a gridLayout
-				GridLayout gl = new GridLayout(2,1);
+				GridLayout gl = new GridLayout(2, 1);
 				constantsJFrame.setLayout(gl);
 
-
-				// add table to JScrollPane		   
+				// add table to JScrollPane
 				constantsJFrame.add(new JScrollPane(table1));
 				constantsJFrame.add(new JScrollPane(table2));
 
 				constantsJFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 				constantsJFrame.setBackground(Color.WHITE);
-				constantsJFrame.setSize(400,450);
-				//constantsJFrame.pack();
-				constantsJFrame.setVisible(true);	
+				constantsJFrame.setSize(400, 450);
+				// constantsJFrame.pack();
+				constantsJFrame.setVisible(true);
 
 			} // end of try
-			catch (runTimeException err){resetCalculation();}
-
+			catch (runTimeException err) {
+				resetCalculation();
+			}
 
 		} // end of if (source == showConstants)
-		
 
-		
 		/***************************/
-		/* L E N N A R D J O N E S  */
+		/* L E N N A R D J O N E S */
 		/*************************/
 		if (source == lennardJones) {
 
-			
-			// create an independant JFrame with some lennardJones parameters inside, recommended from litterature
-			// F. M. Mourits et al., Can. J. Chem. vol 55 , 1977. 
-			JFrame constantsJFrame = new JFrame(); 
+			// create an independant JFrame with some lennardJones parameters inside,
+			// recommended from litterature
+			// F. M. Mourits et al., Can. J. Chem. vol 55 , 1977.
+			JFrame constantsJFrame = new JFrame();
 			constantsJFrame.setLayout(new FlowLayout(FlowLayout.LEFT));
 			constantsJFrame.setLocation(Interface.getKisthepInterface().getLocation());
 			constantsJFrame.setTitle("L e n n a r d - J o n e s  parameters");
@@ -2382,29 +2611,25 @@ public class Interface extends JFrame implements ActionListener {
 			// Bar's instantiation
 			JMenuBar constantsBar = new JMenuBar();
 			constantsJFrame.setJMenuBar(constantsBar);
-			
+
 			ImageIcon icon;
-			URL address =   getClass().getResource("/images/smallLogo.png");
+			URL address = getClass().getResource("/images/smallLogo.png");
 			if (address == null) {
-				String message = "Error in class Interface in constructor"+ Constants.newLine;
-				message = message +  "File smallLogo.png not found"+ Constants.newLine;
-				message = message +  "Please contact the authors"+ Constants.newLine;
-				JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);                      
-			}
-			else {
-				icon = new ImageIcon(address); 
+				String message = "Error in class Interface in constructor" + Constants.newLine;
+				message = message + "File smallLogo.png not found" + Constants.newLine;
+				message = message + "Please contact the authors" + Constants.newLine;
+				JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.ERROR_MESSAGE);
+			} else {
+				icon = new ImageIcon(address);
 				JButton smallLogo = new JButton("");
 				smallLogo.setIcon(icon);
 				constantsBar.add(Box.createGlue());
 				constantsBar.add(smallLogo);
 			}
 
-
-			
-			
 			/* --------------------T A B L E ---------------------------------- */
-			
-			// create a JTable with constants			
+
+			// create a JTable with constants
 			String[] columnNames = {
 					"Chemical system",
 					"\u03C3 (cm)",
@@ -2412,176 +2637,169 @@ public class Interface extends JFrame implements ActionListener {
 					"Mass (g.mol\u207B\u2071)",
 					"Ref."
 			};
-			
-			
+
 			// !!! to use html within String in JTable, String MUST START with <html> tag !!
 			Object[][] data = {
-					
-					{"He", "2.64E-08", "10.9", "4.003", "(c)"},
-					{"Ne", "2.822E-08", "32.0", "20.180", "(a)"},
-					{"Ar", "3.465E-08", "113.5", "39.948", "(a)"},
-					{"Kr", "3.662E-08", "178.0", "83.798", "(a)"},
-					{"Xe", "4.050E-08", "230.2", "131.293", "(a)"},					
-					{"<html>N<sub>2</sub></html>", "3.738E-08", "82.0", "28.013", "(a)"},
-					{"<html>O<sub>2</sub></html>", "3.480E-08", "102.6", "31.999", "(a)"},
-					{"<html>CO<sub>2</sub></html>", "3.943E-08", "200.9", "44.010", "(a)"},
-					{"<html>CS<sub>2</sub></html>", "4.575E-08", "414.6", "76.141", "(a)"},
-					{"<html> SF<sub>6</sub> </html>", "5.199E-08", "212.0", "146.055",  "(a)"},
-					{"<html>(CN)<sub>2</sub></html>", "4.571E-08", "275.7", "52.035",  "(a)"},
-					{"<html>(CN)<sub>2</sub></html>", "4.361E-08", "348.6", "52.035",  "(b)"},
-					{"<html>F<sub>2</sub></html>", "3.439E-08", "152.1", "37.997",  "(a)"},
-					{"<html>Cl<sub>2</sub></html>", "4.240E-08", "307.2", "70.906",  "(a)"},
-					{"<html>Br<sub>2</sub></html>", "4.266E-08", "437.3", "159.808",  "(a)"},
-					{"<html>I<sub>2</sub></html>", "4.630E-08", "577.4", "253.809",  "(a)"},
-					{"<html>CH<sub>4</sub></html>", "3.790E-08", "142.1", "16.043",  "(a)"},
-					{"<html>CH<sub>4</sub></html>", "3.758E-08", "148.6", "16.043",  "(b)"},
-					{"<html>CF<sub>4</sub></html>", "4.486E-08", "167.3", "88.004",  "(a)"},
-					{"<html>CCl<sub>4</sub></html>", "5.611E-08", "415.5", "153.823",  "(a)"},
-					{"<html>C<sub>2</sub>H<sub>6</sub></html>", "4.407E-08", "227.9", "30.069",  "(a)"},
-					{"<html>C<sub>2</sub>H<sub>6</sub></html>", "4.443E-08", "215.7", "30.069",  "(b)"},
-					{"<html>C<sub>3</sub>H<sub>8</sub></html>", "5.114E-08", "237.2", "44.096",  "(a)"},
-					{"<html>n-C<sub>4</sub>H<sub>10</sub></html>", "5.405E-08", "305.0", "58.122",  "(a)"},
-					{"<html>i-C<sub>4</sub>H<sub>10</sub></html>", "5.392E-08", "295.8", "58.122",  "(a)"},
-					{"<html>n-C<sub>5</sub>H<sub>12</sub></html>", "5.916E-08", "308.3", "72.149",  "(a)"},
-					{"<html>neo-C<sub>5</sub>H<sub>12</sub></html>", "5.757E-08", "312.2", "72.149",  "(a)"},
-					{"<html>n-C<sub>6</sub>H<sub>14</sub></html>", "6.269E-08", "341.3", "86.175",  "(a)"},
-					{"<html>n-C<sub>7</sub>H<sub>16</sub></html>", "6.650E-08", "351.4", "100.202",  "(a)"},
-					{"<html>n-C<sub>8</sub>H<sub>18</sub></html>", "7.024E-08", "357.7", "114.229",  "(a)"},
-					{"<html>n-C<sub>9</sub>H<sub>20</sub></html>", "7.351E-08", "360.3", "128.255",  "(a)"},
-					{"<html>cyclo-C<sub>6</sub>H<sub>12</sub></html>", "5.771E-08", "394.8", "84.159",  "(a)"},
-					{"<html>C<sub>2</sub>H<sub>4</sub></html>", "4.155E-08", "225.6", "28.053",  "(a)"},
-					{"<html>C<sub>3</sub>H<sub>6</sub></html>", "4.778E-08", "271.2", "42.080",  "(a)"},
-					{"butene-1", "5.274E-08", "302.4", "56.106",  "(a)"},
-					{"i-butene", "5.282E-08", "299.6", "56.106",  "(a)"},
-					{"<html>C<sub>2</sub>H<sub>2</sub></html>", "4.078E-08", "221.4", "26.037",  "(a)"},
-					{"<html>C<sub>3</sub>H<sub>4</sub></html>", "4.667E-08", "284.7", "40.064",  "(a)"},
-					{"<html>C<sub>6</sub>H<sub>6</sub></html>", "5.455E-08", "401.2", "78.112",  "(a)"},
-					{"<html>C<sub>6</sub>H<sub>5</sub>CH<sub>3</sub></html>", "5.923E-08", "407.8", "92.138",  "(a)"},
-					{"Mesitylene", "6.760E-08", "400.5", "120.192",  "(a)"},
-					{"<html>N<sub>2</sub>O<sub></html>", "3.776E-08", "248.8", "44.013",  "(a)"},
-					{"<html>N<sub>2</sub>O<sub></html>", "3.828E-08", "232.4", "44.013",  "(b)"},
-					{"CO", "3.698E-08", "104.5", "28.010",  "(a)"},
-					{"COS", "4.424E-08", "286.4", "60.075",  "(a)"},
-					{"NO", "3.489E-08", "117.2", "30.006",  "(a)"},
-					{"<html>HNO<sub>3</sub></html>", "4.24E-08", "390", "63.013",  "(b)"},
-					{"HI", "4.080E-08", "333.6", "127.912",  "(a)"},
-					{"HBr", "3.852E-08", "281.1", "80.912",  "(a)"},
-					{"HCl", "3.168E-08", "322.6", "36.461",  "(a)"},
-					{"HF", "3.148E-08", "330.0", "20.006",  "(a)"},
-					{"<html>H<sub>2</sub>S</html>", "3.733E-08", "302.4", "34.081",  "(a)"},
-					{"<html>H<sub>2</sub>S</html>", "3.623E-08", "301.1", "34.081",  "(b)"},
-					{"<html>SO<sub>2</sub></html>", "4.102E-08", "328.5", "64.064",  "(a)"},
-					{"<html>SO<sub>2</sub></html>", "4.112E-08", "335.4", "64.064",  "(b)"},
-					{"HCN", "3.630E-08", "569.1", "27.025",  "(a,b)"},
-					{"<html>NH<sub>3</sub></html>", "3.215E-08", "309.9", "17.031",  "(a)"},
-					{"<html>H<sub>2</sub>O</html>", "2.710E-08", "506.0", "18.015",  "(a)"},
-					{"<html>H<sub>2</sub>O</html>", "2.641E-08", "809.1", "18.015",  "(b)"},
-					{"<html>H<sub>2</sub>O<sub>2</sub></html>", "4.196E-08", "289.3", "34.015",  "(b)"},
-					{"<html>CHCl<sub>3</sub></html>", "5.179E-08", "381.7", "119.378",  "(a)"},
-					{"<html>CH<sub>2</sub>Cl<sub>2</sub></html>", "4.752E-08", "403.5", "84.933",  "(a)"},
-					{"<html>CH<sub>3</sub>Br</html>", "4.306E-08", "416.2", "94.939",  "(a)"},
-					{"<html>CH<sub>3</sub>Cl</html>", "4.296E-08", "328.1", "50.488",  "(a)"},
-					{"<html>C<sub>2</sub>H<sub>5</sub>Cl</html>", "4.490E-08", "402.9", "64.514",  "(a)"},
-					{"<html>n-C<sub>3</sub>H<sub>7</sub>OH</html>", "4.867E-08", "480.2", "60.095",  "(a)"},
-					{"<html>i-C<sub>3</sub>H<sub>7</sub>OH</html>", "4.739E-08", "456.0", "60.095",  "(a)"},
-					{"<html>C<sub>2</sub>H<sub>5</sub>OH</html>", "4.317E-08", "450.2", "46.068",  "(a)"},
-					{"<html>CH<sub>3</sub>OH</html>", "3.657E-08", "385.2", "32.042",  "(a)"},
-					{"<html>(C<sub>2</sub>H<sub>5</sub>)<sub>2</sub>O</html>", "5.553E-08", "348.0", "74.122",  "(a)"},
-					{"<html>(CH<sub>3</sub>)<sub>2</sub>O</html>", "4.230E-08", "352.3", "46.068",  "(a)"},
-					{"<html>CH<sub>3</sub>CO<sub>2</sub>C<sub>2</sub>H<sub>5</sub></html>", "5.650E-08", "372.0", "88.105",  "(a)"},
-					{"<html>CH<sub>3</sub>CO<sub>2</sub>CH<sub>3</sub></html>", "5.141E-08", "389.4", "74.078",  "(a)"},
-					{"<html>(CH<sub>3</sub>)<sub>2</sub>CO</html>", "4.599E-08", "458.0", "58.079",  "(a)"},
-					{"<html>CH<sub>3</sub>CHO</html>", "4.332E-08", "413.5", "44.053",  "(a)"},
-					{"<html>HO<sub>2</sub></html>", "4.196E-08", "289.3", "33.007",  "(b)"},
-					{"ClNO", "4.112E-08", "395.3", "65.459",  "(b)"},
-					{"<html>O<sub>3</sub></html>", "3.980E-08", "161.2", "47.998",  "(b)"},
-					{"BrNO", "4.12E-08", "500", "109.910",  "(b)"},
-					{"INO", "4.5E-08", "500", "156.911",  "(b)"},
-					{"FNO", "4E-08", "380", "49.005",  "(b)"},
-					{"HNO", "3.492E-08", "116.7", "31.014",  "(b)"},
-					{"<html>NO<sub>3</sub></html>", "4.112E-08", "395", "62.005",  "(b)"},
-					{"<html>INO<sub>2</sub></html>", "4.5E-08", "550", "172.910",  "(b)"}
-					
-		    };
-			
-			
-		    
-		   JTable table = new JTable(data, columnNames);	
-		   table.setRowHeight(21);
-		   table.setFont(new Font("Verdana", Font.PLAIN, 12));
-		   
-		   TableColumn column = null;
-		   column = table.getColumnModel().getColumn(0);
-		   column.setPreferredWidth(100); 
-		   kisthelpJTable.alignRight(table, 0);
-		   
-		   column = table.getColumnModel().getColumn(1);
-		   column.setPreferredWidth(80); 
-		   kisthelpJTable.alignRight(table, 1);
-		   
-		   column = table.getColumnModel().getColumn(2);
-		   column.setPreferredWidth(60); 
-		   kisthelpJTable.alignRight(table, 2);
-		   
-		   column = table.getColumnModel().getColumn(3);
-		   column.setPreferredWidth(80); 
-		   kisthelpJTable.alignRight(table, 3);
 
-		   
-		   column = table.getColumnModel().getColumn(4);
-		   column.setPreferredWidth(40); 
-		   kisthelpJTable.alignCenter(table, 4);
+					{ "He", "2.64E-08", "10.9", "4.003", "(c)" },
+					{ "Ne", "2.822E-08", "32.0", "20.180", "(a)" },
+					{ "Ar", "3.465E-08", "113.5", "39.948", "(a)" },
+					{ "Kr", "3.662E-08", "178.0", "83.798", "(a)" },
+					{ "Xe", "4.050E-08", "230.2", "131.293", "(a)" },
+					{ "<html>N<sub>2</sub></html>", "3.738E-08", "82.0", "28.013", "(a)" },
+					{ "<html>O<sub>2</sub></html>", "3.480E-08", "102.6", "31.999", "(a)" },
+					{ "<html>CO<sub>2</sub></html>", "3.943E-08", "200.9", "44.010", "(a)" },
+					{ "<html>CS<sub>2</sub></html>", "4.575E-08", "414.6", "76.141", "(a)" },
+					{ "<html> SF<sub>6</sub> </html>", "5.199E-08", "212.0", "146.055", "(a)" },
+					{ "<html>(CN)<sub>2</sub></html>", "4.571E-08", "275.7", "52.035", "(a)" },
+					{ "<html>(CN)<sub>2</sub></html>", "4.361E-08", "348.6", "52.035", "(b)" },
+					{ "<html>F<sub>2</sub></html>", "3.439E-08", "152.1", "37.997", "(a)" },
+					{ "<html>Cl<sub>2</sub></html>", "4.240E-08", "307.2", "70.906", "(a)" },
+					{ "<html>Br<sub>2</sub></html>", "4.266E-08", "437.3", "159.808", "(a)" },
+					{ "<html>I<sub>2</sub></html>", "4.630E-08", "577.4", "253.809", "(a)" },
+					{ "<html>CH<sub>4</sub></html>", "3.790E-08", "142.1", "16.043", "(a)" },
+					{ "<html>CH<sub>4</sub></html>", "3.758E-08", "148.6", "16.043", "(b)" },
+					{ "<html>CF<sub>4</sub></html>", "4.486E-08", "167.3", "88.004", "(a)" },
+					{ "<html>CCl<sub>4</sub></html>", "5.611E-08", "415.5", "153.823", "(a)" },
+					{ "<html>C<sub>2</sub>H<sub>6</sub></html>", "4.407E-08", "227.9", "30.069", "(a)" },
+					{ "<html>C<sub>2</sub>H<sub>6</sub></html>", "4.443E-08", "215.7", "30.069", "(b)" },
+					{ "<html>C<sub>3</sub>H<sub>8</sub></html>", "5.114E-08", "237.2", "44.096", "(a)" },
+					{ "<html>n-C<sub>4</sub>H<sub>10</sub></html>", "5.405E-08", "305.0", "58.122", "(a)" },
+					{ "<html>i-C<sub>4</sub>H<sub>10</sub></html>", "5.392E-08", "295.8", "58.122", "(a)" },
+					{ "<html>n-C<sub>5</sub>H<sub>12</sub></html>", "5.916E-08", "308.3", "72.149", "(a)" },
+					{ "<html>neo-C<sub>5</sub>H<sub>12</sub></html>", "5.757E-08", "312.2", "72.149", "(a)" },
+					{ "<html>n-C<sub>6</sub>H<sub>14</sub></html>", "6.269E-08", "341.3", "86.175", "(a)" },
+					{ "<html>n-C<sub>7</sub>H<sub>16</sub></html>", "6.650E-08", "351.4", "100.202", "(a)" },
+					{ "<html>n-C<sub>8</sub>H<sub>18</sub></html>", "7.024E-08", "357.7", "114.229", "(a)" },
+					{ "<html>n-C<sub>9</sub>H<sub>20</sub></html>", "7.351E-08", "360.3", "128.255", "(a)" },
+					{ "<html>cyclo-C<sub>6</sub>H<sub>12</sub></html>", "5.771E-08", "394.8", "84.159", "(a)" },
+					{ "<html>C<sub>2</sub>H<sub>4</sub></html>", "4.155E-08", "225.6", "28.053", "(a)" },
+					{ "<html>C<sub>3</sub>H<sub>6</sub></html>", "4.778E-08", "271.2", "42.080", "(a)" },
+					{ "butene-1", "5.274E-08", "302.4", "56.106", "(a)" },
+					{ "i-butene", "5.282E-08", "299.6", "56.106", "(a)" },
+					{ "<html>C<sub>2</sub>H<sub>2</sub></html>", "4.078E-08", "221.4", "26.037", "(a)" },
+					{ "<html>C<sub>3</sub>H<sub>4</sub></html>", "4.667E-08", "284.7", "40.064", "(a)" },
+					{ "<html>C<sub>6</sub>H<sub>6</sub></html>", "5.455E-08", "401.2", "78.112", "(a)" },
+					{ "<html>C<sub>6</sub>H<sub>5</sub>CH<sub>3</sub></html>", "5.923E-08", "407.8", "92.138", "(a)" },
+					{ "Mesitylene", "6.760E-08", "400.5", "120.192", "(a)" },
+					{ "<html>N<sub>2</sub>O<sub></html>", "3.776E-08", "248.8", "44.013", "(a)" },
+					{ "<html>N<sub>2</sub>O<sub></html>", "3.828E-08", "232.4", "44.013", "(b)" },
+					{ "CO", "3.698E-08", "104.5", "28.010", "(a)" },
+					{ "COS", "4.424E-08", "286.4", "60.075", "(a)" },
+					{ "NO", "3.489E-08", "117.2", "30.006", "(a)" },
+					{ "<html>HNO<sub>3</sub></html>", "4.24E-08", "390", "63.013", "(b)" },
+					{ "HI", "4.080E-08", "333.6", "127.912", "(a)" },
+					{ "HBr", "3.852E-08", "281.1", "80.912", "(a)" },
+					{ "HCl", "3.168E-08", "322.6", "36.461", "(a)" },
+					{ "HF", "3.148E-08", "330.0", "20.006", "(a)" },
+					{ "<html>H<sub>2</sub>S</html>", "3.733E-08", "302.4", "34.081", "(a)" },
+					{ "<html>H<sub>2</sub>S</html>", "3.623E-08", "301.1", "34.081", "(b)" },
+					{ "<html>SO<sub>2</sub></html>", "4.102E-08", "328.5", "64.064", "(a)" },
+					{ "<html>SO<sub>2</sub></html>", "4.112E-08", "335.4", "64.064", "(b)" },
+					{ "HCN", "3.630E-08", "569.1", "27.025", "(a,b)" },
+					{ "<html>NH<sub>3</sub></html>", "3.215E-08", "309.9", "17.031", "(a)" },
+					{ "<html>H<sub>2</sub>O</html>", "2.710E-08", "506.0", "18.015", "(a)" },
+					{ "<html>H<sub>2</sub>O</html>", "2.641E-08", "809.1", "18.015", "(b)" },
+					{ "<html>H<sub>2</sub>O<sub>2</sub></html>", "4.196E-08", "289.3", "34.015", "(b)" },
+					{ "<html>CHCl<sub>3</sub></html>", "5.179E-08", "381.7", "119.378", "(a)" },
+					{ "<html>CH<sub>2</sub>Cl<sub>2</sub></html>", "4.752E-08", "403.5", "84.933", "(a)" },
+					{ "<html>CH<sub>3</sub>Br</html>", "4.306E-08", "416.2", "94.939", "(a)" },
+					{ "<html>CH<sub>3</sub>Cl</html>", "4.296E-08", "328.1", "50.488", "(a)" },
+					{ "<html>C<sub>2</sub>H<sub>5</sub>Cl</html>", "4.490E-08", "402.9", "64.514", "(a)" },
+					{ "<html>n-C<sub>3</sub>H<sub>7</sub>OH</html>", "4.867E-08", "480.2", "60.095", "(a)" },
+					{ "<html>i-C<sub>3</sub>H<sub>7</sub>OH</html>", "4.739E-08", "456.0", "60.095", "(a)" },
+					{ "<html>C<sub>2</sub>H<sub>5</sub>OH</html>", "4.317E-08", "450.2", "46.068", "(a)" },
+					{ "<html>CH<sub>3</sub>OH</html>", "3.657E-08", "385.2", "32.042", "(a)" },
+					{ "<html>(C<sub>2</sub>H<sub>5</sub>)<sub>2</sub>O</html>", "5.553E-08", "348.0", "74.122", "(a)" },
+					{ "<html>(CH<sub>3</sub>)<sub>2</sub>O</html>", "4.230E-08", "352.3", "46.068", "(a)" },
+					{ "<html>CH<sub>3</sub>CO<sub>2</sub>C<sub>2</sub>H<sub>5</sub></html>", "5.650E-08", "372.0",
+							"88.105", "(a)" },
+					{ "<html>CH<sub>3</sub>CO<sub>2</sub>CH<sub>3</sub></html>", "5.141E-08", "389.4", "74.078",
+							"(a)" },
+					{ "<html>(CH<sub>3</sub>)<sub>2</sub>CO</html>", "4.599E-08", "458.0", "58.079", "(a)" },
+					{ "<html>CH<sub>3</sub>CHO</html>", "4.332E-08", "413.5", "44.053", "(a)" },
+					{ "<html>HO<sub>2</sub></html>", "4.196E-08", "289.3", "33.007", "(b)" },
+					{ "ClNO", "4.112E-08", "395.3", "65.459", "(b)" },
+					{ "<html>O<sub>3</sub></html>", "3.980E-08", "161.2", "47.998", "(b)" },
+					{ "BrNO", "4.12E-08", "500", "109.910", "(b)" },
+					{ "INO", "4.5E-08", "500", "156.911", "(b)" },
+					{ "FNO", "4E-08", "380", "49.005", "(b)" },
+					{ "HNO", "3.492E-08", "116.7", "31.014", "(b)" },
+					{ "<html>NO<sub>3</sub></html>", "4.112E-08", "395", "62.005", "(b)" },
+					{ "<html>INO<sub>2</sub></html>", "4.5E-08", "550", "172.910", "(b)" }
 
-		   
-		   TableCellRenderer rendererFromHeader = table.getTableHeader().getDefaultRenderer();
-		   JLabel headerLabel1 = (JLabel) rendererFromHeader;
-		   headerLabel1.setHorizontalAlignment(JLabel.CENTER);
+			};
 
-		   // create the references
-		   JLabel reference1 = new JLabel("(a) F. M. Mourits and F. H. A. Rummens, Can. J. Chem. 55 (1977) 3007");
-		   JLabel reference2 = new JLabel("(b) J. Troe, J. Chem. Phys. 66 (1977) 4758");
-		   JLabel reference3 = new JLabel("(c) J. O. Hirschfelder,  C. F. Curtiss, and R. B. Bird, Molecular Theory of Gases and Liquids, Wiley, New York, p.1114 (1954)");
+			JTable table = new JTable(data, columnNames);
+			table.setRowHeight(21);
+			table.setFont(new Font("Verdana", Font.PLAIN, 12));
 
-		   
-		   // add table and references to JScrollPane		   
-		   constantsJFrame.add(new JScrollPane(table));
-		   constantsJFrame.add(reference1);
-		   constantsJFrame.add(reference2);
-		   constantsJFrame.add(reference3);
+			TableColumn column = null;
+			column = table.getColumnModel().getColumn(0);
+			column.setPreferredWidth(100);
+			kisthelpJTable.alignRight(table, 0);
 
-		   constantsJFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		   constantsJFrame.setBackground(Color.WHITE);
-		   constantsJFrame.setSize(480,500);
-		   constantsJFrame.setVisible(true);	
-		   
+			column = table.getColumnModel().getColumn(1);
+			column.setPreferredWidth(80);
+			kisthelpJTable.alignRight(table, 1);
 
-		   
-		   
+			column = table.getColumnModel().getColumn(2);
+			column.setPreferredWidth(60);
+			kisthelpJTable.alignRight(table, 2);
+
+			column = table.getColumnModel().getColumn(3);
+			column.setPreferredWidth(80);
+			kisthelpJTable.alignRight(table, 3);
+
+			column = table.getColumnModel().getColumn(4);
+			column.setPreferredWidth(40);
+			kisthelpJTable.alignCenter(table, 4);
+
+			TableCellRenderer rendererFromHeader = table.getTableHeader().getDefaultRenderer();
+			JLabel headerLabel1 = (JLabel) rendererFromHeader;
+			headerLabel1.setHorizontalAlignment(JLabel.CENTER);
+
+			// create the references
+			JLabel reference1 = new JLabel("(a) F. M. Mourits and F. H. A. Rummens, Can. J. Chem. 55 (1977) 3007");
+			JLabel reference2 = new JLabel("(b) J. Troe, J. Chem. Phys. 66 (1977) 4758");
+			JLabel reference3 = new JLabel(
+					"(c) J. O. Hirschfelder,  C. F. Curtiss, and R. B. Bird, Molecular Theory of Gases and Liquids, Wiley, New York, p.1114 (1954)");
+
+			// add table and references to JScrollPane
+			constantsJFrame.add(new JScrollPane(table));
+			constantsJFrame.add(reference1);
+			constantsJFrame.add(reference2);
+			constantsJFrame.add(reference3);
+
+			constantsJFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			constantsJFrame.setBackground(Color.WHITE);
+			constantsJFrame.setSize(480, 500);
+			constantsJFrame.setVisible(true);
+
 		} // end of if (source == lennardJones)
-		
-
 
 		/******************************************************************/
 		// S O U R C E == I N P U T / S A V E
 		/******************************************************************/
 		if (source == saveInputs) { // assuming only one object is in the current session
-			
-			File temporaryFile=null;
-			String temporaryFileName="";
-			ActionOnFileWrite writeOnKinp=null;
-			
+
+			File temporaryFile = null;
+			String temporaryFileName = "";
+			ActionOnFileWrite writeOnKinp = null;
+
 			// get the name of the class corresponding to the current object of the session
 			String currentClassName = Session.getCurrentSession().getSessionContent().get(0).getClass().getName();
-			
-			// if  object of current session is InertStatistical, save inputs results in .kinp file
-			 if (currentClassName.equalsIgnoreCase("InertStatisticalSystem")){
-					// ask for new filename for the resulting kinp file
-				 try {
-					
-					  temporaryFile = KisthepDialog.requireOutputFilename(".kinp filename ?",new KisthepOutputFileFilter(Constants.kInpFileType));
+
+			// if object of current session is InertStatistical, save inputs results in
+			// .kinp file
+			if (currentClassName.equalsIgnoreCase("InertStatisticalSystem")) {
+				// ask for new filename for the resulting kinp file
+				try {
+
+					temporaryFile = KisthepDialog.requireOutputFilename(".kinp filename ?",
+							new KisthepOutputFileFilter(Constants.kInpFileType));
 
 					temporaryFileName = temporaryFile.getAbsolutePath();
-				 
 
 					// check the filename suffix
 					if (temporaryFileName.indexOf('.') == -1) {
@@ -2589,37 +2807,36 @@ public class Interface extends JFrame implements ActionListener {
 					}
 
 					// to prepare the writing action
-					
-						writeOnKinp = new ActionOnFileWrite(temporaryFileName);
-						InertStatisticalSystem currentSystem;
-						currentSystem = (InertStatisticalSystem) Session.getCurrentSession().getSessionContent().get(0);
-						currentSystem.saveInputs(writeOnKinp);
-						writeOnKinp.end();
 
-					 
-						
-				 }// try end
-				 catch (CancelException err) {}
-				 catch (IOException err) {resetCalculation();}
-				 catch (runTimeException err) {resetCalculation();}
-				                                                 
-				 
-			 }// end of if (currentClassName.equalsIgnoreCase("InertStatisticalSystem"))
-			 else {				 
-					String message = "Error in class Interface in method ActionPerformed (if (source == saveInputs))"+ Constants.newLine;
-					message = message +  "while trying to save inputs of an InertStatisticalSystem"+ Constants.newLine;
-					message = message +  "Current object in session is not InertStatisticalSystem but" + Constants.newLine;
-					message = message +  currentClassName + " ..."+ Constants.newLine;
-					JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);                  
-					resetCalculation();					
-			 }
-			
-			
+					writeOnKinp = new ActionOnFileWrite(temporaryFileName);
+					InertStatisticalSystem currentSystem;
+					currentSystem = (InertStatisticalSystem) Session.getCurrentSession().getSessionContent().get(0);
+					currentSystem.saveInputs(writeOnKinp);
+					writeOnKinp.end();
+
+				} // try end
+				catch (CancelException err) {
+				} catch (IOException err) {
+					resetCalculation();
+				} catch (runTimeException err) {
+					resetCalculation();
+				}
+
+			} // end of if (currentClassName.equalsIgnoreCase("InertStatisticalSystem"))
+			else {
+				String message = "Error in class Interface in method ActionPerformed (if (source == saveInputs))"
+						+ Constants.newLine;
+				message = message + "while trying to save inputs of an InertStatisticalSystem" + Constants.newLine;
+				message = message + "Current object in session is not InertStatisticalSystem but" + Constants.newLine;
+				message = message + currentClassName + " ..." + Constants.newLine;
+				JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.ERROR_MESSAGE);
+				resetCalculation();
+			}
+
 		}
 		// ---END--- S O U R C E == I N P U T / S A V E
 		/******************************************************************/
 
-		
 		/***************************/
 		/* SAVE RESULTS */
 		/*************************/
@@ -2627,12 +2844,15 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				workSession.saveResults();
-			}			
-			catch (CancelException error) {resetCalculation();}  
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source==saveResults
 
@@ -2643,11 +2863,13 @@ public class Interface extends JFrame implements ActionListener {
 
 			try {
 				buildReactPath();
+			} catch (CancelException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
 			}
-			catch (CancelException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();}
-			catch (IllegalDataException error) {resetCalculation();}
-
 
 		} // end of if (source==saveResults
 
@@ -2666,26 +2888,33 @@ public class Interface extends JFrame implements ActionListener {
 				Session.getCurrentSession().add(reaction);
 				// make available save and display results menus
 				dataRefresh.setEnabled(true);
-				// make available the results save menu if session is not empty AND !! if the single temperature or pressure range is invoked
-				if ( (Session.getCurrentSession().getTemperatureMin()==Session.getCurrentSession().getTemperatureMax()) && 
-					 (Session.getCurrentSession().getPressureMin()==Session.getCurrentSession().getPressureMax()) )
-				{saveResults.setEnabled(true);}
-				else {saveResults.setEnabled(false);}
-
+				// make available the results save menu if session is not empty AND !! if the
+				// single temperature or pressure range is invoked
+				if ((Session.getCurrentSession().getTemperatureMin() == Session.getCurrentSession().getTemperatureMax())
+						&&
+						(Session.getCurrentSession().getPressureMin() == Session.getCurrentSession()
+								.getPressureMax())) {
+					saveResults.setEnabled(true);
+				} else {
+					saveResults.setEnabled(false);
+				}
 
 				// display results in the central pane
 				workSession.displayResults();
-				
-
 
 			} // end of try
 
-			catch (CancelException error) {resetCalculation();} 
-			catch (IllegalDataException error) {resetCalculation();} 
-			catch (IOException error) {resetCalculation();} 
-		    catch (runTimeException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-          
+			catch (CancelException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (IOException error) {
+				resetCalculation();
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of source==rrkmTightTs
 
@@ -2758,11 +2987,10 @@ public class Interface extends JFrame implements ActionListener {
 				labelTemperature.setText("Temp ("
 						+ workSession.getUnitSystem().getTemperatureSymbol()
 						+ ")");
-				
+
 				// display results in new units
 				workSession.displayResults();
 
-				
 			} catch (TemperatureException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Temperature (in K) must be positive");
@@ -2774,13 +3002,14 @@ public class Interface extends JFrame implements ActionListener {
 			catch (TemperatureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Temperature step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
 
-			
-			
 		} // end of kelvin menu
 
 		/***************************/
@@ -2863,11 +3092,9 @@ public class Interface extends JFrame implements ActionListener {
 				labelTemperature.setText("Temp ("
 						+ workSession.getUnitSystem().getTemperatureSymbol()
 						+ ")");
-				
-				
+
 				// display results in new units
 				workSession.displayResults();
-
 
 			} catch (TemperatureException error) {
 				JOptionPane.showMessageDialog(null,
@@ -2882,12 +3109,14 @@ public class Interface extends JFrame implements ActionListener {
 						"Warning : The Temperature step must be positive");
 			}
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-			
-			
 		} // end of celsius menu
 
 		/***************************/
@@ -2958,10 +3187,9 @@ public class Interface extends JFrame implements ActionListener {
 				labelTemperature.setText("Temp ("
 						+ workSession.getUnitSystem().getTemperatureSymbol()
 						+ ")");
-				
+
 				// display results in new units
 				workSession.displayResults();
-
 
 			} catch (TemperatureException error) {
 				JOptionPane.showMessageDialog(null,
@@ -2976,9 +3204,13 @@ public class Interface extends JFrame implements ActionListener {
 						"Warning : The Temperature step must be positive");
 			}
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of fahrenheit menu
 
@@ -3019,9 +3251,9 @@ public class Interface extends JFrame implements ActionListener {
 				labelPressure
 						.setText("Pressure ("
 								+ workSession.getUnitSystem()
-										.getPressureSymbol() + ")");
-				
-				
+										.getPressureSymbol()
+								+ ")");
+
 				// display results in new units
 				workSession.displayResults();
 
@@ -3035,12 +3267,13 @@ public class Interface extends JFrame implements ActionListener {
 			catch (PressureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
-			
 
 		} // end of pascal menu
 
@@ -3081,8 +3314,9 @@ public class Interface extends JFrame implements ActionListener {
 				labelPressure
 						.setText("Pressure ("
 								+ workSession.getUnitSystem()
-										.getPressureSymbol() + ")");
-				
+										.getPressureSymbol()
+								+ ")");
+
 				// display results in new units
 				workSession.displayResults();
 
@@ -3098,11 +3332,13 @@ public class Interface extends JFrame implements ActionListener {
 			catch (PressureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
 
 		} // end of bar menu
 
@@ -3143,8 +3379,9 @@ public class Interface extends JFrame implements ActionListener {
 				labelPressure
 						.setText("Pressure ("
 								+ workSession.getUnitSystem()
-										.getPressureSymbol() + ")");
-				
+										.getPressureSymbol()
+								+ ")");
+
 				// display results in new units
 				workSession.displayResults();
 
@@ -3160,11 +3397,13 @@ public class Interface extends JFrame implements ActionListener {
 			catch (PressureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
 
 		} // end of atmosphere menu
 
@@ -3205,8 +3444,9 @@ public class Interface extends JFrame implements ActionListener {
 				labelPressure
 						.setText("Pressure ("
 								+ workSession.getUnitSystem()
-										.getPressureSymbol() + ")");
-				
+										.getPressureSymbol()
+								+ ")");
+
 				// display results in new units
 				workSession.displayResults();
 
@@ -3222,93 +3462,93 @@ public class Interface extends JFrame implements ActionListener {
 			catch (PressureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
 
 		} // end of torr menu
 
-        /* pressure and temperatures possible states :
-         * 
-         *   
-         *   Single Temperature : "ST"
-         *   Single Pressure    : "SP"
-         *   
-         *   Range of Temperatures : "RT"
-         *   Range of Pressures    : "RP"
-         *   
-         *   */
+		/*
+		 * pressure and temperatures possible states :
+		 * 
+		 * 
+		 * Single Temperature : "ST"
+		 * Single Pressure : "SP"
+		 * 
+		 * Range of Temperatures : "RT"
+		 * Range of Pressures : "RP"
+		 * 
+		 */
 
 		/*******************************/
 		/* TOWARDS SINGLE TEMPERATURE */
 		/*****************************/
-		
-		/* 1:  RT_SP --> ST_SP  */
-		
+
+		/* 1: RT_SP --> ST_SP */
+
 		if ((source == temperatureRadio1) && (pressureRadio1.isSelected())) {
 
-			
 			labelPressureMin.setEnabled(false);
 			txtPressureMin.setEnabled(false);
 			labelPressureMax.setEnabled(false);
 			txtPressureMax.setEnabled(false);
 			labelStepPressure.setEnabled(false);
 			txtStepPressure.setEnabled(false);
-			
-			
 
 			try {
 				workSession.setTemperatureMin(Double.parseDouble(txtTemperature.getText()));
 				workSession.setTemperatureMax(Double.parseDouble(txtTemperature.getText()));
 				workSession.setStepTemperature(Constants.tStepDefault);
-			
 
-			
-			// make available the results save menu if session is not empty
-			if (Session.getCurrentSession().getSize() != 0) {saveResults.setEnabled(true);}
-		
-			// make unavailable the temperature range menu
-			labelTemperatureMin.setEnabled(false);
-			txtTemperatureMin.setEnabled(false);
-			labelTemperatureMax.setEnabled(false);
-			txtTemperatureMax.setEnabled(false);
-			labelStepTemperature.setEnabled(false);
+				// make available the results save menu if session is not empty
+				if (Session.getCurrentSession().getSize() != 0) {
+					saveResults.setEnabled(true);
+				}
 
+				// make unavailable the temperature range menu
+				labelTemperatureMin.setEnabled(false);
+				txtTemperatureMin.setEnabled(false);
+				labelTemperatureMax.setEnabled(false);
+				txtTemperatureMax.setEnabled(false);
+				labelStepTemperature.setEnabled(false);
 
-			labelTemperature.setEnabled(true);
-			txtTemperature.setEnabled(true);
-			txtStepTemperature.setEnabled(false);
+				labelTemperature.setEnabled(true);
+				txtTemperature.setEnabled(true);
+				txtStepTemperature.setEnabled(false);
 
-			// single temperature mode is saved 
-			Session.getCurrentSession().setSessionMode(0); 
-			
-			// display a pane containing all the results
-			workSession.displayResults();
+				// single temperature mode is saved
+				Session.getCurrentSession().setSessionMode(0);
 
-			
+				// display a pane containing all the results
+				workSession.displayResults();
+
 			} // end of try
-			
+
 			catch (TemperatureException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Temperature (in K) must be positive");
 			} catch (TemperatureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Temperature step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
+
 		}
 		/***************************/
 		/* TEMPERATURE RANGE */
 		/*************************/
-		
-		/* 2:   ST_SP --> RT_SP  */
-		
-		
+
+		/* 2: ST_SP --> RT_SP */
+
 		if ((source == temperatureRadio2) && (pressureRadio1.isSelected())) {
 
 			// make unavailable the pressure range
@@ -3318,8 +3558,7 @@ public class Interface extends JFrame implements ActionListener {
 			txtPressureMax.setEnabled(false);
 			labelStepPressure.setEnabled(false);
 			txtStepPressure.setEnabled(false);
-			
-			
+
 			// make unavailable the results save menu
 			saveResults.setEnabled(false);
 
@@ -3335,9 +3574,6 @@ public class Interface extends JFrame implements ActionListener {
 				// ForGraphicsButtonBox
 				// (EAST)
 
-
-
-
 				labelTemperatureMin.setEnabled(true);
 				txtTemperatureMin.setEnabled(true);
 				labelTemperatureMax.setEnabled(true);
@@ -3345,50 +3581,49 @@ public class Interface extends JFrame implements ActionListener {
 				labelStepTemperature.setEnabled(true);
 				txtStepTemperature.setEnabled(true);
 
-
 				labelTemperature.setEnabled(false);
 				txtTemperature.setEnabled(false);
 
-				// range temperature mode is saved 
-				Session.getCurrentSession().setSessionMode(1); 
-				
+				// range temperature mode is saved
+				Session.getCurrentSession().setSessionMode(1);
+
 				// display a pane containing all the results
 				workSession.displayResults();
-	   	   }// end of try
-			
+			} // end of try
+
 			catch (TemperatureException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Temperature (in K) must be positive");
 			} catch (TemperatureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Temperature step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
 
-			
 		}
 
 		/***************************/
 		/* TOWARDS SINGLE PRESSURE */
 		/*************************/
 
-		
-		/* 3:  ST_RP --> ST_SP  */
-		
-		
-		
+		/* 3: ST_RP --> ST_SP */
+
 		if ((source == pressureRadio1) && (temperatureRadio1.isSelected())) {
 
 			try {
-				workSession.setPressureMin(Double.parseDouble(txtPressure	.getText()));
-				workSession.setPressureMax(Double.parseDouble(txtPressure	.getText()));
+				workSession.setPressureMin(Double.parseDouble(txtPressure.getText()));
+				workSession.setPressureMax(Double.parseDouble(txtPressure.getText()));
 				workSession.setStepPressure(Constants.pStepDefault);
 
-				
 				// make available the results save menu if session is not empty
-				if (Session.getCurrentSession().getSize() != 0) {saveResults.setEnabled(true);}
+				if (Session.getCurrentSession().getSize() != 0) {
+					saveResults.setEnabled(true);
+				}
 
 				// make unavailable the pressure and temperature range
 				labelTemperatureMin.setEnabled(false);
@@ -3397,7 +3632,6 @@ public class Interface extends JFrame implements ActionListener {
 				txtTemperatureMax.setEnabled(false);
 				labelStepTemperature.setEnabled(false);
 				txtStepTemperature.setEnabled(false);
-				
 
 				labelPressureMin.setEnabled(false);
 				txtPressureMin.setEnabled(false);
@@ -3405,17 +3639,15 @@ public class Interface extends JFrame implements ActionListener {
 				txtPressureMax.setEnabled(false);
 				labelStepPressure.setEnabled(false);
 				txtStepPressure.setEnabled(false);
-				
+
 				labelPressure.setEnabled(true);
 				txtPressure.setEnabled(true);
-				
-				
-				// single pressure mode is saved 
-				Session.getCurrentSession().setSessionMode(2); 
-				
+
+				// single pressure mode is saved
+				Session.getCurrentSession().setSessionMode(2);
+
 				// display a pane containing all the results
 				workSession.displayResults();
-
 
 			} // end try
 
@@ -3427,19 +3659,21 @@ public class Interface extends JFrame implements ActionListener {
 			catch (PressureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
 
 		}
 		/***************************/
 		/* PRESSURE RANGE */
 		/*************************/
-		
-		/* 4:  ST_SP --> ST_RP  */
-		
+
+		/* 4: ST_SP --> ST_RP */
+
 		if ((source == pressureRadio2) && (temperatureRadio1.isSelected())) {
 
 			try {
@@ -3466,7 +3700,6 @@ public class Interface extends JFrame implements ActionListener {
 				labelPressure.setEnabled(false);
 				txtPressure.setEnabled(false);
 
-				
 				// make unavailable the results save menu
 				saveResults.setEnabled(false);
 
@@ -3477,14 +3710,12 @@ public class Interface extends JFrame implements ActionListener {
 				txtTemperatureMax.setEnabled(false);
 				labelStepTemperature.setEnabled(false);
 				txtStepTemperature.setEnabled(false);
-				
-				
-				// pressure range mode is saved 
-				Session.getCurrentSession().setSessionMode(3); 
-	
+
+				// pressure range mode is saved
+				Session.getCurrentSession().setSessionMode(3);
+
 				// display a pane containing all the results
 				workSession.displayResults();
-
 
 			} // end try
 
@@ -3496,20 +3727,22 @@ public class Interface extends JFrame implements ActionListener {
 			catch (PressureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
 
 		} // end of if source==pressureRadio2
 
-		
 		/******************************************/
 		/* TOWARDS TEMPERATURE + PRESSURE RANGE */
 		/****************************************/
-		
-		/* 5:  RT_SP --> RT_RP  */
-		
+
+		/* 5: RT_SP --> RT_RP */
+
 		if ((source == pressureRadio2) && (temperatureRadio2.isSelected())) {
 
 			try {
@@ -3536,17 +3769,14 @@ public class Interface extends JFrame implements ActionListener {
 				labelPressure.setEnabled(false);
 				txtPressure.setEnabled(false);
 
-				
 				// make unavailable the results save menu
 				saveResults.setEnabled(false);
 
-				
-				// pressure range mode is saved 
-				Session.getCurrentSession().setSessionMode(4); 
-	
+				// pressure range mode is saved
+				Session.getCurrentSession().setSessionMode(4);
+
 				// display a pane containing all the results
 				workSession.displayResults();
-
 
 			} // end try
 
@@ -3558,23 +3788,24 @@ public class Interface extends JFrame implements ActionListener {
 			catch (PressureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
 
 		} // end of if source==pressureRadio2
 
-		
 		/******************************/
 		/* TOWARDS TEMPERATURE RANGE */
 		/****************************/
-		
-		/* 6:   RT_RP --> RT_SP  */
+
+		/* 6: RT_RP --> RT_SP */
 
 		if ((source == pressureRadio1) && (temperatureRadio2.isSelected())) {
 
-			
 			// make unavailable the pressure range
 			labelPressureMin.setEnabled(false);
 			txtPressureMin.setEnabled(false);
@@ -3582,19 +3813,17 @@ public class Interface extends JFrame implements ActionListener {
 			txtPressureMax.setEnabled(false);
 			labelStepPressure.setEnabled(false);
 			txtStepPressure.setEnabled(false);
-			
+
 			labelPressure.setEnabled(true);
 			txtPressure.setEnabled(true);
-			
-			
+
 			// make unavailable the results save menu
 			saveResults.setEnabled(false);
 
 			try { // automatically converted in Kelvin into workSession
-				
-				
-				workSession.setPressureMin(Double.parseDouble(txtPressure	.getText()));
-				workSession.setPressureMax(Double.parseDouble(txtPressure	.getText()));
+
+				workSession.setPressureMin(Double.parseDouble(txtPressure.getText()));
+				workSession.setPressureMax(Double.parseDouble(txtPressure.getText()));
 				workSession.setStepPressure(Constants.pStepDefault);
 
 				workSession.setCurrentGraphIndex(0);// reinitialize currentIndex
@@ -3602,13 +3831,12 @@ public class Interface extends JFrame implements ActionListener {
 				// ForGraphicsButtonBox
 				// (EAST)
 
+				// range temperature mode is saved
+				Session.getCurrentSession().setSessionMode(5);
 
-				// range temperature mode is saved 
-				Session.getCurrentSession().setSessionMode(5); 
-				
 				// display a pane containing all the results
 				workSession.displayResults();
-	   	   }// end of try
+			} // end of try
 			catch (PressureException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Pressure must be positive");
@@ -3619,33 +3847,30 @@ public class Interface extends JFrame implements ActionListener {
 						"Warning : The Pressure step must be positive");
 			}
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
-			
 		}
 
-		
 		/******************************************/
 		/* TOWARDS TEMPERATURE + PRESSURE RANGE */
 		/****************************************/
-		
-		/* 7:  ST_RP --> RT_RP  */
-		
+
+		/* 7: ST_RP --> RT_RP */
+
 		if ((source == temperatureRadio2) && (pressureRadio2.isSelected())) {
 
 			try {
-				
-				
 
 				workSession.setTemperatureMin(Double.parseDouble(txtTemperatureMin.getText()));
 				workSession.setTemperatureMax(Double.parseDouble(txtTemperatureMax.getText()));
 				workSession.setStepTemperature(Double.parseDouble(txtStepTemperature.getText()));
 
-				
-				
-				
 				workSession.setCurrentGraphIndex(0);// reinitialize currentIndex
 													// on the
 													// ForGraphicsButtonBox
@@ -3658,21 +3883,17 @@ public class Interface extends JFrame implements ActionListener {
 				labelStepTemperature.setEnabled(true);
 				txtStepTemperature.setEnabled(true);
 
-
 				labelTemperature.setEnabled(false);
 				txtTemperature.setEnabled(false);
 
-			
 				// make unavailable the results save menu
 				saveResults.setEnabled(false);
 
-				
-				// pressure range mode is saved 
-				Session.getCurrentSession().setSessionMode(6); 
-	
+				// pressure range mode is saved
+				Session.getCurrentSession().setSessionMode(6);
+
 				// display a pane containing all the results
 				workSession.displayResults();
-
 
 			} // end try
 
@@ -3684,20 +3905,22 @@ public class Interface extends JFrame implements ActionListener {
 			catch (TemperatureStepException error) {
 				JOptionPane.showMessageDialog(null,
 						"Warning : The Temperature step must be positive");
+			} catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
 			}
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
 
 		} // end of if source==pressureRadio2
 
-	
 		/***************************/
 		/* TOWARDS PRESSURE RANGE */
 		/*************************/
-		
-		/* 8:  RT_RP --> ST_RP  */
-		
+
+		/* 8: RT_RP --> ST_RP */
+
 		if ((source == temperatureRadio1) && (pressureRadio2.isSelected())) {
 
 			try {
@@ -3706,14 +3929,11 @@ public class Interface extends JFrame implements ActionListener {
 				workSession.setTemperatureMax(Double.parseDouble(txtTemperature.getText()));
 				workSession.setStepTemperature(Constants.tStepDefault);
 
-				
 				workSession.setCurrentGraphIndex(0);// reinitialize currentIndex
 													// on the
 													// ForGraphicsButtonBox
 													// (EAST)
 
-
-				
 				// make unavailable the results save menu
 				saveResults.setEnabled(false);
 
@@ -3724,16 +3944,15 @@ public class Interface extends JFrame implements ActionListener {
 				txtTemperatureMax.setEnabled(false);
 				labelStepTemperature.setEnabled(false);
 				txtStepTemperature.setEnabled(false);
-				
+
 				labelTemperature.setEnabled(true);
 				txtTemperature.setEnabled(true);
-				
-				// pressure range mode is saved 
-				Session.getCurrentSession().setSessionMode(7); 
-	
+
+				// pressure range mode is saved
+				Session.getCurrentSession().setSessionMode(7);
+
 				// display a pane containing all the results
 				workSession.displayResults();
-
 
 			} // end try
 
@@ -3747,15 +3966,16 @@ public class Interface extends JFrame implements ActionListener {
 						"Warning : The Temperature step must be positive");
 			}
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if source==pressureRadio2
 
-		
-		
-		
 		/***************************/
 		/* CHANGE TEMPERATURE */
 		/*************************/
@@ -3776,13 +3996,11 @@ public class Interface extends JFrame implements ActionListener {
 
 				// display a pane containing all the results
 				workSession.displayResults();
-				
-				
+
 				txtTemperature.setText(String.valueOf(Maths.format(Session
 						.getCurrentSession().getUnitSystem()
 						.convertToTemperatureUnit(workSession.getTemperatureMin()),
 						"0.00")));
-
 
 			} // end of try
 
@@ -3802,11 +4020,14 @@ public class Interface extends JFrame implements ActionListener {
 						"Temperature error", JOptionPane.WARNING_MESSAGE);
 			} // end of catch (NumberFormatException error)
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
-			
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
+
 		} // end of if (source==txtTemperature)
 
 		/***************************/
@@ -3819,8 +4040,7 @@ public class Interface extends JFrame implements ActionListener {
 
 				// refresh the pane containing all the results
 				workSession.displayResults();
-				
-				
+
 				// if tMax=tMin then update tStep
 
 				txtTemperatureMin.setText(String.valueOf(Maths.format(Session
@@ -3840,7 +4060,6 @@ public class Interface extends JFrame implements ActionListener {
 				txtStepTemperature.setText(String.valueOf(Maths.format(
 						tStepTemporary, "0.00")));
 
-
 			} // end of try
 
 			catch (TemperatureException error) {
@@ -3854,10 +4073,13 @@ public class Interface extends JFrame implements ActionListener {
 						"Temperature error", JOptionPane.WARNING_MESSAGE);
 
 			} // end of catch (NumberFormatException error) {
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source==txtTemperatureMin) {
 
@@ -3872,8 +4094,7 @@ public class Interface extends JFrame implements ActionListener {
 
 				// display a pane containing all the results
 				workSession.displayResults();
-				
-				
+
 				txtTemperatureMax.setText(String.valueOf(Maths.format(Session
 						.getCurrentSession().getUnitSystem()
 						.convertToTemperatureUnit(workSession.getTemperatureMax()),
@@ -3892,7 +4113,6 @@ public class Interface extends JFrame implements ActionListener {
 				txtStepTemperature.setText(String.valueOf(Maths.format(
 						tStepTemporary, "0.00")));
 
-
 			} // end of try
 
 			catch (TemperatureException error) {
@@ -3907,11 +4127,13 @@ public class Interface extends JFrame implements ActionListener {
 
 			} // end of catch (NumberFormatException error) {
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
-			
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source == txtTemperatureMax) {
 
@@ -3926,7 +4148,7 @@ public class Interface extends JFrame implements ActionListener {
 
 				// display a pane containing all the results
 				workSession.displayResults();
-				
+
 				double tStepTemporary = Session
 						.getCurrentSession()
 						.getUnitSystem()
@@ -3938,7 +4160,6 @@ public class Interface extends JFrame implements ActionListener {
 
 				txtStepTemperature.setText(String.valueOf(Maths.format(
 						tStepTemporary, "0.00")));
-
 
 			} // end of try
 
@@ -3953,11 +4174,14 @@ public class Interface extends JFrame implements ActionListener {
 						"Temperature error", JOptionPane.WARNING_MESSAGE);
 
 			} // end of catch (NumberFormatException error) {
-			
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
 
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source==txtStepTemperature) {
 
@@ -3976,15 +4200,14 @@ public class Interface extends JFrame implements ActionListener {
 
 				// display a pane containing all the results
 				workSession.displayResults();
-				
-				txtPressure
-				.setText(String.valueOf(Maths.format(
-						Session.getCurrentSession()
-								.getUnitSystem()
-								.convertToPressureUnit(
-										workSession.getPressureMin()),
-						"0.00E00")));
 
+				txtPressure
+						.setText(String.valueOf(Maths.format(
+								Session.getCurrentSession()
+										.getUnitSystem()
+										.convertToPressureUnit(
+												workSession.getPressureMin()),
+								"0.00E00")));
 
 			} // end of try
 
@@ -4004,11 +4227,14 @@ public class Interface extends JFrame implements ActionListener {
 						"Pressure error", JOptionPane.WARNING_MESSAGE);
 
 			} // end of catch (NumberFormatException error)
-			
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
+
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source==txtPressure)
 
@@ -4024,19 +4250,19 @@ public class Interface extends JFrame implements ActionListener {
 				workSession.displayResults();
 
 				txtPressureMin
-				.setText(String.valueOf(Maths.format(
-						Session.getCurrentSession()
-						.getUnitSystem()
-						.convertToPressureUnit(
-								workSession.getPressureMin()),
+						.setText(String.valueOf(Maths.format(
+								Session.getCurrentSession()
+										.getUnitSystem()
+										.convertToPressureUnit(
+												workSession.getPressureMin()),
 								"0.00E00")));
 				// if tMax=tMin then update tStep
 				txtStepPressure.setText(String.valueOf(Maths.format(
 						Session.getCurrentSession()
-						.getUnitSystem()
-						.convertToPressureUnit(
-								workSession.getStepPressure()), "0.00")));
-
+								.getUnitSystem()
+								.convertToPressureUnit(
+										workSession.getStepPressure()),
+						"0.00")));
 
 			} // end of try
 
@@ -4052,11 +4278,13 @@ public class Interface extends JFrame implements ActionListener {
 
 			} // end of catch (NumberFormatException error) {
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
-			
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source==txtPressureMin) {
 
@@ -4073,19 +4301,19 @@ public class Interface extends JFrame implements ActionListener {
 				workSession.displayResults();
 
 				txtPressureMax
-				.setText(String.valueOf(Maths.format(
-						Session.getCurrentSession()
-						.getUnitSystem()
-						.convertToPressureUnit(
-								workSession.getPressureMax()),
+						.setText(String.valueOf(Maths.format(
+								Session.getCurrentSession()
+										.getUnitSystem()
+										.convertToPressureUnit(
+												workSession.getPressureMax()),
 								"0.00")));
 				// if tMax=tMin then update tStep
 				txtStepPressure.setText(String.valueOf(Maths.format(
 						Session.getCurrentSession()
-						.getUnitSystem()
-						.convertToPressureUnit(
-								workSession.getStepPressure()), "0.00")));
-
+								.getUnitSystem()
+								.convertToPressureUnit(
+										workSession.getStepPressure()),
+						"0.00")));
 
 			} // end of try
 
@@ -4101,10 +4329,13 @@ public class Interface extends JFrame implements ActionListener {
 
 			} // end of catch (NumberFormatException error) {
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source == txtPressureMax) {
 
@@ -4119,13 +4350,13 @@ public class Interface extends JFrame implements ActionListener {
 
 				// display a pane containing all the results
 				workSession.displayResults();
-				
+
 				txtStepPressure.setText(String.valueOf(Maths.format(
 						Session.getCurrentSession()
 								.getUnitSystem()
 								.convertToPressureUnit(
-										workSession.getStepPressure()), "0.00")));
-
+										workSession.getStepPressure()),
+						"0.00")));
 
 			} // end of try
 
@@ -4141,11 +4372,13 @@ public class Interface extends JFrame implements ActionListener {
 
 			} // end of catch (NumberFormatException error) {
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
-			
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source==txtStepPressure) {
 
@@ -4156,44 +4389,46 @@ public class Interface extends JFrame implements ActionListener {
 			try {
 
 				workSession.setScalingFactor(Double
-						.parseDouble(txtScalingFactor.getText())); // all thermodynamic properties are updated (except, E0 for a RRKM computation) (see below)
+						.parseDouble(txtScalingFactor.getText())); // all thermodynamic properties are updated (except,
+																	// E0 for a RRKM computation) (see below)
 
 				// display a pane containing all the results
 				centralPane.removeAll();
 
-				// if a RRKM calculation is going to be performed, update the E0 critical energy value BOX
-				// since E0 = f(Up, vib. frequencies)				
-				if (Session.getCurrentSession().getSessionContent().size()!=0) { // only if a calculation has been performed
-					
-					String currentClassName = Session.getCurrentSession().getSessionContent().get(0).getClass().getName();
-					if (currentClassName=="UnimolecularReaction") {
-						
-						UnimolecularReaction currentReaction = (UnimolecularReaction)Session.getCurrentSession().getSessionContent().get(0);
-						if (currentReaction.getRateConstant().getKineticLevel()=="rrkmTightTs") {
+				// if a RRKM calculation is going to be performed, update the E0 critical energy
+				// value BOX
+				// since E0 = f(Up, vib. frequencies)
+				if (Session.getCurrentSession().getSessionContent().size() != 0) { // only if a calculation has been
+																					// performed
+
+					String currentClassName = Session.getCurrentSession().getSessionContent().get(0).getClass()
+							.getName();
+					if (currentClassName == "UnimolecularReaction") {
+
+						UnimolecularReaction currentReaction = (UnimolecularReaction) Session.getCurrentSession()
+								.getSessionContent().get(0);
+						if (currentReaction.getRateConstant().getKineticLevel() == "rrkmTightTs") {
 							// get the E0Panel to update the E0 value
-							
-							RateConstantRRKM currentRateConstant = (RateConstantRRKM)(currentReaction.getRateConstant());
+
+							RateConstantRRKM currentRateConstant = (RateConstantRRKM) (currentReaction
+									.getRateConstant());
 							double E0 = currentRateConstant.getE0PESValue();
-							currentRateConstant.getE0Panel().getTxtE0().setText(Maths.format(E0*Constants.convertJToKCalPerMol, "00.00"));
-							currentRateConstant.setE0(E0); // refresh the E0 property of RRKMRateConstant (computeValue of k is here)
-							
-						}// end of if (currentReaction.getRateConstant().getKineticLevel()=="rrkmTightTs"
-						
-					}// end of if (currentClassName=="UnimolecularReaction")
-				}// end of if (Session.getCurrentSession().getSessionContent().size()!=0)
-				
+							currentRateConstant.getE0Panel().getTxtE0()
+									.setText(Maths.format(E0 * Constants.convertJToKCalPerMol, "00.00"));
+							currentRateConstant.setE0(E0); // refresh the E0 property of RRKMRateConstant (computeValue
+															// of k is here)
 
+						} // end of if (currentReaction.getRateConstant().getKineticLevel()=="rrkmTightTs"
 
-				
-				
+					} // end of if (currentClassName=="UnimolecularReaction")
+				} // end of if (Session.getCurrentSession().getSessionContent().size()!=0)
+
 				// display a pane containing all the results
 				workSession.displayResults();
-				
-				
+
 				txtScalingFactor.setText(String.valueOf(Maths.format(
 						workSession.getScalingFactor(), "0.00")));
-				
-				
+
 			} // end of try
 
 			catch (NumberFormatException error) {
@@ -4203,10 +4438,13 @@ public class Interface extends JFrame implements ActionListener {
 
 			} // end of catch (NumberFormatException error)
 
-		    catch (runTimeException error) {resetCalculation();}
-		    catch (IllegalDataException error) {resetCalculation();}
-			catch (OutOfRangeException error) {resetCalculation();}
-			
+			catch (runTimeException error) {
+				resetCalculation();
+			} catch (IllegalDataException error) {
+				resetCalculation();
+			} catch (OutOfRangeException error) {
+				resetCalculation();
+			}
 
 		} // end of if (source==txtScalingFactor) {
 
@@ -4217,25 +4455,24 @@ public class Interface extends JFrame implements ActionListener {
 		// kisthep input file
 		if (source == helpInputFile) {
 
-			try {		
+			try {
 				String indexName = "userIndex.html";
-				URL address =   getClass().getResource(indexName);
-				
-				
-				if (address == null) {
-					String message = "Error in class Interface in ActionPerformed, if source==helpInputFile"+ Constants.newLine;
-					message = message +  "File " + indexName + " not found"+ Constants.newLine;
-					message = message +  "Please contact the authors"+ Constants.newLine;
-					JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);                      
-			  }
-			  else {				
-				String filePath=address.toString(); 				 
-				JFrame viewerFrameInputFile = new DocumentViewer(filePath);
-				viewerFrameInputFile.setVisible(true);
-			  }// end of if then else
-			}// end of try
-			catch (runTimeException err) {}
+				URL address = getClass().getResource(indexName);
 
+				if (address == null) {
+					String message = "Error in class Interface in ActionPerformed, if source==helpInputFile"
+							+ Constants.newLine;
+					message = message + "File " + indexName + " not found" + Constants.newLine;
+					message = message + "Please contact the authors" + Constants.newLine;
+					JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.ERROR_MESSAGE);
+				} else {
+					String filePath = address.toString();
+					JFrame viewerFrameInputFile = new DocumentViewer(filePath);
+					viewerFrameInputFile.setVisible(true);
+				} // end of if then else
+			} // end of try
+			catch (runTimeException err) {
+			}
 
 		}
 
@@ -4248,26 +4485,25 @@ public class Interface extends JFrame implements ActionListener {
 		// this part of program display the html documentaion about the
 		// differents kisthep java classes
 		if (source == helpDocumentation) {
-			
-			
-			try {		
+
+			try {
 				String indexName = "index.html";
-				URL address =   getClass().getResource(indexName);
+				URL address = getClass().getResource(indexName);
 				if (address == null) {
-					String message = "Error in class Interface in ActionPerformed, if source==helpInputFile"+ Constants.newLine;
-					message = message +  "File " + indexName + " not found"+ Constants.newLine;
-					message = message +  "Please contact the authors"+ Constants.newLine;
-					JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);                      
-			  }
-			  else {
-				File index = new File(address.toString().substring(5)); 
-				String filePath=address.toString(); 
-				JFrame viewerFrameInputFile = new DocumentViewer(filePath);
-				viewerFrameInputFile.setVisible(true);
-			  }// end of if then else
+					String message = "Error in class Interface in ActionPerformed, if source==helpInputFile"
+							+ Constants.newLine;
+					message = message + "File " + indexName + " not found" + Constants.newLine;
+					message = message + "Please contact the authors" + Constants.newLine;
+					JOptionPane.showMessageDialog(null, message, Constants.kisthepMessage, JOptionPane.ERROR_MESSAGE);
+				} else {
+					File index = new File(address.toString().substring(5));
+					String filePath = address.toString();
+					JFrame viewerFrameInputFile = new DocumentViewer(filePath);
+					viewerFrameInputFile.setVisible(true);
+				} // end of if then else
+			} catch (runTimeException err) {
 			}
-			catch (runTimeException err) {}
-			
+
 		}
 		// ---E N D--- S O U R C E == H E L P O P T I O N
 
@@ -4302,8 +4538,10 @@ public class Interface extends JFrame implements ActionListener {
 
 	public void calculationItemsetEnabled(boolean state) {
 
-		// change the state of the menu item of the menu Calculation (Atom/Molecule, kTST, ...)
-		// indeed, according whether the calculation is reset or not, these item must be grey or not (disabled or enabled)
+		// change the state of the menu item of the menu Calculation (Atom/Molecule,
+		// kTST, ...)
+		// indeed, according whether the calculation is reset or not, these item must be
+		// grey or not (disabled or enabled)
 		for (int iItem = 0; iItem < calculationNumberItem; iItem++) {
 			tJMenuItemCalculationInactives[iItem].setEnabled(state);
 		}
@@ -4465,15 +4703,15 @@ public class Interface extends JFrame implements ActionListener {
 
 		// centralPane managment
 		centralPane = new JDesktopPane();
-	 
-		//GridLayout g3 = new GridLayout(0, 1);
+
+		// GridLayout g3 = new GridLayout(0, 1);
 		centralPane.setLayout(new BoxLayout(centralPane, BoxLayout.Y_AXIS));
-		//centralPane.setLayout(g3);
+		// centralPane.setLayout(g3);
 		centralPane.setBorder(BorderFactory.createLoweredBevelBorder());
 
-		//centralPane backGroundColor
+		// centralPane backGroundColor
 		centralPane.setBackground(Color.WHITE);
-		
+
 		// Kisthep logo managment
 		logo = new Logo();
 		centralPane.add(logo);
@@ -4493,127 +4731,137 @@ public class Interface extends JFrame implements ActionListener {
 		JOptionPane.showMessageDialog(this, message, Constants.kisthepMessage, JOptionPane.INFORMATION_MESSAGE);
 
 		// get the number of points (1 for a TST, n for a VTST calculation)
-		// ask for intrinsic reaction coordinate		
+		// ask for intrinsic reaction coordinate
 		int nbPts;
-		String questionNbpts="Please enter the number of points to be read (TST=1, VTST=n)\n Including the TS itself ";		
+		String questionNbpts = "Please enter the number of points to be read (TST=1, VTST=n)\n Including the TS itself ";
 		String txt;
 		txt = KisthepDialog.requireDouble(questionNbpts, "KiSThelP");
-		nbPts = (int)(Double.parseDouble(txt));
-		if (nbPts <=0) {throw new CancelException();}
-		
+		nbPts = (int) (Double.parseDouble(txt));
+		if (nbPts <= 0) {
+			throw new CancelException();
+		}
+
 		File temporaryFile, temporaryFile2;
-		ActionOnFileRead  readFromCurrentKinp;
+		ActionOnFileRead readFromCurrentKinp;
 		ActionOnFileWrite writeOnRPKinp;
 		String temporaryFileName = "";
-		String temporaryFileName2= "";
+		String temporaryFileName2 = "";
 		String currentLine;
 		Boolean notFoundAGoodName, alreadyOpen;
 
 		String question1 = "Please enter the corresponding Intrinsic Reaction Coordinate (IRC, ex.: -0.3)";
 		String question2;
-		
 
 		ArrayList<Double> irc = new ArrayList<Double>();
 		ArrayList<File> kinpFiles = new ArrayList<File>();
 
-		
-		// get the (irc/file) set the CanceException is implicitly handled by KisthepDialog.requireExistingFilename
-		for (int iPoint=1; iPoint<=nbPts; iPoint++){
+		// get the (irc/file) set the CanceException is implicitly handled by
+		// KisthepDialog.requireExistingFilename
+		for (int iPoint = 1; iPoint <= nbPts; iPoint++) {
 
-             // create a temporary chemicalsystem to test the data and create a kinp file is
+			// create a temporary chemicalsystem to test the data and create a kinp file is
 			// the entered file is not of kinp type but is of quatum chemistry type
 			question2 = "FILE: select a data file for PATH POINT " + iPoint + " / " + nbPts;
 			temporaryFile = ChemicalSystem.returnKinpFile(ChemicalSystem.pathPoint, question2);
-			
+
 			// if ok, add this kinp file to the list of kinp files to be read next
 			kinpFiles.add(temporaryFile);
 
 			// if nbPts == 1 => simple TST calculation => irc = 0.0 automatically
 			// ask for intrinsic reaction coordinate
-			if (nbPts >1) { // VTST case
+			if (nbPts > 1) { // VTST case
 				txt = KisthepDialog.requireDouble(question1, "KiSThelP");
 				irc.add(Double.parseDouble(txt));
-			}
-			else irc.add(0.0); // TST case
-
+			} else
+				irc.add(0.0); // TST case
 
 		} // end of for (int iPoint=1; iPoint<=nbPts; iPoint++)
 
-		
 		/*****************************************************/
 		// ask for new filename for the resulting kinp file
 		// but take care: the new filename must not be already open !
-		temporaryFile = KisthepDialog.requireRPOutputFilename("Reaction path filename (e.g. RP.kinp) ?",new KisthepOutputFileFilter(Constants.kInpFileType));
+		temporaryFile = KisthepDialog.requireRPOutputFilename("Reaction path filename (e.g. RP.kinp) ?",
+				new KisthepOutputFileFilter(Constants.kInpFileType));
 		temporaryFileName = temporaryFile.getAbsolutePath();
-		
+
 		// if no file extension has been given, the default kinp is given
 		if (temporaryFileName.indexOf('.') == -1) {
 			temporaryFileName = temporaryFileName + ".kinp";
 		}
-		
 
-		notFoundAGoodName=true;
+		notFoundAGoodName = true;
 		while (notFoundAGoodName) {
-		   // check that this file is not already open (one of the kinp files in memory)			   
-		   alreadyOpen=false;
-		   for (int iFile = 0; iFile < nbPts; iFile++) {
-			   // get the absolute filename of the kinp file of the current path point		   
-			    temporaryFile2 = (File) (kinpFiles.get(iFile));
-			    temporaryFileName2 = temporaryFile2.getAbsolutePath();
-			   // compare to the wanted filename for the reaction path:
-			    if (temporaryFileName2.equals(temporaryFileName)) {
-			    	  alreadyOpen=true;		
-			    	  JOptionPane.showMessageDialog(Interface.getKisthepInterface(), "Sorry, this file is already in use in KiSThelP session. Please choose another name.", Constants.kisthepMessage, JOptionPane.WARNING_MESSAGE);
-			  	  temporaryFile = KisthepDialog.requireRPOutputFilename("Reaction path filename (e.g. RP.kinp) ?",new KisthepOutputFileFilter(Constants.kInpFileType));
-			  	  temporaryFileName = temporaryFile.getAbsolutePath();
+			// check that this file is not already open (one of the kinp files in memory)
+			alreadyOpen = false;
+			for (int iFile = 0; iFile < nbPts; iFile++) {
+				// get the absolute filename of the kinp file of the current path point
+				temporaryFile2 = (File) (kinpFiles.get(iFile));
+				temporaryFileName2 = temporaryFile2.getAbsolutePath();
+				// compare to the wanted filename for the reaction path:
+				if (temporaryFileName2.equals(temporaryFileName)) {
+					alreadyOpen = true;
+					JOptionPane.showMessageDialog(Interface.getKisthepInterface(),
+							"Sorry, this file is already in use in KiSThelP session. Please choose another name.",
+							Constants.kisthepMessage, JOptionPane.WARNING_MESSAGE);
+					temporaryFile = KisthepDialog.requireRPOutputFilename("Reaction path filename (e.g. RP.kinp) ?",
+							new KisthepOutputFileFilter(Constants.kInpFileType));
+					temporaryFileName = temporaryFile.getAbsolutePath();
 					// if no file extension has been given, the default kinp is given
 					if (temporaryFileName.indexOf('.') == -1) {
 						temporaryFileName = temporaryFileName + ".kinp";
 					}
-					break; // then, does not test the existence on the disk (hereafter, in the while statement)
+					break; // then, does not test the existence on the disk (hereafter, in the while
+							// statement)
 
-			    }
-		   } // end of for
-		   
-           // after this "for" loop on "list of IRC files" : check if this filename is already open or not
-		   if (alreadyOpen==false) {
-			   
-			   // now, check that this file does not exist on the disk
-			   // --> temporarily create a new temporary file with temporaryFileName as filename,
-			   // because maybe the user has not provided the extension ...
-			   File f = new File(temporaryFileName);
-			   if(f.exists()) 			               
-			         {
-				      
-			          int answer=JOptionPane.showConfirmDialog(Interface.getKisthepInterface(),"This file already exists, do you want to continue ?","Save as", JOptionPane.YES_NO_OPTION);
-			          if (answer==JOptionPane.YES_OPTION) {
-			        	     // then, the file name is not open by Kisthelp (as a kinp file), it already exists on the disk, and will be replaced
-			        	     notFoundAGoodName=false; // one exits the while loop because the file does not exist in memory (in session), exist
-			        	                              // in memory but the user decides to go on ...
-			          }// end of if answer==JOptionPane.YES_OPTION
-			          else {
-			        	      // the file name is not open by Kisthelp (as a kinp file), it already exists on the disk, and will not be replaced
-				        	  // ask for a new filename:
-				        	  temporaryFile = KisthepDialog.requireRPOutputFilename("Reaction path filename (e.g. RP.kinp) ?",new KisthepOutputFileFilter(Constants.kInpFileType));
-				        	  temporaryFileName = temporaryFile.getAbsolutePath();
-	
-				        	  // if no file extension has been given, the default kinp is given
-				        	  if (temporaryFileName.indexOf('.') == -1) {
-				        		  temporaryFileName = temporaryFileName + ".kinp";
-				        	      }
-					
+				}
+			} // end of for
 
-			               }
-			          
-			         } // end of  if (file.exists())
-			   else notFoundAGoodName=false;// one exits the while loop because the file does not exist on the disk nor in memory (in session)
-		   } // end of if (alreadyOpen==false)
+			// after this "for" loop on "list of IRC files" : check if this filename is
+			// already open or not
+			if (alreadyOpen == false) {
+
+				// now, check that this file does not exist on the disk
+				// --> temporarily create a new temporary file with temporaryFileName as
+				// filename,
+				// because maybe the user has not provided the extension ...
+				File f = new File(temporaryFileName);
+				if (f.exists()) {
+
+					int answer = JOptionPane.showConfirmDialog(Interface.getKisthepInterface(),
+							"This file already exists, do you want to continue ?", "Save as",
+							JOptionPane.YES_NO_OPTION);
+					if (answer == JOptionPane.YES_OPTION) {
+						// then, the file name is not open by Kisthelp (as a kinp file), it already
+						// exists on the disk, and will be replaced
+						notFoundAGoodName = false; // one exits the while loop because the file does not exist in memory
+													// (in session), exist
+													// in memory but the user decides to go on ...
+					} // end of if answer==JOptionPane.YES_OPTION
+					else {
+						// the file name is not open by Kisthelp (as a kinp file), it already exists on
+						// the disk, and will not be replaced
+						// ask for a new filename:
+						temporaryFile = KisthepDialog.requireRPOutputFilename("Reaction path filename (e.g. RP.kinp) ?",
+								new KisthepOutputFileFilter(Constants.kInpFileType));
+						temporaryFileName = temporaryFile.getAbsolutePath();
+
+						// if no file extension has been given, the default kinp is given
+						if (temporaryFileName.indexOf('.') == -1) {
+							temporaryFileName = temporaryFileName + ".kinp";
+						}
+
+					}
+
+				} // end of if (file.exists())
+				else
+					notFoundAGoodName = false;// one exits the while loop because the file does not exist on the disk
+												// nor in memory (in session)
+			} // end of if (alreadyOpen==false)
 		} // end of the while (notFoundAGoodName)
 
 		// to prepare the writing action
 		writeOnRPKinp = null;
 		writeOnRPKinp = new ActionOnFileWrite(temporaryFileName);
-
 
 		// combine the file(s)
 		for (int iFile = 0; iFile < nbPts; iFile++) {
@@ -4622,38 +4870,36 @@ public class Interface extends JFrame implements ActionListener {
 			writeOnRPKinp.oneString(Keywords.startOfReactionCoordinateInputSection);
 			writeOnRPKinp.oneDouble(irc.get(iFile));
 			writeOnRPKinp.oneString(Keywords.endOfInputSection);
-			
-			
-			//now: directly copy the information from the kinp file to the reactionPath file 
+
+			// now: directly copy the information from the kinp file to the reactionPath
+			// file
 			// write the kinp file content of the current point
 			temporaryFile = (File) (kinpFiles.get(iFile));
 			temporaryFileName = temporaryFile.getAbsolutePath();
 
-			readFromCurrentKinp= new ActionOnFileRead (temporaryFileName,Constants.kInpFileType); 
-			currentLine = readFromCurrentKinp.oneString();  
+			readFromCurrentKinp = new ActionOnFileRead(temporaryFileName, Constants.kInpFileType);
+			currentLine = readFromCurrentKinp.oneString();
 
-			// reading loop      				
+			// reading loop
 			if (currentLine == null) {
-				JOptionPane.showMessageDialog(null,"Warning : the file " + temporaryFileName + " is empty ...");  
-			}
-			else {
-				do {  
+				JOptionPane.showMessageDialog(null, "Warning : the file " + temporaryFileName + " is empty ...");
+			} else {
+				do {
 					writeOnRPKinp.oneString(currentLine);
 					currentLine = readFromCurrentKinp.oneString();
-				} while (currentLine != null) ;
+				} while (currentLine != null);
 			} // end of else
-			// write the IRC tail keyword
+				// write the IRC tail keyword
 			writeOnRPKinp.oneString(Keywords.endOfPointSection);
-			
-			// remove the temporary current Kinp file from the Kisthelp list AND next erase the file 
+
+			// remove the temporary current Kinp file from the Kisthelp list AND next erase
+			// the file
 			readFromCurrentKinp.end();
 			readFromCurrentKinp.getWorkFile().delete();
-			
 
 		} // end of for (int iFile=0)
 		writeOnRPKinp.end();
-		JOptionPane.showMessageDialog(null,"file " + writeOnRPKinp.getWorkFile().getName() + " successfully written");
+		JOptionPane.showMessageDialog(null, "file " + writeOnRPKinp.getWorkFile().getName() + " successfully written");
 	} // end of method buildReactPath
 
 } // End of class
-

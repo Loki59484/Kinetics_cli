@@ -16,20 +16,17 @@ public class ActionOnFileWrite extends ActionOnFile {
     /** Creates new Class , constructor */
     public ActionOnFileWrite (String name) throws IOException {
         
-       
     	super(name, "write"); 
     	try {   // // checks for a buffer IO error
-    		textOutputStream = new PrintWriter (new FileWriter (name));
-    	} 
+    		textOutputStream = new PrintWriter(new FileWriter (name));
+    	}
 
     	catch (IOException e){
     		String message = "Error in class ActionOnFileWrite, in constructor ActionOnFileWrite(String name )"+ Constants.newLine;
     		message = message +  "while trying to create a textOutputStream for file " + name + Constants.newLine;
-    		JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);                      		
+    		JOptionPane.showMessageDialog(null,message,Constants.kisthepMessage,JOptionPane.ERROR_MESSAGE);
     		throw new IOException();
-
     	}
-        
     }
 
     public void oneString(String lineToBeWritten) { // writes one string on the work file
